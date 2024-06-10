@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 :root {
+  --white: #edebd7;
+  --yellow: #e3b23c;
+  --dark: #423e37;
+  --darl-light: #6e675f;
+  --white-dark: #a39594;
+
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -10,20 +16,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    /* --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0; */
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to top, var(--white), transparent);
 }
 
 @layer utilities {
@@ -31,3 +31,42 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer base {
+  h1 {
+    @apply: text-5xl font-bold;
+  }
+
+  h2 {
+    @apply: text-4xl font-bold;
+  }
+
+  h3 {
+    @apply text-3xl font-bold;
+  }
+
+  h4 {
+    @apply text-2xl font-bold;
+  }
+  h5 {
+    @apply text-xl font-bold;
+  }
+
+  h6 {
+    @apply text-lg;
+  }
+
+  ul {
+    @apply *:before:content-['▷'] *:before:mr-2 *:mt-2 *:text-justify;
+  }
+}
+/* 
+.section-container {
+  @apply mx-auto max-w-6xl px-3 text-center;
+}
+.section-content {
+  @apply mx-auto max-w-3xl text-center text-xl leading-9 text-grayishBlue;
+}
+.button-container {
+  @apply flex w-full flex-col justify-center space-y-6 text-xl text-white md:flex-row md:space-x-4 md:space-y-0;
+} */
