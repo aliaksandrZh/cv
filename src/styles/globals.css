@@ -24,6 +24,7 @@
 
 body {
   background: linear-gradient(to top, var(--white), transparent);
+  color: var(--dark);
 }
 
 @layer utilities {
