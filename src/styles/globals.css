@@ -58,7 +58,11 @@ body {
   }
 
   ul {
-    @apply *:before:content-['▷'] *:before:mr-2 *:mt-2 *:text-justify;
+    /* @apply *:before:content-['▷'] *:before:mr-2 *:mt-2 *:text-justify; */
+  }
+
+  .hover-list-item-vertical {
+    @apply before:content-['▷'] before:mr-2 mt-2 text-justify;
   }
 }
 /* 
