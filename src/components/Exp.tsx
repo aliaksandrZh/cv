@@ -1,4 +1,5 @@
 import { ListHoverEffect } from "./ui/list-hover-effect";
+import Certificates from "./Certificates";
 
 const Exp = () => (
   <main className="container mx-auto flex border-t-4 border-black pt-10">
@@ -51,6 +52,9 @@ const Exp = () => (
           <li className="hover-list-item-vertical" key="4">
             React
           </li>
+          <li className="hover-list-item-vertical" key="9">
+            RxJS
+          </li>
           <li className="hover-list-item-vertical" key="5">
             NodeJS
           </li>
@@ -67,6 +71,10 @@ const Exp = () => (
             Docker
           </li>
         </ListHoverEffect>
+      </div>
+
+      <div className="mt-7">
+        <Certificates />
       </div>
     </section>
     <section className="w-3/4 border-l-4 border-black pl-10">

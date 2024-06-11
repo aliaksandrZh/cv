@@ -31,6 +31,7 @@ const Header = () => (
                 "TypeScript",
                 "Angular",
                 "React",
+                "RxJS",
                 "Tailwind",
                 "NodeJS",
                 "SQL",
