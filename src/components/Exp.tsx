@@ -1,5 +1,6 @@
 import { ListHoverEffect } from "./ui/list-hover-effect";
 import Certificates from "./Certificates";
+import { expertise } from "@/data/expertise";
 
 const Exp = () => (
   <main className="container mx-auto flex border-t-4 border-black pt-10">
@@ -40,36 +41,11 @@ const Exp = () => (
         <h5>Software Engineer</h5>
         <h6 className="mt-1">2020-2023</h6> */}
         <ListHoverEffect>
-          <li className="hover-list-item-vertical" key="1">
-            JavaScript
-          </li>
-          <li className="hover-list-item-vertical" key="2">
-            TypeScript
-          </li>
-          <li className="hover-list-item-vertical" key="3">
-            Angular
-          </li>
-          <li className="hover-list-item-vertical" key="4">
-            React
-          </li>
-          <li className="hover-list-item-vertical" key="9">
-            RxJS
-          </li>
-          <li className="hover-list-item-vertical" key="5">
-            NodeJS
-          </li>
-          <li className="hover-list-item-vertical" key="6">
-            SQL
-          </li>
-          <li className="hover-list-item-vertical" key="7">
-            C#
-          </li>
-          <li className="hover-list-item-vertical" key="8">
-            Git
-          </li>
-          <li className="hover-list-item-vertical" key="9">
-            Docker
-          </li>
+          {expertise.map((e) => (
+            <li className="hover-list-item-vertical" key="e">
+              {e}
+            </li>
+          ))}
         </ListHoverEffect>
       </div>
 

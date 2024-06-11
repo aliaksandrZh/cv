@@ -5,6 +5,7 @@ import AvatarImage from "@/images/108681764.jpeg";
 import Image from "next/image";
 import { FlipWords } from "./ui/flip-words";
 import { ListHoverEffect } from "./ui/list-hover-effect";
+import { expertise } from "@/data/expertise";
 
 const Header = () => (
   <header className="mt-10 flex w-full justify-center">
@@ -24,22 +25,7 @@ const Header = () => (
         <div>
           <h1 className="text-5xl font-bold">Aliaksandr Zhebit</h1>
           <h2 className="mt-2 text-3xl">
-            <FlipWords
-              duration={1000}
-              words={[
-                "JavaScript",
-                "TypeScript",
-                "Angular",
-                "React",
-                "RxJS",
-                "Tailwind",
-                "NodeJS",
-                "SQL",
-                "C#",
-                "Git",
-                "Docker",
-              ]}
-            />
+            <FlipWords duration={1000} words={expertise} />
           </h2>
         </div>
         <div className="flex items-center justify-start">

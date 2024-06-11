@@ -1,28 +1,17 @@
 import { Certificate } from "@/data/certificates";
-import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 const CertificatePreview = ({
   target,
   data,
 }: {
-  target: HTMLElement | undefined;
-  data: Certificate | undefined;
+  target?: HTMLElement;
+  data?: Certificate;
 }) => {
-  // const [fullView, setFullView] = useState(false);
-
-  // useEffect(() => {
-  //   if (target) {
-  //     console.log(target);
-  //     setFullView(false);
-  //   }
-  // }, [target, data]);
-
   return (
     <AnimatePresence>
-      {target && (
+      {target && data && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -33,15 +22,9 @@ const CertificatePreview = ({
           }}
         >
           {/* TODO: The image height should change smoothly */}
-          {/* <div
-            className={cn(
-              "z-10 transition-all duration-[1s] ease-[ease-in-out]",
-              fullView ? "fixed left-0 top-0 h-dvh w-dvw bg-yellow" : "",
-            )}
-          > */}
           <div>
             <Image
-              src={data?.img}
+              src={data.img}
               alt="certificate"
               className="w-full rounded-2xl shadow-2xl"
             />
