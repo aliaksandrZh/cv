@@ -16,7 +16,7 @@ export const certificates = [
   {
     img: angularIntermediate,
     platform: "HackerRank",
-    title: "Angular (Intermediate)",
+    title: "Angular",
     date: "10.06.2024",
   },
   {
@@ -28,7 +28,7 @@ export const certificates = [
   {
     img: jsIntermediate,
     platform: "HackerRank",
-    title: "JavaScript (Intermediate)",
+    title: "JavaScript",
     date: "10.06.2024",
   },
   {
@@ -62,3 +62,5 @@ export const certificates = [
     date: "16.04.2023",
   },
 ];
+
+export type Certificate = (typeof certificates)[0];
