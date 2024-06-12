@@ -64,14 +64,8 @@ body {
   .hover-list-item-vertical {
     @apply mt-2 text-justify before:mr-2 before:content-['▷'];
   }
+
+  .test-hover-item {
+    @apply bg-black text-white;
+  }
 }
-/* 
-.section-container {
-  @apply mx-auto max-w-6xl px-3 text-center;
-}
-.section-content {
-  @apply mx-auto max-w-3xl text-center text-xl leading-9 text-grayishBlue;
-}
-.button-container {
-  @apply flex w-full flex-col justify-center space-y-6 text-xl text-white md:flex-row md:space-x-4 md:space-y-0;
-} */
