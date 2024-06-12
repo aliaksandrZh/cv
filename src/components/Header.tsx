@@ -4,8 +4,8 @@ import MailIcon from "@/images/MailIcon";
 import AvatarImage from "@/images/108681764.jpeg";
 import Image from "next/image";
 import { FlipWords } from "./ui/flip-words";
-import { ListHoverEffect } from "./ui/list-hover-effect";
 import { expertise } from "@/data/expertise";
+import HoverItemWrapper from "./ui/hover-item-wrapper";
 
 const Header = () => (
   <header className="mt-10 flex w-full justify-center">
@@ -29,7 +29,7 @@ const Header = () => (
           </h2>
         </div>
         <div className="flex items-center justify-start">
-          <ListHoverEffect className="flex" rotation="horizontal">
+          <HoverItemWrapper>
             <span
               key="1"
               className="box-border flex items-center gap-5 p-4 pl-0"
@@ -37,15 +37,19 @@ const Header = () => (
               <LinkedInIcon width={25} height={25} />
               Linked In
             </span>
+          </HoverItemWrapper>
+          <HoverItemWrapper>
             <span key="2" className="flex items-center gap-5 p-4">
               <GitHubIcon width={25} heigh={25} />
               GitHub
             </span>
+          </HoverItemWrapper>
+          <HoverItemWrapper>
             <span key="3" className="gap-5l flex items-center p-4">
               <MailIcon width={25} height={25} />
               aliaksandr.zhebit@gmail.com
             </span>
-          </ListHoverEffect>
+          </HoverItemWrapper>
         </div>
       </div>
     </div>
