@@ -26,7 +26,7 @@ const AnimationContextWrapper = (props: {
 
   const handleMouseEnter = (e: any) => {
     const target = (e.target as HTMLElement).closest(
-      ".test-hover-item",
+      "[data-hover-item]",
     ) as HTMLElement;
 
     setRect({

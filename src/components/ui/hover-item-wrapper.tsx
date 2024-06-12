@@ -11,7 +11,8 @@ const HoverItemWrapper = ({
   const { handleMouseLeave, handleMouseEnter } = useHover();
   return (
     <div
-      className={cn(className, "test-hover-item")}
+      data-hover-item
+      className={className}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
