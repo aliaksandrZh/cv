@@ -1,8 +1,16 @@
-import { createContext, useContext } from "react";
-import { Subject } from "rxjs";
+import { createContext, useContext, useState } from "react";
+
+export type RectState =
+  | {
+      x: number;
+      y: number;
+      width: number;
+      height: number;
+    }
+  | {};
 
 export const AnimationContext = createContext<{
-  stream: Subject<any>;
+  rect: RectState;
   handleMouseEnter: (e: any) => void;
   handleMouseLeave: () => void;
 }>(null!);
@@ -14,14 +22,14 @@ export const useHover = () => {
 const AnimationContextWrapper = (props: {
   children: JSX.Element | JSX.Element[];
 }) => {
-  const hoverSubject = new Subject();
+  const [rect, setRect] = useState<RectState>({});
 
   const handleMouseEnter = (e: any) => {
     const target = (e.target as HTMLElement).closest(
       ".test-hover-item",
     ) as HTMLElement;
 
-    hoverSubject.next({
+    setRect({
       y: target.offsetTop,
       x: target.offsetLeft,
       width: target.clientWidth,
@@ -33,7 +41,7 @@ const AnimationContextWrapper = (props: {
   return (
     <AnimationContext.Provider
       value={{
-        stream: hoverSubject,
+        rect,
         handleMouseLeave,
         handleMouseEnter,
       }}
