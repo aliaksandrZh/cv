@@ -31,8 +31,10 @@ const HoverBackground = () => {
   return (
     <div
       style={style}
-      className="absolute -z-10 rounded-2xl bg-yellow opacity-30 shadow-2xl transition-all duration-[0.4s] ease-[ease-in-out]"
-    />
+      className="absolute -z-10 rounded-2xl shadow-2xl transition-all duration-[0.4s] ease-[ease-in-out]"
+    >
+      <div className="h-full w-full rounded-2xl bg-yellow opacity-30" />
+    </div>
   );
 };
 
