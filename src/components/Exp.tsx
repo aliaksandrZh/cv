@@ -24,7 +24,7 @@ const Exp = () => {
             <h4 className="mt-3">iTechArt Group</h4>
             <h5>Software Engineer</h5>
             <h6 className="mt-1">2020-2023</h6>
-            <ListHoverEffect>
+            <ul>
               <li className="hover-list-item-vertical">
                 Developed and maintained web applications using technologies
                 such as JavaScript, TypeScript, .Net, React, Angular, NodeJS,
@@ -38,7 +38,7 @@ const Exp = () => {
                 Participated in code reviews, troubleshooting, and optimization
                 efforts to improve application performance and reliability.
               </li>
-            </ListHoverEffect>
+            </ul>
           </HoverItemWrapper>
         </div>
 
@@ -48,20 +48,18 @@ const Exp = () => {
             {/* <h4 className="mt-3">iTechArt Group</h4>
         <h5>Software Engineer</h5>
         <h6 className="mt-1">2020-2023</h6> */}
-            <ListHoverEffect>
+            <ul>
               {expertise.map((e) => (
                 <li className="hover-list-item-vertical" key={e}>
                   {e}
                 </li>
               ))}
-            </ListHoverEffect>
+            </ul>
           </HoverItemWrapper>
         </div>
 
         <div className="mt-7">
-          <HoverItemWrapper>
-            <Certificates />
-          </HoverItemWrapper>
+          <Certificates />
         </div>
       </aside>
 

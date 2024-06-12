@@ -8,10 +8,10 @@ const HoverItemWrapper = ({
   children: string | JSX.Element | JSX.Element[];
   className?: string;
 }) => {
-  const { handleMouseLeave, handleMouseEnter } = useHover();
+  const { handleMouseLeave, handleMouseEnter, attribute } = useHover();
   return (
     <div
-      data-hover-item
+      {...attribute}
       className={className}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

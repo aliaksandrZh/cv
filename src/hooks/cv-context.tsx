@@ -13,6 +13,7 @@ export const AnimationContext = createContext<{
   rect: RectState;
   handleMouseEnter: (e: any) => void;
   handleMouseLeave: () => void;
+  attribute: Record<string, boolean>;
 }>(null!);
 
 export const useHover = () => {
@@ -21,13 +22,18 @@ export const useHover = () => {
 
 const AnimationContextWrapper = (props: {
   children: JSX.Element | JSX.Element[];
+  itemIdentifierAttribute: string;
 }) => {
   const [rect, setRect] = useState<RectState>({});
 
   const handleMouseEnter = (e: any) => {
     const target = (e.target as HTMLElement).closest(
-      "[data-hover-item]",
+      `[${props.itemIdentifierAttribute}]`,
     ) as HTMLElement;
+
+    if (!target) {
+      return;
+    }
 
     setRect({
       y: target.offsetTop - 10,
@@ -41,6 +47,7 @@ const AnimationContextWrapper = (props: {
   return (
     <AnimationContext.Provider
       value={{
+        attribute: { [props.itemIdentifierAttribute]: true },
         rect,
         handleMouseLeave,
         handleMouseEnter,

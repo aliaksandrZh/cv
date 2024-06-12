@@ -1,7 +1,9 @@
 import { Certificate, certificates } from "@/data/certificates";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CertificatePreview from "./CertificatePreview";
-import { ListHoverEffect } from "./ui/list-hover-effect";
+import AnimationContextWrapper from "@/hooks/cv-context";
+import HoverBackground from "./ui/hover-bg";
+import HoverItemWrapper from "./ui/hover-item-wrapper";
 
 const Certificates = () => {
   const [[preview, data], setPreview] = useState<
@@ -9,13 +11,14 @@ const Certificates = () => {
   >([]);
 
   return (
-    <div className="">
+    //
+    <div className="" onMouseLeave={(e) => setPreview([])}>
       <h3>Certificates</h3>
-      <ul className="group relative" onMouseLeave={(e) => setPreview([])}>
-        <ListHoverEffect>
-          {certificates.map((c, idx) => (
+      {/* <AnimationContextWrapper itemIdentifierAttribute="data-hover-item-certificate"> */}
+      <ul className="group">
+        {certificates.map((c) => (
+          <HoverItemWrapper key={c.title + c.platform}>
             <li
-              key={c.title}
               className="hover-list-item-vertical text-left"
               onMouseEnter={(e) => setPreview([e.target as HTMLElement, c])}
             >
@@ -24,10 +27,12 @@ const Certificates = () => {
               </span>
               <div>{c.title}</div>
             </li>
-          ))}
-        </ListHoverEffect>
-        <CertificatePreview target={preview} data={data} />
+          </HoverItemWrapper>
+        ))}
+        <HoverBackground bgIdentifierAttribute="certificates-level-hover-bg" />
       </ul>
+      <CertificatePreview data={data} />
+      {/* </AnimationContextWrapper> */}
     </div>
   );
 };

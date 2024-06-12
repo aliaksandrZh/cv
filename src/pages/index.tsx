@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <AnimationContextWrapper>
+    <AnimationContextWrapper itemIdentifierAttribute="data-hover-item">
       <div className={roboto.className + " root-el relative min-h-dvh"}>
         <Header />
         <div className="container mx-auto mb-10"></div>
@@ -20,16 +20,8 @@ export default function Home() {
         <Exp />
 
         <div className="pb-96"></div>
-        {/* <div
-          className="h-16 w-16 -translate-y-1/2 translate-x-1/2 rounded-xl bg-black"
-          // style={{
-          //   top: y,
-          //   left: x,
-          //   width: w,
-          //   height: h,
-          // }}
-        ></div> */}
-        <HoverBackground />
+
+        <HoverBackground bgIdentifierAttribute="app-level-hover-bg" />
       </div>
     </AnimationContextWrapper>
   );
