@@ -6,12 +6,13 @@
   --white: #edebd7;
   --yellow: #e3b23c;
   --dark: #423e37;
-  --dark-light: #6e675f;
-  --white-dark: #a39594;
+  --blue: #7da1bf;
+  --green: #8ba186;
+  --pink: #e27d60;
 
-  --foreground-rgb: 0, 0, 0;
+  /* --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255; */
 }
 
 @media (prefers-color-scheme: dark) {

@@ -10,14 +10,21 @@ const config: Config = {
     colors: {
       white: {
         DEFAULT: "var(--white)",
-        dark: "var(--white-dark)",
       },
       yellow: {
         DEFAULT: "var(--yellow)",
       },
       black: {
         DEFAULT: "var(--dark)",
-        light: "var(--dark-light)",
+      },
+      blue: {
+        DEFAULT: "var(--blue)",
+      },
+      green: {
+        DEFAULT: "var(--green)",
+      },
+      pink: {
+        DEFAULT: "var(--pink)",
       },
     },
     extend: {

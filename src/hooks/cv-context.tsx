@@ -30,10 +30,10 @@ const AnimationContextWrapper = (props: {
     ) as HTMLElement;
 
     setRect({
-      y: target.offsetTop,
-      x: target.offsetLeft,
-      width: target.clientWidth,
-      height: target.clientHeight,
+      y: target.offsetTop - 10,
+      x: target.offsetLeft - 10,
+      width: target.clientWidth + 20,
+      height: target.clientHeight + 20,
     });
   };
   const handleMouseLeave = () => {};
