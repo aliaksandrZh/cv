@@ -1,26 +1,39 @@
 import { Certificate, certificates } from "@/data/certificates";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CertificatePreview from "./CertificatePreview";
-import AnimationContextWrapper from "@/hooks/cv-context";
-import HoverBackground from "./ui/hover-bg";
 import HoverItemWrapper from "./ui/hover-item-wrapper";
+import Modal from "./ui/modal";
 
 const Certificates = () => {
-  const [[preview, data], setPreview] = useState<
-    [HTMLElement, Certificate] | []
-  >([]);
+  const [show, setShow] = useState(false);
+  const [certificate, setCertificate] = useState<Certificate | null>(null);
+
+  const openModal = () => {
+    setShow(true);
+  };
 
   return (
-    //
-    <div className="" onMouseLeave={(e) => setPreview([])}>
+    <div
+      className=""
+      onMouseLeave={(e) => setCertificate(null)}
+      onClick={() => setShow(true)}
+    >
       <h3>Certificates</h3>
-      {/* <AnimationContextWrapper itemIdentifierAttribute="data-hover-item-certificate"> */}
       <ul className="group">
         {certificates.map((c) => (
           <HoverItemWrapper key={c.title + c.platform}>
             <li
               className="hover-list-item-vertical text-left"
-              onMouseEnter={(e) => setPreview([e.target as HTMLElement, c])}
+              onMouseEnter={(e) => {
+                // TODO: Target can be span and it leads to wrong offset
+                // set width to span?
+                // I want to set the offset only once
+                //  TODO: On resize I have to do something. Reload window?
+                // if (e.target.classList.contains("hover-list-item-vertical")) {
+                //   setOffset(e.target.offsetWidth);
+                // }
+                setCertificate(c);
+              }}
             >
               <span>
                 {c.platform}: {c.date}
@@ -29,10 +42,9 @@ const Certificates = () => {
             </li>
           </HoverItemWrapper>
         ))}
-        <HoverBackground bgIdentifierAttribute="certificates-level-hover-bg" />
       </ul>
-      <CertificatePreview data={data} />
-      {/* </AnimationContextWrapper> */}
+      <Modal show={show} onCloseButtonClick={() => setShow(false)} />
+      <CertificatePreview data={certificate} openModal={openModal} />
     </div>
   );
 };

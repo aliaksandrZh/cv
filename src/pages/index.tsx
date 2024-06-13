@@ -1,14 +1,12 @@
-import Header from "@/components/Header";
 import Exp from "@/components/Exp";
-import { Inter, Roboto_Mono } from "next/font/google";
-import AnimationContextWrapper from "@/hooks/cv-context";
+import Header from "@/components/Header";
 import HoverBackground from "@/components/ui/hover-bg";
+import AnimationContextWrapper from "@/hooks/cv-context";
+import { Roboto_Mono } from "next/font/google";
 
 const roboto = Roboto_Mono({
   subsets: ["cyrillic", "latin"],
 });
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
