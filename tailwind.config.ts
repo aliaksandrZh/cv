@@ -73,13 +73,38 @@ const config: Config = {
             transform: "scale(0)",
           },
         },
+
+        bgIn: {
+          "0%": {
+            background: "var(--dark)",
+          },
+          "70%": {
+            background: "var(--dark)",
+          },
+          "100%": {
+            background: "var(--dark-transparent)",
+          },
+        },
+        bgOut: {
+          "0%": {
+            background: "var(--dark-transparent)",
+          },
+          "70%": {
+            background: "var(--dark-transparent)",
+          },
+          "100%": {
+            background: "var(--dark)",
+          },
+        },
       },
       animation: {
-        unfoldIn: "unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards",
+        unfoldIn: "unfoldIn 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards",
         unfoldOut:
           "unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards",
         zoomIn: "zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards",
         zoomOut: "zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards",
+        bgIn: "bgIn 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) forwards",
+        bgOut: "bgOut 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards",
       },
     },
   },

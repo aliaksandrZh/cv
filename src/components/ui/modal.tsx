@@ -6,6 +6,7 @@ import {
   BehaviorSubject,
   delay,
   filter,
+  map,
   of,
   pairwise,
   switchMap,
@@ -15,27 +16,42 @@ import {
 const useModalAnimationRx = (show: boolean) => {
   const { current: show$ } = useRef(new BehaviorSubject<boolean>(false));
   const [isVisible, setIsVisible] = useState<boolean>(false);
-  const [styles, setStyles] = useState("");
+  const [styles, setStyles] = useState({
+    modal: "",
+    container: "",
+    bg: "",
+  });
 
   useEffect(() => {
     const s$ = show$
       .pipe(
         pairwise(),
         filter(([prev, cur]) => prev !== cur),
-        switchMap(([prev, cur]) =>
-          cur
-            ? of(cur).pipe(
+        map(([prev, cur]) => cur),
+        switchMap((show) =>
+          show
+            ? of(show).pipe(
                 tap(() => setIsVisible(true)),
                 delay(1000),
                 tap(() =>
-                  setStyles("scale-x-0 scale-y-[0.01] animate-unfoldIn"),
+                  setStyles({
+                    container: "scale-x-0 scale-y-[0.01] animate-unfoldIn",
+                    modal: "scale-0 animate-zoomIn",
+                    bg: "animate-bgIn",
+                  }),
                 ),
               )
-            : of(cur).pipe(
-                tap(() => setStyles("scale-100 animate-unfoldOut")),
+            : of(show).pipe(
+                tap(() =>
+                  setStyles({
+                    container: "scale-100 animate-unfoldOut",
+                    modal: "animate-zoomOut",
+                    bg: "animate-bgOut",
+                  }),
+                ),
                 delay(1500),
                 tap(() => setIsVisible(false)),
-                tap(() => setStyles("")),
+                tap(() => setStyles((s) => ({ ...s, container: "" }))),
               ),
         ),
       )
@@ -94,9 +110,13 @@ export const Modal = ({
 }: {
   show: boolean;
   onCloseButtonClick: () => void;
+  //TODO: FIX
   children: any;
 }) => {
-  const { isVisible, styles } = useModalAnimationRx(show);
+  const {
+    isVisible,
+    styles: { container, modal, bg },
+  } = useModalAnimationRx(show);
 
   return (
     <>
@@ -110,16 +130,16 @@ export const Modal = ({
             }}
             className={cn(
               "fixed left-0 top-0 z-20 table h-full w-full scale-0 cursor-pointer",
-              "text-white",
-              styles,
+              container,
             )}
           >
-            <div
-              className={cn(
-                "modal-background bg-black-light top-2/3 table-cell text-center align-middle",
-              )}
-            >
-              <div className="modal relative flex h-full w-full items-center justify-center">
+            <div className={cn("modal-background bg-black-light h-full", bg)}>
+              <div
+                className={cn(
+                  "modal relative flex h-full w-full items-center justify-center",
+                  modal,
+                )}
+              >
                 {/* <h2 className="mb-[15px] text-[25px] leading-[25px]">
                   I`m a Modal
                 </h2>
