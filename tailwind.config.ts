@@ -7,28 +7,28 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      white: {
-        DEFAULT: "var(--white)",
-      },
-      yellow: {
-        DEFAULT: "var(--yellow)",
-      },
-      black: {
-        DEFAULT: "var(--dark)",
-        light: "var(--dark-transparent)",
-      },
-      blue: {
-        DEFAULT: "var(--blue)",
-      },
-      green: {
-        DEFAULT: "var(--green)",
-      },
-      pink: {
-        DEFAULT: "var(--pink)",
-      },
-    },
     extend: {
+      colors: {
+        white: {
+          DEFAULT: "var(--white)",
+        },
+        yellow: {
+          DEFAULT: "var(--yellow)",
+        },
+        black: {
+          DEFAULT: "var(--dark)",
+          light: "var(--dark-transparent)",
+        },
+        blue: {
+          DEFAULT: "var(--blue)",
+        },
+        green: {
+          DEFAULT: "var(--green)",
+        },
+        pink: {
+          DEFAULT: "var(--pink)",
+        },
+      },
       backgroundImage: {
         // "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         // "gradient-conic":
