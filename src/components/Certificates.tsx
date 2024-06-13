@@ -1,21 +1,21 @@
-import { Certificate, certificates } from "@/data/certificates";
+import { Certificate, certificates } from "@/libs/certificates";
 import { useState } from "react";
-import CertificatePreview from "./CertificatePreview";
-import HoverItemWrapper from "./ui/hover-item-wrapper";
-import Modal from "./ui/modal";
+import { CertificatePreview } from "./CertificatePreview";
+import { HoverAnimationItemWrapper } from "./ui/HoverItemAnimationWrapper";
 import Image from "next/image";
+import { Modal } from "./ui/Modal";
 
-const Certificates = () => {
+export const Certificates = () => {
   const [{ status, modalData }, setShow] = useState<{
     status: boolean;
-    modalData?: Certificate;
+    modalData?: Certificate | null;
   }>({
     status: false,
   });
   const [certificate, setCertificate] = useState<Certificate | null>(null);
 
   const openModal = () => {
-    setShow({ status: true, modalData: certificate! });
+    setShow({ status: true, modalData: certificate });
   };
 
   return (
@@ -23,7 +23,7 @@ const Certificates = () => {
       <h3>Certificates</h3>
       <ul className="group">
         {certificates.map((c) => (
-          <HoverItemWrapper key={c.title + c.platform}>
+          <HoverAnimationItemWrapper key={c.title + c.platform}>
             <li
               className="hover-list-item-vertical text-left"
               onMouseEnter={(e) => {
@@ -42,7 +42,7 @@ const Certificates = () => {
               </span>
               <div>{c.title}</div>
             </li>
-          </HoverItemWrapper>
+          </HoverAnimationItemWrapper>
         ))}
       </ul>
       <Modal
@@ -50,16 +50,16 @@ const Certificates = () => {
         onCloseButtonClick={() => setShow((s) => ({ ...s, status: false }))}
       >
         <div className="max-w-screen-lg rounded-2xl bg-gradient-to-b from-yellow to-white p-10 shadow-2xl">
-          <Image
-            src={modalData?.img}
-            alt="certificate"
-            className="max-h-[80dvh] w-full rounded-2xl object-contain shadow-2xl"
-          />
+          {modalData && (
+            <Image
+              src={modalData.img}
+              alt="certificate"
+              className="max-h-[80dvh] w-full rounded-2xl object-contain shadow-2xl"
+            />
+          )}
         </div>
       </Modal>
       <CertificatePreview data={certificate} openModal={openModal} />
     </div>
   );
 };
-
-export default Certificates;

@@ -1,6 +1,6 @@
-import { useHover } from "@/hooks/cv-context";
+import { useHoverAnimation } from "@/hooks/useHoverAnimation";
 import { cn } from "@/utils/cn";
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 type HoverBackgroundState =
   | {
@@ -16,20 +16,13 @@ type HoverBackgroundProps = {
   className?: string;
 };
 
-const HoverBackground = (props: HoverBackgroundProps) => {
+export const HoverAnimationBackground = (props: HoverBackgroundProps) => {
   const [style, setStyle] = useState<HoverBackgroundState>({
     transform: "scale(0)",
   });
-  const { rect } = useHover();
-  // const attr = useMemo(() => {
-  //   console.log("attr is calculated for", props.bgIdentifierAttribute);
-  //   return {
-  //     [props.bgIdentifierAttribute]: true,
-  //   };
-  // }, [props.bgIdentifierAttribute]);
+  const { rect } = useHoverAnimation();
 
   useEffect(() => {
-    // TODO: fix
     if ("width" in rect) {
       setStyle({
         width: `${rect.width}px`,
@@ -55,5 +48,3 @@ const HoverBackground = (props: HoverBackgroundProps) => {
     </div>
   );
 };
-
-export default HoverBackground;

@@ -87,7 +87,7 @@ const useModalAnimation = (show: boolean) => {
   };
 };
 
-const Modal = ({
+export const Modal = ({
   show,
   onCloseButtonClick,
   children,
@@ -153,5 +153,3 @@ const Modal = ({
     </>
   );
 };
-
-export default Modal;

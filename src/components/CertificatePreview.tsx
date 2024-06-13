@@ -1,17 +1,17 @@
-import { Certificate } from "@/data/certificates";
-import { useHover } from "@/hooks/cv-context";
+import { useHoverAnimation } from "@/hooks/useHoverAnimation";
+import { Certificate } from "@/libs/certificates";
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
-const CertificatePreview = ({
+export const CertificatePreview = ({
   openModal,
   data,
 }: {
   data: Certificate | null;
   openModal: () => void;
 }) => {
-  const { rect } = useHover();
+  const { rect } = useHoverAnimation();
 
   return (
     <AnimatePresence>
@@ -43,5 +43,3 @@ const CertificatePreview = ({
     </AnimatePresence>
   );
 };
-
-export default CertificatePreview;

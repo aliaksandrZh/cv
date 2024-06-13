@@ -1,25 +1,24 @@
-import { ListHoverEffect } from "./ui/list-hover-effect";
-import Certificates from "./Certificates";
-import { expertise } from "@/data/expertise";
-import HoverItemWrapper from "./ui/hover-item-wrapper";
+import { expertise } from "@/libs/expertise";
+import { Certificates } from "./Certificates";
+import { HoverAnimationItemWrapper } from "./ui/HoverItemAnimationWrapper";
 
-const Exp = () => {
+export const Exp = () => {
   return (
     <main className="container mx-auto flex border-t-4 border-black pt-10">
       <aside className="w-3/12 pr-5">
         <div>
-          <HoverItemWrapper>
+          <HoverAnimationItemWrapper>
             <h3>Education</h3>
             <h4 className="mt-3 text-justify">
               Francisk Skorina Gomel State University
             </h4>
             <h5>Bachelor`s Degree</h5>
             <h6>2015 - 2019</h6>
-          </HoverItemWrapper>
+          </HoverAnimationItemWrapper>
         </div>
 
         <div className="mt-7">
-          <HoverItemWrapper>
+          <HoverAnimationItemWrapper>
             <h3>Experience</h3>
             <h4 className="mt-3">iTechArt Group</h4>
             <h5>Software Engineer</h5>
@@ -39,11 +38,11 @@ const Exp = () => {
                 efforts to improve application performance and reliability.
               </li>
             </ul>
-          </HoverItemWrapper>
+          </HoverAnimationItemWrapper>
         </div>
 
         <div className="mt-7">
-          <HoverItemWrapper>
+          <HoverAnimationItemWrapper>
             <h3>Expertise</h3>
             {/* <h4 className="mt-3">iTechArt Group</h4>
         <h5>Software Engineer</h5>
@@ -55,7 +54,7 @@ const Exp = () => {
                 </li>
               ))}
             </ul>
-          </HoverItemWrapper>
+          </HoverAnimationItemWrapper>
         </div>
 
         <div className="mt-7">
@@ -65,7 +64,7 @@ const Exp = () => {
 
       <section className="w-3/4 border-l-4 border-black pl-10">
         <section>
-          <HoverItemWrapper>
+          <HoverAnimationItemWrapper>
             <div>
               <h3>About Me</h3>
               <p className="mt-3 text-justify">
@@ -77,12 +76,12 @@ const Exp = () => {
                 contribute to innovative projects.
               </p>
             </div>
-          </HoverItemWrapper>
+          </HoverAnimationItemWrapper>
         </section>
         <section className="mt-7">
           <h3>Projects</h3>
           <article className="mt-7">
-            <HoverItemWrapper>
+            <HoverAnimationItemWrapper>
               <h4>Ernst & Young (EY) Raptor</h4>
               <h5>Lead Frontend / Full-Stack Engineer</h5>
               <h6 className="">2021 - 2023</h6>
@@ -158,10 +157,10 @@ const Exp = () => {
                   import/export functionalities.
                 </li>
               </ul>
-            </HoverItemWrapper>
+            </HoverAnimationItemWrapper>
           </article>
           <article className="mt-7">
-            <HoverItemWrapper>
+            <HoverAnimationItemWrapper>
               <h4>MPRE</h4>
               <h5>Frontend Engineer</h5>
               <h6 className="">2020 - 2021</h6>
@@ -197,11 +196,11 @@ const Exp = () => {
                   Refactored and redesigned the source code.
                 </li>
               </ul>
-            </HoverItemWrapper>
+            </HoverAnimationItemWrapper>
           </article>
 
           <article className="mt-7">
-            <HoverItemWrapper>
+            <HoverAnimationItemWrapper>
               <div>
                 <h4>Raycast</h4>
                 <h5>Opensource</h5>
@@ -259,12 +258,10 @@ const Exp = () => {
                   </li>
                 </ul>
               </div>
-            </HoverItemWrapper>
+            </HoverAnimationItemWrapper>
           </article>
         </section>
       </section>
     </main>
   );
 };
-
-export default Exp;

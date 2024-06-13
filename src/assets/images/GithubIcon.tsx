@@ -1,4 +1,4 @@
-const GitHubIcon = (props: { width: number; heigh: number }) => (
+export const GitHubIcon = (props: { width: number; heigh: number }) => (
   <svg
     height={props.width}
     width={props.heigh}
@@ -14,5 +14,3 @@ const GitHubIcon = (props: { width: number; heigh: number }) => (
     />
   </svg>
 );
-
-export default GitHubIcon;

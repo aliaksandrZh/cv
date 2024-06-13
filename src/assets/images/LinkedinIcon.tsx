@@ -1,4 +1,4 @@
-const LinkedInIcon = (props: { width: number; height: number }) => (
+export const LinkedInIcon = (props: { width: number; height: number }) => (
   <svg
     width={props.width}
     height={props.height}
@@ -26,5 +26,3 @@ const LinkedInIcon = (props: { width: number; height: number }) => (
     />
   </svg>
 );
-
-export default LinkedInIcon;

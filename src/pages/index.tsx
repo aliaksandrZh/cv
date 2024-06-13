@@ -1,7 +1,8 @@
-import Exp from "@/components/Exp";
-import Header from "@/components/Header";
-import HoverBackground from "@/components/ui/hover-bg";
-import AnimationContextWrapper from "@/hooks/cv-context";
+import { Exp } from "@/components/Exp";
+import { Header } from "@/components/Header";
+import { HoverAnimationContextWrapper } from "@/components/context-wrappers/HoverAnimationContextWrapper";
+import { HoverAnimationBackground } from "@/components/ui/HoverAnimationBackground";
+import { cn } from "@/utils/cn";
 import { Roboto_Mono } from "next/font/google";
 
 const roboto = Roboto_Mono({
@@ -10,8 +11,8 @@ const roboto = Roboto_Mono({
 
 export default function Home() {
   return (
-    <AnimationContextWrapper itemIdentifierAttribute="data-hover-item">
-      <div className={roboto.className + " root-el relative min-h-dvh"}>
+    <HoverAnimationContextWrapper itemIdentifierAttribute="data-hover-item">
+      <div className={cn(roboto.className, "root-el relative min-h-dvh")}>
         <Header />
         <div className="container mx-auto mb-10"></div>
 
@@ -19,8 +20,8 @@ export default function Home() {
 
         <div className="pb-96"></div>
 
-        <HoverBackground bgIdentifierAttribute="app-level-hover-bg" />
+        <HoverAnimationBackground bgIdentifierAttribute="app-level-hover-bg" />
       </div>
-    </AnimationContextWrapper>
+    </HoverAnimationContextWrapper>
   );
 }
