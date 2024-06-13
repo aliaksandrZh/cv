@@ -16,7 +16,7 @@ const config: Config = {
       },
       black: {
         DEFAULT: "var(--dark)",
-        // light: "var(--dark-transparent)",
+        light: "var(--dark-transparent)",
       },
       blue: {
         DEFAULT: "var(--blue)",

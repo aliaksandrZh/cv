@@ -12,10 +12,10 @@ export const HoverAnimationContextWrapper = (props: {
 
   const handleMouseEnter = (e: MouseEvent<HTMLElement>) => {
     setRect({
-      y: e.currentTarget.offsetTop - 10,
-      x: e.currentTarget.offsetLeft - 10,
-      width: e.currentTarget.clientWidth + 20,
-      height: e.currentTarget.clientHeight + 20,
+      y: e.currentTarget.offsetTop,
+      x: e.currentTarget.offsetLeft,
+      width: e.currentTarget.clientWidth,
+      height: e.currentTarget.clientHeight,
     });
   };
   const handleMouseLeave = (e: MouseEvent<HTMLElement>) => {};

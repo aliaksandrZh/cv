@@ -1,11 +1,11 @@
 import { expertise } from "@/libs/expertise";
 import { Certificates } from "./Certificates";
-import { HoverAnimationItemWrapper } from "./ui/HoverItemAnimationWrapper";
+import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 
 export const Exp = () => {
   return (
     <main className="container mx-auto flex border-t-4 border-black pt-10">
-      <aside className="w-3/12 pr-5">
+      <aside className="w-3/12 max-w-96 pr-5">
         <div>
           <HoverAnimationItemWrapper>
             <h3>Education</h3>

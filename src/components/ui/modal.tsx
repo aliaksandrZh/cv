@@ -109,7 +109,7 @@ export const Modal = ({
               onCloseButtonClick();
             }}
             className={cn(
-              "fixed left-0 top-0 z-20 table h-full w-full scale-0",
+              "fixed left-0 top-0 z-20 table h-full w-full scale-0 cursor-pointer",
               "text-white",
               styles,
             )}
@@ -119,7 +119,7 @@ export const Modal = ({
                 "modal-background bg-black-light top-2/3 table-cell text-center align-middle",
               )}
             >
-              <div className="modal relative flex h-full w-full items-center justify-center rounded-[3px] p-[50px] font-light">
+              <div className="modal relative flex h-full w-full items-center justify-center">
                 {/* <h2 className="mb-[15px] text-[25px] leading-[25px]">
                   I`m a Modal
                 </h2>

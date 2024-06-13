@@ -4,7 +4,7 @@ import { MailIcon } from "@/assets/images/MailIcon";
 import AvatarImage from "@/assets/images/108681764.jpeg";
 import { expertise } from "@/libs/expertise";
 import Image from "next/image";
-import { HoverAnimationItemWrapper } from "./ui/HoverItemAnimationWrapper";
+import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 import { FlipWords } from "./ui/FlipWords";
 
 export const Header = () => (
