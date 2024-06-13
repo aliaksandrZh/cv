@@ -90,9 +90,11 @@ const useModalAnimation = (show: boolean) => {
 const Modal = ({
   show,
   onCloseButtonClick,
+  children,
 }: {
   show: boolean;
   onCloseButtonClick: () => void;
+  children: any;
 }) => {
   const { isVisible, styles } = useModalAnimationRx(show);
 
@@ -114,11 +116,11 @@ const Modal = ({
           >
             <div
               className={cn(
-                "modal-background table-cell bg-black text-center align-middle",
+                "modal-background bg-black-light top-2/3 table-cell text-center align-middle",
               )}
             >
-              <div className="modal relative inline-block rounded-[3px] p-[50px] font-light">
-                <h2 className="mb-[15px] text-[25px] leading-[25px]">
+              <div className="modal relative flex h-full w-full items-center justify-center rounded-[3px] p-[50px] font-light">
+                {/* <h2 className="mb-[15px] text-[25px] leading-[25px]">
                   I`m a Modal
                 </h2>
                 <p className="text-lg leading-[22px]">Hear me roar.</p>
@@ -141,7 +143,8 @@ const Modal = ({
                     rx="3"
                     ry="3"
                   ></rect>
-                </svg>
+                </svg> */}
+                {children}
               </div>
             </div>
           </div>,

@@ -23,10 +23,9 @@ const CertificatePreview = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className={cn(
-            "absolute z-10 max-h-fit w-96 -translate-y-1/2 translate-x-full cursor-pointer rounded-2xl bg-blue p-5 shadow-2xl transition-all duration-[1s] ease-[ease-in-out]",
+            "absolute z-10 max-h-fit w-96 -translate-y-1/2 translate-x-full cursor-pointer rounded-2xl bg-gradient-to-t from-yellow to-white p-5 shadow-2xl transition-all duration-[1s] ease-[ease-in-out]",
           )}
           style={{
-            // width: offsetHorizontal,
             top: rect.y,
             left: rect.x,
           }}

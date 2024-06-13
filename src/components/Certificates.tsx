@@ -3,21 +3,23 @@ import { useState } from "react";
 import CertificatePreview from "./CertificatePreview";
 import HoverItemWrapper from "./ui/hover-item-wrapper";
 import Modal from "./ui/modal";
+import Image from "next/image";
 
 const Certificates = () => {
-  const [show, setShow] = useState(false);
+  const [{ status, modalData }, setShow] = useState<{
+    status: boolean;
+    modalData?: Certificate;
+  }>({
+    status: false,
+  });
   const [certificate, setCertificate] = useState<Certificate | null>(null);
 
   const openModal = () => {
-    setShow(true);
+    setShow({ status: true, modalData: certificate! });
   };
 
   return (
-    <div
-      className=""
-      onMouseLeave={(e) => setCertificate(null)}
-      onClick={() => setShow(true)}
-    >
+    <div onMouseLeave={() => setCertificate(null)}>
       <h3>Certificates</h3>
       <ul className="group">
         {certificates.map((c) => (
@@ -43,7 +45,18 @@ const Certificates = () => {
           </HoverItemWrapper>
         ))}
       </ul>
-      <Modal show={show} onCloseButtonClick={() => setShow(false)} />
+      <Modal
+        show={status}
+        onCloseButtonClick={() => setShow((s) => ({ ...s, status: false }))}
+      >
+        <div className="max-w-screen-lg rounded-2xl bg-gradient-to-b from-yellow to-white p-10 shadow-2xl">
+          <Image
+            src={modalData?.img}
+            alt="certificate"
+            className="max-h-[80dvh] w-full rounded-2xl object-contain shadow-2xl"
+          />
+        </div>
+      </Modal>
       <CertificatePreview data={certificate} openModal={openModal} />
     </div>
   );
