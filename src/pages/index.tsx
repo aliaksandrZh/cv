@@ -14,7 +14,6 @@ export default function Home() {
     <HoverAnimationContextWrapper itemIdentifierAttribute="data-hover-item">
       <div className={cn(roboto.className, "root-el relative min-h-dvh")}>
         <Header />
-        <div className="container mx-auto mb-10"></div>
 
         <Exp />
 

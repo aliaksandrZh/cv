@@ -8,7 +8,7 @@ import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 import { FlipWords } from "./ui/FlipWords";
 
 export const Header = () => (
-  <header className="container mx-auto">
+  <header className="container mx-auto border-b-2 border-black">
     <div className="flex flex-col p-5 sm:flex-row sm:items-center">
       <div className="flex items-center justify-center sm:w-3/12">
         <div className="rounded-full p-5 shadow-2xl">

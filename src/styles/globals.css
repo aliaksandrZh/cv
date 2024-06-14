@@ -71,4 +71,50 @@ body {
   .test-hover-item {
     @apply bg-black text-white;
   }
+
+  .main-grid {
+    display: grid;
+    /* gap: 1.5rem; */
+    grid-template-areas:
+      "about"
+      "experience"
+      "projects"
+      "expertise"
+      "empty"
+      "education"
+      "certificates";
+
+    /* padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto; */
+  }
+
+  .main-grid section:nth-child(1) {
+    grid-area: about;
+  }
+  .main-grid section:nth-child(2) {
+    grid-area: experience;
+  }
+  .main-grid section:nth-child(3) {
+    grid-area: projects;
+  }
+  .main-grid section:nth-child(4) {
+    grid-area: expertise;
+  }
+  .main-grid section:nth-child(5) {
+    grid-area: certificates;
+  }
+  .main-grid section:nth-child(6) {
+    grid-area: education;
+  }
+
+  @media (min-width: 50rem) {
+    .main-grid {
+      grid-template-columns: 1fr 3fr;
+      grid-template-areas:
+        "education about"
+        "expertise experience"
+        "certificates projects";
+    }
+  }
 }

@@ -1,37 +1,30 @@
 import { AboutMe } from "./AboutMe";
 import { Certificates } from "./Certificates";
 import { Education } from "./Education";
-import { Experience } from "./Experiense";
+import { Experience } from "./Experience";
 import { Expertise } from "./Expertise";
 import { Projects } from "./Projects";
 
 export const Exp = () => {
   return (
-    <main className="container mx-auto flex border-t-4 border-black pt-10">
-      <aside className="w-3/12 max-w-96 pr-5">
+    <main className="main-grid container mx-auto mt-10">
+      <section className="p-5">
+        <AboutMe />
+      </section>
+      <section className="p-5">
+        <Experience />
+      </section>
+      <section className="p-5">
+        <Projects />
+      </section>
+      <section className="border-black p-5 sm:border-r-2">
+        <Expertise />
+      </section>
+      <section className="border-black p-5 sm:border-r-2">
+        <Certificates />
+      </section>
+      <section className="border-black p-5 sm:border-r-2">
         <Education />
-
-        <div className="mt-7">
-          <Experience />
-        </div>
-
-        <div className="mt-7">
-          <Expertise />
-        </div>
-
-        <div className="mt-7">
-          <Certificates />
-        </div>
-      </aside>
-
-      <section className="w-3/4 border-l-4 border-black pl-10">
-        <section>
-          <AboutMe />
-        </section>
-
-        <section className="mt-7">
-          <Projects />
-        </section>
       </section>
     </main>
   );
