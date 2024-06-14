@@ -2,13 +2,20 @@ import {
   HoverAnimationContext,
   RectState,
 } from "@/contexts/HoverAnimationContext";
-import { MouseEvent, useState } from "react";
+import { useMediaQueryRx } from "@/hooks/useMediaQuery";
+import { useWindowResize } from "@/hooks/useWindowReisze";
+import { MouseEvent, useEffect, useState } from "react";
 
 export const HoverAnimationContextWrapper = (props: {
   children: JSX.Element | JSX.Element[];
   itemIdentifierAttribute: string;
 }) => {
+  const isMediaQueryMatched = useMediaQueryRx();
   const [rect, setRect] = useState<RectState>({} as RectState);
+
+  useEffect(() => {
+    setRect({} as RectState);
+  }, [isMediaQueryMatched]);
 
   const handleMouseEnter = (e: MouseEvent<HTMLElement>) => {
     setRect({

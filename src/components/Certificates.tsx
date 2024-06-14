@@ -1,11 +1,15 @@
 import { Certificate, certificates } from "@/libs/certificates";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CertificatePreview } from "./CertificatePreview";
 import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 import Image from "next/image";
 import { Modal } from "./ui/Modal";
+import { useMediaQueryRx } from "@/hooks/useMediaQuery";
+
+// import { isBrowser, isMobile } from "react-device-detect";
 
 export const Certificates = () => {
+  const { isMediaQueryMatched } = useMediaQueryRx();
   const [{ status, modalData }, setShow] = useState<{
     status: boolean;
     modalData?: Certificate | null;
@@ -27,6 +31,7 @@ export const Certificates = () => {
             <li
               className="hover-list-item-vertical text-left"
               onMouseEnter={() => setCertificate(c)}
+              onClick={isMediaQueryMatched ? null : openModal}
             >
               <span>
                 {c.platform}: {c.date}
@@ -50,7 +55,9 @@ export const Certificates = () => {
           )}
         </div>
       </Modal>
-      <CertificatePreview data={certificate} openModal={openModal} />
+      {isMediaQueryMatched && (
+        <CertificatePreview data={certificate} openModal={openModal} />
+      )}
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { useHoverAnimation } from "@/hooks/useHoverAnimation";
+import { useWindowResize } from "@/hooks/useWindowReisze";
 import { cn } from "@/utils/cn";
 import { useEffect, useState } from "react";
 
@@ -17,10 +18,15 @@ type HoverBackgroundProps = {
 };
 
 export const HoverAnimationBackground = (props: HoverBackgroundProps) => {
+  const resized = useWindowResize();
   const [style, setStyle] = useState<HoverBackgroundState>({
     transform: "scale(0)",
   });
   const { rect } = useHoverAnimation();
+
+  useEffect(() => {
+    setStyle((s) => ({ transform: "scale(0)" }));
+  }, [resized]);
 
   useEffect(() => {
     if ("width" in rect) {
@@ -37,7 +43,7 @@ export const HoverAnimationBackground = (props: HoverBackgroundProps) => {
     <div
       {...{ [props.bgIdentifierAttribute]: "" }}
       style={style}
-      className="absolute -z-10 scale-x-[1.05] scale-y-[1.05] rounded-2xl shadow-2xl transition-all duration-[0.4s] ease-[ease-in-out]"
+      className="absolute -z-10 scale-x-[1.05] scale-y-[1.01] rounded-2xl shadow-2xl transition-all duration-[0.4s] ease-[ease-in-out] sm:scale-y-[1.05]"
     >
       <div
         className={cn(

@@ -17,13 +17,13 @@ export const Exp = () => {
       <section className="p-5">
         <Projects />
       </section>
-      <section className="border-black p-5 sm:border-r-2">
+      <section className="border-black p-5 md:border-r-2">
         <Expertise />
       </section>
-      <section className="border-black p-5 sm:border-r-2">
+      <section className="border-black p-5 md:border-r-2">
         <Certificates />
       </section>
-      <section className="border-black p-5 sm:border-r-2">
+      <section className="border-black p-5 md:border-r-2">
         <Education />
       </section>
     </main>
