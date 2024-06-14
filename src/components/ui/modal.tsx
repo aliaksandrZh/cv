@@ -133,7 +133,7 @@ export const Modal = ({
               container,
             )}
           >
-            <div className={cn("modal-background bg-black-light h-full", bg)}>
+            <div className={cn("modal-background h-full bg-black", bg)}>
               <div
                 className={cn(
                   "modal relative flex h-full w-full items-center justify-center",

@@ -13,20 +13,10 @@ const config: Config = {
           DEFAULT: "var(--white)",
         },
         yellow: {
-          DEFAULT: "var(--yellow)",
+          DEFAULT: "var(--bg-selection)",
         },
         black: {
-          DEFAULT: "var(--dark)",
-          light: "var(--dark-transparent)",
-        },
-        blue: {
-          DEFAULT: "var(--blue)",
-        },
-        green: {
-          DEFAULT: "var(--green)",
-        },
-        pink: {
-          DEFAULT: "var(--pink)",
+          DEFAULT: "var(--text)",
         },
       },
       backgroundImage: {
@@ -76,24 +66,24 @@ const config: Config = {
 
         bgIn: {
           "0%": {
-            background: "var(--dark)",
+            background: "var(--black)",
           },
           "70%": {
-            background: "var(--dark)",
+            background: "var(--black)",
           },
           "100%": {
-            background: "var(--dark-transparent)",
+            background: "var(--bg-selection)",
           },
         },
         bgOut: {
           "0%": {
-            background: "var(--dark-transparent)",
+            background: "var(--bg-selection)",
           },
           "70%": {
-            background: "var(--dark-transparent)",
+            background: "var(--bg-selection)",
           },
           "100%": {
-            background: "var(--dark)",
+            background: "var(--black)",
           },
         },
       },

@@ -46,10 +46,7 @@ export const HoverAnimationBackground = (props: HoverBackgroundProps) => {
       className="absolute -z-10 scale-x-[1.05] scale-y-[1.01] rounded-2xl shadow-2xl transition-all duration-[0.4s] ease-[ease-in-out] sm:scale-y-[1.05]"
     >
       <div
-        className={cn(
-          "h-full w-full rounded-2xl bg-yellow opacity-30",
-          props.className,
-        )}
+        className={cn("h-full w-full rounded-2xl bg-yellow", props.className)}
       />
     </div>
   );
