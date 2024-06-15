@@ -1,3 +1,4 @@
+import { DownloadCV } from "@/components/Download";
 import { Exp } from "@/components/Exp";
 import { Header } from "@/components/Header";
 import { HoverAnimationContextWrapper } from "@/components/context-wrappers/HoverAnimationContextWrapper";
@@ -16,7 +17,11 @@ export default function Home() {
         <Header />
 
         <Exp />
+        <div className="pb-32"></div>
 
+        <div className="container mx-auto flex justify-center">
+          <DownloadCV />
+        </div>
         <div className="pb-96"></div>
 
         <HoverAnimationBackground bgIdentifierAttribute="app-level-hover-bg" />
