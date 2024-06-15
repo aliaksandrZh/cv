@@ -1,13 +1,14 @@
 export const expertise = [
   "JavaScript",
   "TypeScript",
+  "NodeJS",
   "Angular",
   "React",
   "RxJS",
   "Tailwind",
-  "NodeJS",
-  "SQL",
-  "C#",
-  "Git",
+  "ASP.Net Core",
   "Docker",
+  "SSMS",
+  "SQL",
+  "Git",
 ];

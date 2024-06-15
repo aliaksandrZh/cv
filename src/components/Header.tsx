@@ -26,7 +26,7 @@ export const Header = () => (
           Aliaksandr Zhebit
         </h1>
         <h2 className="mt-2 py-5 text-center text-3xl sm:text-left">
-          <FlipWords duration={1000} words={expertise} className="text-black" />
+          {/* <FlipWords duration={1000} words={expertise} className="text-black" /> */}
         </h2>
 
         <div className="mt-5 flex flex-wrap lg:flex-nowrap">
