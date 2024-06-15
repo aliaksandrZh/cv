@@ -24,7 +24,7 @@ export const Certificates = () => {
 
   return (
     <div onMouseLeave={() => setCertificate(null)}>
-      <h3>Certificates</h3>
+      <h3 className="text-title">Certificates</h3>
       <ul className="group">
         {certificates.map((c) => (
           <HoverAnimationItemWrapper key={c.title + c.platform}>
@@ -45,12 +45,12 @@ export const Certificates = () => {
         show={status}
         onCloseButtonClick={() => setShow((s) => ({ ...s, status: false }))}
       >
-        <div className="max-w-screen-lg rounded-2xl bg-gradient-to-b from-yellow to-white p-5 shadow-2xl">
+        <div className="bg-hover max-w-screen-lg rounded-2xl p-5 shadow-2xl">
           {modalData && (
             <Image
               src={modalData.img}
               alt="certificate"
-              className="max-h-[80dvh] w-full rounded-2xl object-contain shadow-2xl"
+              className="max-h-[80dvh] w-full object-contain shadow-2xl"
             />
           )}
         </div>

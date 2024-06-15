@@ -3,7 +3,7 @@ import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 export const AboutMe = () => (
   <HoverAnimationItemWrapper>
     <div>
-      <h3>About Me</h3>
+      <h3 className="text-title">About Me</h3>
       <p className="mt-3 text-justify">
         Experienced software engineer with a background in{" "}
         <span className="font-bold">web development</span>. Possesses 3+ years

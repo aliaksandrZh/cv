@@ -3,7 +3,6 @@ import { Certificate } from "@/libs/certificates";
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect } from "react";
 
 export const CertificatePreview = ({
   openModal,
@@ -24,12 +23,13 @@ export const CertificatePreview = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className={cn(
-            "absolute z-10 max-h-fit w-80 -translate-y-1/2 cursor-pointer rounded-2xl bg-gradient-to-b from-yellow to-white p-2 shadow-2xl transition-all duration-[1s] ease-[ease-in-out]",
+            "bg-hover absolute z-10 max-h-fit w-80 cursor-pointer p-2 shadow-2xl transition-all duration-[1s] ease-[ease-in-out]",
           )}
           style={{
             top: rect.y,
             left: rect.x,
             translateX: rect.width - 10,
+            translateY: "-50%",
           }}
         >
           {/* TODO: The image height should change smoothly */}
@@ -37,7 +37,7 @@ export const CertificatePreview = ({
             <Image
               src={data.img}
               alt="certificate"
-              className="max-h-[1000px] rounded-2xl object-contain shadow-2xl"
+              className="max-h-[1000px] object-contain shadow-2xl"
             />
           </div>
         </motion.div>

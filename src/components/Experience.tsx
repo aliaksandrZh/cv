@@ -2,8 +2,8 @@ import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 
 export const Experience = (props: { className?: string }) => (
   <HoverAnimationItemWrapper className={props.className}>
-    <h3>Experience</h3>
-    <h4 className="mt-3">iTechArt Group</h4>
+    <h3 className="text-title">Experience</h3>
+    <h4 className="text-title mt-3">iTechArt Group</h4>
     <h5>Software Engineer</h5>
     <h6 className="mt-1">2020-2023</h6>
     <ul>

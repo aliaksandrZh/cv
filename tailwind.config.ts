@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -12,11 +11,17 @@ const config: Config = {
         white: {
           DEFAULT: "var(--white)",
         },
-        yellow: {
+        hover: {
           DEFAULT: "var(--bg-selection)",
         },
         black: {
           DEFAULT: "var(--text)",
+        },
+        title: {
+          DEFAULT: "var(--title)",
+        },
+        red: {
+          DEFAULT: "var(--red)",
         },
       },
       backgroundImage: {
@@ -66,10 +71,10 @@ const config: Config = {
 
         bgIn: {
           "0%": {
-            background: "var(--black)",
+            background: "var(--red)",
           },
           "70%": {
-            background: "var(--black)",
+            background: "var(--red)",
           },
           "100%": {
             background: "var(--bg-selection)",
@@ -83,7 +88,7 @@ const config: Config = {
             background: "var(--bg-selection)",
           },
           "100%": {
-            background: "var(--black)",
+            background: "var(--red)",
           },
         },
       },

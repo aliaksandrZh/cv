@@ -2,10 +2,10 @@ import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 
 export const Projects = () => (
   <>
-    <h3>Projects</h3>
+    <h3 className="text-title">Projects</h3>
     <article className="mt-7">
       <HoverAnimationItemWrapper>
-        <h4>Ernst & Young (EY) Raptor</h4>
+        <h4 className="text-title">Ernst & Young (EY) Raptor</h4>
         <h5>Lead Frontend / Full-Stack Engineer</h5>
         <h6 className="">2021 - 2023</h6>
         <p className="mt-2 text-justify">
@@ -80,7 +80,7 @@ export const Projects = () => (
     </article>
     <article className="mt-7">
       <HoverAnimationItemWrapper>
-        <h4>MPRE</h4>
+        <h4 className="text-title">MPRE</h4>
         <h5>Frontend Engineer</h5>
         <h6 className="">2020 - 2021</h6>
         <p className="mt-2 text-justify">
@@ -118,7 +118,7 @@ export const Projects = () => (
     <article className="mt-7">
       <HoverAnimationItemWrapper>
         <div>
-          <h4>Raycast</h4>
+          <h4 className="text-title">Raycast</h4>
           <h5>Opensource</h5>
           <h6 className="">2024</h6>
           <p className="mt-2 text-justify">

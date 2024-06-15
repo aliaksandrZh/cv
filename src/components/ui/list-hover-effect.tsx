@@ -76,7 +76,7 @@ export const ListHoverEffect = ({
       ))}
       <span
         className={cn(
-          "absolute -z-10 -mt-0 scale-x-0 rounded-xl bg-yellow transition-all duration-[0.4s] ease-[ease-in-out] before:content-none group-hover:scale-x-105 group-hover:scale-y-125",
+          "bg-hover absolute -z-10 -mt-0 scale-x-0 rounded-xl transition-all duration-[0.4s] ease-[ease-in-out] before:content-none group-hover:scale-x-105 group-hover:scale-y-125",
           properties.full,
         )}
         style={{
