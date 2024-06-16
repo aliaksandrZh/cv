@@ -1,9 +1,8 @@
 import { GitHubIcon } from "@/assets/images/GithubIcon";
 import { LinkedInIcon } from "@/assets/images/LinkedinIcon";
 import { MailIcon } from "@/assets/images/MailIcon";
-import AvatarImage from "@/assets/images/image.png";
+import { AvatarIcon } from "@/assets/images/AvatarVectorIcon";
 import { expertise } from "@/libs/expertise";
-import Image from "next/image";
 import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 import { TypedText } from "./ui/TypedText";
 
@@ -12,10 +11,9 @@ export const Header = () => (
     <div className="flex flex-col p-5 sm:flex-row sm:items-center">
       <div className="flex items-center justify-center lg:w-3/12">
         <div className="rounded-full p-5 shadow-2xl">
-          <Image
-            src={AvatarImage}
-            alt="avatar"
-            height={250}
+          <AvatarIcon
+            width={200}
+            height={200}
             className="rounded-full shadow-2xl"
           />
         </div>
