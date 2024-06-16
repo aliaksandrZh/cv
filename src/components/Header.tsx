@@ -6,9 +6,10 @@ import { expertise } from "@/libs/expertise";
 import Image from "next/image";
 import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 import { FlipWords } from "./ui/FlipWords";
+import { TypedText } from "./ui/TypedText";
 
 export const Header = () => (
-  <header className="border-red container mx-auto border-b-2">
+  <header className="container mx-auto border-b-2 border-red">
     <div className="flex flex-col p-5 sm:flex-row sm:items-center">
       <div className="flex items-center justify-center lg:w-3/12">
         <div className="rounded-full p-5 shadow-2xl">
@@ -22,11 +23,11 @@ export const Header = () => (
       </div>
 
       <div className="flex flex-col sm:pl-5 lg:w-3/4">
-        <h1 className="text-title mt-5 text-center text-5xl font-bold sm:text-left md:mt-0">
+        <h1 className="mt-5 text-center text-5xl font-bold text-title sm:text-left md:mt-0">
           Aliaksandr Zhebit
         </h1>
-        <h2 className="mt-2 py-5 text-center text-3xl sm:text-left">
-          {/* <FlipWords duration={1000} words={expertise} className="text-black" /> */}
+        <h2 className="mt-5 h-10 text-center text-3xl sm:text-left">
+          <TypedText words={expertise} />
         </h2>
 
         <div className="mt-5 flex flex-wrap lg:flex-nowrap">

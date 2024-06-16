@@ -12,3 +12,10 @@ export const expertise = [
   "SQL",
   "Git",
 ];
+
+// export const expertise = [
+//   "1JavaScriptTypeScript",
+//   "2JavaScriptTypeScript",
+//   "3JavaScriptTypeScript",
+//   "4JavaScriptTypeScript",
+// ];

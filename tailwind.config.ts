@@ -30,6 +30,18 @@ const config: Config = {
         //   "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       keyframes: {
+        blinkCaret: {
+          "0%": {
+            "border-color": "transparent",
+          },
+          "50%": {
+            "border-color": "var(--red)",
+          },
+          "100%": {
+            "border-color": "transparent",
+          },
+        },
+
         unfoldIn: {
           "0%": {
             transform: "scaleY(.005) scaleX(.005)",
@@ -100,6 +112,7 @@ const config: Config = {
         zoomOut: "zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards",
         bgIn: "bgIn 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) forwards",
         bgOut: "bgOut 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards",
+        blinkCaret: "blinkCaret 1s ease-in-out infinite",
       },
     },
   },
