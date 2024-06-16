@@ -6,16 +6,16 @@ import { expertise } from "@/libs/expertise";
 import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 import { TypedText } from "./ui/TypedText";
 import Image from "next/image";
-import AvatarImage from "@/assets/images/aliaksandr.zhebit_Create_a_cartoonish_abstract_futuristic_SVG-s_da9640d2-2f41-4859-8588-daf72fcb2622.png";
+import AvatarImage from "@/assets/images/2.png";
 
 export const Header = () => (
-  <header className="container mx-auto border-b-2 border-red">
+  <header className="container mx-auto border-b-2 border-title">
     <div className="flex flex-col p-5 sm:flex-row sm:items-center">
       <div className="flex items-center justify-center lg:w-3/12">
         <Image
           src={AvatarImage}
           alt="avatar"
-          className="rounded-full shadow-2xl"
+          className="rounded-full shadow-2xl dark:bg-title"
           width={200}
           height={200}
         />

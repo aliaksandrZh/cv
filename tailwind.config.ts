@@ -20,8 +20,8 @@ const config: Config = {
         title: {
           DEFAULT: "var(--title)",
         },
-        red: {
-          DEFAULT: "var(--red)",
+        icon: {
+          DEFAULT: "var(--icon)",
         },
       },
       backgroundImage: {

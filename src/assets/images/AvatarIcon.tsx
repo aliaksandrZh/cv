@@ -18,7 +18,7 @@ export const AvatarIcon = ({
   >
     <g
       transform="translate(0.000000,2048.000000) scale(0.100000,-0.100000)"
-      fill="var(--red)"
+      fill="var(--icon)"
       stroke="none"
     >
       <path

@@ -49,34 +49,13 @@ export const ListHoverEffect = ({
   return (
     <ul className={cn("group cursor-default", className)}>
       {children.map((item, idx) => (
-        <li
-          className="hover-item"
-          key={idx}
-          // className="bg-red-500 transition-all duration-[0.3s] ease-[ease-in-out] hover:scale-105"
-          // onMouseEnter={(e) => {
-          //   // TODO: Optimize
-          //   const target = (e.target as HTMLElement).closest(
-          //     ".hover-item",
-          //   ) as HTMLElement;
-
-          //   setSize((s) =>
-          //     target[properties.targetSize as keyof HTMLElement] === 0
-          //       ? s
-          //       : (target[
-          //           properties.targetSize as keyof HTMLElement
-          //         ] as number),
-          //   );
-          //   setY(
-          //     target[properties.offsetTarget as keyof HTMLElement] as number,
-          //   );
-          // }}
-        >
+        <li className="hover-item" key={idx}>
           {item}
         </li>
       ))}
       <span
         className={cn(
-          "bg-hover absolute -z-10 -mt-0 scale-x-0 rounded-xl transition-all duration-[0.4s] ease-[ease-in-out] before:content-none group-hover:scale-x-105 group-hover:scale-y-125",
+          "absolute -z-10 -mt-0 scale-x-0 rounded-xl bg-hover transition-all duration-[0.4s] ease-[ease-in-out] before:content-none group-hover:scale-x-105 group-hover:scale-y-125",
           properties.full,
         )}
         style={{
