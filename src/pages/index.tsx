@@ -24,9 +24,9 @@ export default function Home() {
           <Exp />
           <div className="pb-32"></div>
 
-          <div className="container mx-auto flex justify-center">
+          {/* <div className="container mx-auto flex justify-center">
             <DownloadCV />
-          </div>
+          </div> */}
           <div className="pb-96"></div>
 
           <HoverAnimationBackground bgIdentifierAttribute="app-level-hover-bg" />
