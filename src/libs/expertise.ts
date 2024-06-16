@@ -11,11 +11,5 @@ export const expertise = [
   "SSMS",
   "SQL",
   "Git",
+  "Azure",
 ];
-
-// export const expertise = [
-//   "1JavaScriptTypeScript",
-//   "2JavaScriptTypeScript",
-//   "3JavaScriptTypeScript",
-//   "4JavaScriptTypeScript",
-// ];
