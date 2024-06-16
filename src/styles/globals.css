@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --white: #edebd7;
+  /* --white: #edebd7;
   --red: #b03119;
   --black: #423e37;
   --bg-1: #f5f5f5;
@@ -11,11 +11,25 @@
   --text: var(--black);
   --title: var(--red);
   --bg-selection: rgba(224, 224, 224, 0.8);
+  --icon: var(--red); */
+
+  --white: #f2e0db;
+  --red: #2e425f;
+  --black: #314966;
+  --bg-1: #dadfe3;
+  --bg-2: #d9dee4;
+  --text: var(--black);
+  --title: #2e425f;
+  --bg-selection: rgba(165, 182, 191, 0.8);
   --icon: var(--red);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --title: #6a8f7e;
+    /* --title: ##74585b; */
+    --icon: var(--title);
+    --red: var(--title);
     --black: #423e37;
     --bg-1: #2c2c2c;
     --bg-2: #1a1a1a;

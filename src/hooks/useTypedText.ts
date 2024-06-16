@@ -19,7 +19,7 @@ const typeWord = (word: string) =>
   );
 
 const deleteWord = (word: string) =>
-  interval(100).pipe(
+  interval(50).pipe(
     takeWhile((index) => index < word.length),
     map((index) => word.substring(0, word.length - index - 1)),
   );
