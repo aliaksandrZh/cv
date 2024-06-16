@@ -1,4 +1,4 @@
-import { AvatarIcon } from "@/assets/images/Aliaksandr";
+import { AvatarIcon } from "@/assets/images/AvatarIcon";
 import { GitHubIcon } from "@/assets/images/GithubIcon";
 import { LinkedInIcon } from "@/assets/images/LinkedinIcon";
 import { MailIcon } from "@/assets/images/MailIcon";
@@ -11,7 +11,11 @@ export const Header = () => (
     <div className="flex flex-col p-5 sm:flex-row sm:items-center">
       <div className="flex items-center justify-center lg:w-3/12">
         <div className="rounded-full p-5 shadow-2xl">
-          <AvatarIcon className="rounded-full shadow-2xl" />
+          <AvatarIcon
+            className="rounded-full shadow-2xl"
+            width={200}
+            height={200}
+          />
         </div>
       </div>
 
