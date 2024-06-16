@@ -145,30 +145,6 @@ export const Modal = ({
                   modal,
                 )}
               >
-                {/* <h2 className="mb-[15px] text-[25px] leading-[25px]">
-                  I`m a Modal
-                </h2>
-                <p className="text-lg leading-[22px]">Hear me roar.</p>
-                <svg
-                  className="modal-svg absolute left-0 top-0 h-full w-full rounded-[3px]"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="100%"
-                  height="100%"
-                  preserveAspectRatio="none"
-                >
-                  <rect
-                    className="stroke-white stroke-[2px]"
-                    strokeDasharray="778"
-                    strokeDashoffset="778"
-                    x="0"
-                    y="0"
-                    fill="none"
-                    width="226"
-                    height="162"
-                    rx="3"
-                    ry="3"
-                  ></rect>
-                </svg> */}
                 {children}
               </div>
             </div>

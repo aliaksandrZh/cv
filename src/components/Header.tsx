@@ -5,7 +5,6 @@ import AvatarImage from "@/assets/images/image.png";
 import { expertise } from "@/libs/expertise";
 import Image from "next/image";
 import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
-import { FlipWords } from "./ui/FlipWords";
 import { TypedText } from "./ui/TypedText";
 
 export const Header = () => (
