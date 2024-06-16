@@ -35,7 +35,7 @@ export const Certificates = () => {
               onClick={isMediaQueryMatched ? fn : () => openModal(c)}
             >
               <span>
-                {c.platform}: {c.date}
+                <span className="font-bold">{c.platform}</span>: {c.date}
               </span>
               <div>{c.title}</div>
             </li>

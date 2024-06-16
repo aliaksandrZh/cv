@@ -2,12 +2,12 @@ import studySectionJsA from "@/assets/images/certificates/study-section-js-a.web
 import studySectionJsE from "@/assets/images/certificates/study-section-js-e.webp";
 import studySectionJsF from "@/assets/images/certificates/study-section-js-f.webp";
 import testdomJs from "@/assets/images/certificates/testdom-js.webp";
-// import udemyAngular15 from "@/assets/images/certificates/udemy-angular-15.webp";
-// import udemyAngularTestingMc from "@/assets/images/certificates/udemy-angular-testing-masterclass.webp";
-// import udemyAngular from "@/assets/images/certificates/udemy-angular.webp";
-// import udemyCssMaster from "@/assets/images/certificates/udemy-css-master.webp";
-// import udemyJsAdvanced from "@/assets/images/certificates/udemy-js-advanced.webp";
-// import udemyRxjs from "@/assets/images/certificates/udemy-rxjs.webp";
+import udemyAngular15 from "@/assets/images/certificates/udemy-angular-15.webp";
+import udemyAngularTestingMc from "@/assets/images/certificates/udemy-angular-testing-masterclass.webp";
+import udemyAngular from "@/assets/images/certificates/udemy-angular.webp";
+import udemyCssMaster from "@/assets/images/certificates/udemy-css-master.webp";
+import udemyJsAdvanced from "@/assets/images/certificates/udemy-js-advanced.webp";
+import udemyRxjs from "@/assets/images/certificates/udemy-rxjs.webp";
 import angularIntermediate from "@/assets/images/certificates/angular-intermediate-certificate.webp";
 import reactIntermediate from "@/assets/images/certificates/react-frontend-developer-certificate.webp";
 import jsIntermediate from "@/assets/images/certificates/javascript-intermediate-certificate.webp";
@@ -55,6 +55,46 @@ export const certificates = [
     title: "JavaScript Programming (Foundation)",
     date: "16.04.2023",
   },
-];
+  {
+    img: udemyAngular,
+    platform: "Udemy",
+    title: "Angular - The Complite Guide",
+    date: "16.04.2023",
+  },
+  {
+    img: udemyAngular15,
+    platform: "Udemy",
+    title: "Reactive Angular Course",
+    date: "21.04.2023",
+  },
+  {
+    img: udemyAngularTestingMc,
+    platform: "Udemy",
+    title: "Angular Testing Masterclass",
+    date: "16.04.2023",
+  },
+  {
+    img: udemyCssMaster,
+    platform: "Udemy",
+    title: "Become a CSS master",
+    date: "16.04.2023",
+  },
+  {
+    img: udemyJsAdvanced,
+    platform: "Udemy",
+    title: "JavaScript: The Advanced concepts",
+    date: "25.04.2023",
+  },
+  {
+    img: udemyRxjs,
+    platform: "Udemy",
+    title: "RxJS in Practice",
+    date: "20.04.2023",
+  },
+].sort((a, b) => {
+  const dateA = new Date(a.date.split(".").reverse().join("-"));
+  const dateB = new Date(b.date.split(".").reverse().join("-"));
+  return dateB.getTime() - dateA.getTime(); // For descending order
+});
 
 export type Certificate = (typeof certificates)[0];
