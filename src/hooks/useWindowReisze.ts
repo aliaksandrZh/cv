@@ -14,7 +14,6 @@ export const useWindowResize = () => {
     const r$ = fromEvent(window, "resize")
       .pipe(
         debounceTime(500),
-        tap(() => console.log("resized")),
         tap(() => setResized({ isResized: true })),
       )
       .subscribe();

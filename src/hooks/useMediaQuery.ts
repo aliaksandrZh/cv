@@ -40,7 +40,6 @@ export const useMediaQueryRx = (size: MediaThresholds = "sm") => {
         map(() => window.matchMedia(mediaThresholds[size]).matches),
         startWith(window.matchMedia(mediaThresholds[size]).matches),
         distinctUntilChanged(),
-        tap((e) => console.log("DESKTOP", e)),
         tap((e) => setMatched({ isMediaQueryMatched: e })),
       )
       .subscribe();

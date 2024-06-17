@@ -21,6 +21,11 @@ export default function Home(
   return (
     <>
       <Head>
+        <meta
+          name="description"
+          content="Welcome to Aliaksandr Zhebit's CV! Explore my professional experience, projects, certificates, and download my CV. Learn more about my skills and qualifications in software development and engineering."
+        ></meta>
+
         <title>Aliaksandr Zhebit | Web dev</title>
       </Head>
       <HoverAnimationContextWrapper itemIdentifierAttribute="data-hover-item">

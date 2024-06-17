@@ -30,18 +30,19 @@ export const Certificates = () => {
       <h3 className="text-title">{t("certificates.title")}</h3>
       <ul className="group">
         {certificates.map((c) => (
-          <HoverAnimationItemWrapper key={c.title + c.platform}>
-            <li
-              className="hover-list-item-vertical text-left"
-              onMouseEnter={isMediaQueryMatched ? () => setCertificate(c) : fn}
-              onClick={isMediaQueryMatched ? fn : () => openModal(c)}
-            >
+          <li
+            key={c.title + c.platform}
+            className="hover-list-item-vertical flex text-left"
+            onMouseEnter={isMediaQueryMatched ? () => setCertificate(c) : fn}
+            onClick={isMediaQueryMatched ? fn : () => openModal(c)}
+          >
+            <HoverAnimationItemWrapper className="w-full">
               <span>
                 <span className="font-bold">{c.platform}</span>: {c.date}
               </span>
               <div>{c.title}</div>
-            </li>
-          </HoverAnimationItemWrapper>
+            </HoverAnimationItemWrapper>
+          </li>
         ))}
       </ul>
 
