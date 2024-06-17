@@ -1,18 +1,41 @@
 import { useTranslation } from "next-i18next";
 import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
+import { useEffect, useState } from "react";
 
 export const DownloadCV = ({ className }: { className?: string }) => {
+  const [ext, setExt] = useState<"pdf" | "docx">("pdf");
+  const [a, setA] = useState({
+    href: `./Aliaksandr.Zhebit.${ext}`,
+    download: `Aliaksandr.Zhebit.Web.Dev.${ext}`,
+  });
+  useEffect(() => {
+    setA({
+      href: `./Aliaksandr.Zhebit.${ext}`,
+      download: `Aliaksandr.Zhebit.Web.Dev.${ext}`,
+    });
+  }, [ext]);
   const { t } = useTranslation();
   return (
     <HoverAnimationItemWrapper className={className}>
-      <a
-        href="./Aliaksandr.Zhebit.pdf"
-        download="Aliaksandr.Zhebit.Web.Dev.pdf"
-      >
-        <button className="bg-title px-12 py-3 text-white shadow-lg transition-all hover:scale-105 active:scale-90 sm:px-20 sm:py-5">
-          {t("download.title")}
-        </button>
-      </a>
+      <div className="flex">
+        <a
+          className="block h-full bg-title shadow-lg"
+          href={a.href}
+          download={a.download}
+        >
+          <button className="bg-title py-3 pl-12 pr-3 text-white transition-all hover:scale-105 active:scale-90 sm:py-5 sm:pl-20">
+            {t("download.title")}{" "}
+          </button>{" "}
+        </a>
+        <select
+          value={ext}
+          className="border-l-2 border-[var(--bg-2)] bg-title py-3 pl-1 pr-5 text-white transition-all hover:scale-105 active:scale-90 sm:py-5"
+          onChange={(e) => setExt(e.currentTarget.value as "pdf" | "docx")}
+        >
+          <option value="pdf">.pdf</option>
+          <option value="docx">.docx</option>
+        </select>
+      </div>
     </HoverAnimationItemWrapper>
   );
 };
