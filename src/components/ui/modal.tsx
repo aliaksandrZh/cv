@@ -1,3 +1,7 @@
+import {
+  DelayModalAnimationStart,
+  DelayModalUnmounting,
+} from "@/libs/constants";
 import { cn } from "@/utils/cn";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
@@ -31,7 +35,7 @@ const useModalAnimationRx = (show: boolean) => {
           show
             ? of(show).pipe(
                 tap(() => setIsVisible(true)),
-                delay(250),
+                delay(DelayModalAnimationStart),
                 tap(() =>
                   setStyles({
                     container: "scale-x-0 scale-y-[0.01] animate-unfoldIn",
@@ -48,7 +52,7 @@ const useModalAnimationRx = (show: boolean) => {
                     bg: "animate-bgOut",
                   }),
                 ),
-                delay(1500),
+                delay(DelayModalUnmounting),
                 tap(() => setIsVisible(false)),
                 tap(() => setStyles((s) => ({ ...s, container: "" }))),
               ),
@@ -63,43 +67,6 @@ const useModalAnimationRx = (show: boolean) => {
   }, [show, show$]);
 
   return { styles, isVisible };
-};
-
-const useModalAnimation = (show: boolean) => {
-  const { current: timers } = useRef<NodeJS.Timeout[]>([]);
-  const [styles, setStyles] = useState("");
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (show === isVisible) {
-      return;
-    }
-
-    if (show) {
-      setIsVisible(show);
-      timers.push(
-        setTimeout(() => {
-          setStyles("scale-x-0 scale-y-[0.01] animate-unfoldIn");
-        }, 1000),
-      );
-      return;
-    }
-
-    setStyles("scale-100 animate-unfoldOut");
-    timers.push(
-      setTimeout(() => {
-        setIsVisible(show);
-        setStyles("");
-      }, 1000),
-    );
-
-    return () => timers.forEach((t) => clearTimeout(t));
-  }, [show, isVisible, timers]);
-
-  return {
-    styles,
-    isVisible,
-  };
 };
 
 export const Modal = ({

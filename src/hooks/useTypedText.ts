@@ -1,3 +1,9 @@
+import {
+  DeleteCharacterInterval,
+  TypeCharacterInterval,
+  WaitForNewWord,
+  WaitForWordDeleting,
+} from "@/libs/constants";
 import { useEffect, useState } from "react";
 import {
   concat,
@@ -14,12 +20,12 @@ import {
 
 const typeWord = (word: string) =>
   from(word).pipe(
-    concatMap((char) => of(char).pipe(delay(100))),
+    concatMap((char) => of(char).pipe(delay(TypeCharacterInterval))),
     map((char, index) => word.substring(0, index + 1)),
   );
 
 const deleteWord = (word: string) =>
-  interval(50).pipe(
+  interval(DeleteCharacterInterval).pipe(
     takeWhile((index) => index < word.length),
     map((index) => word.substring(0, word.length - index - 1)),
   );
@@ -31,11 +37,11 @@ export const useTypedText = (words: string[]) => {
       concat(
         typeWord(word).pipe(
           tap((x) => setLetters(x)),
-          delay(1500),
+          delay(WaitForWordDeleting),
         ),
         deleteWord(word).pipe(
           tap((x) => setLetters(x)),
-          delay(500),
+          delay(WaitForNewWord),
         ),
       );
     const words$ = from(words)
