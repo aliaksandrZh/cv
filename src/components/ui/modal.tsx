@@ -1,4 +1,3 @@
-"use client";
 import { cn } from "@/utils/cn";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
