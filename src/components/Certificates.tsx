@@ -1,6 +1,7 @@
 import { useMediaQueryRx } from "@/hooks/useMediaQuery";
 import { Certificate, certificates } from "@/libs/certificates";
 import { fn } from "@/utils/fnPlaceholder";
+import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import { useCallback, useState } from "react";
 import { CertificatePreview } from "./CertificatePreview";
@@ -8,6 +9,7 @@ import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 import { Modal } from "./ui/Modal";
 
 export const Certificates = () => {
+  const { t } = useTranslation();
   const { isMediaQueryMatched } = useMediaQueryRx();
   const [{ status, modalData }, setShow] = useState<{
     status: boolean;
@@ -25,7 +27,7 @@ export const Certificates = () => {
 
   return (
     <div onMouseLeave={() => setCertificate(null)}>
-      <h3 className="text-title">Certificates</h3>
+      <h3 className="text-title">{t("certificates.title")}</h3>
       <ul className="group">
         {certificates.map((c) => (
           <HoverAnimationItemWrapper key={c.title + c.platform}>

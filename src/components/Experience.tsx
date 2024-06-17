@@ -1,24 +1,19 @@
+import { useTranslation } from "next-i18next";
 import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 
-export const Experience = (props: { className?: string }) => (
-  <HoverAnimationItemWrapper className={props.className}>
-    <h3 className="text-title">Experience</h3>
-    <h4 className="text-title mt-3">iTechArt Group</h4>
-    <h5>Software Engineer</h5>
-    <h6 className="mt-1">2020-2023</h6>
-    <ul>
-      <li className="hover-list-item-vertical">
-        Developed and maintained web applications using technologies such as
-        JavaScript, TypeScript, .Net, React, Angular, NodeJS, and SQL.
-      </li>
-      <li className="hover-list-item-vertical">
-        Collaborated with cross-functional teams to deliver high-quality
-        software solutions.
-      </li>
-      <li className="hover-list-item-vertical">
-        Participated in code reviews, troubleshooting, and optimization efforts
-        to improve application performance and reliability.
-      </li>
-    </ul>
-  </HoverAnimationItemWrapper>
-);
+export const Experience = (props: { className?: string }) => {
+  const { t } = useTranslation("common");
+  return (
+    <HoverAnimationItemWrapper className={props.className}>
+      <h3 className="text-title">{t("experience.title")}</h3>
+      <h4 className="mt-3 text-title">iTechArt Group</h4>
+      <h5>{t("experience.position")}</h5>
+      <h6 className="mt-1">2020-2023</h6>
+      <ul>
+        <li className="hover-list-item-vertical">{t("experience.done.d1")}</li>
+        <li className="hover-list-item-vertical">{t("experience.done.d2")}</li>
+        <li className="hover-list-item-vertical">{t("experience.done.d3")}</li>
+      </ul>
+    </HoverAnimationItemWrapper>
+  );
+};

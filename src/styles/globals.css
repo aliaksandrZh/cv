@@ -10,7 +10,7 @@
   --bg-2: #d9dee4;
   --text: var(--black);
   --title: #2e425f;
-  --bg-selection: rgba(165, 182, 191, 0.8);
+  --bg-selection: rgba(165, 182, 191, 0.4);
   --icon: var(--red);
 }
 

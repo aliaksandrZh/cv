@@ -4,6 +4,8 @@ import { Header } from "@/components/Header";
 import { HoverAnimationContextWrapper } from "@/components/context-wrappers/HoverAnimationContextWrapper";
 import { HoverAnimationBackground } from "@/components/ui/HoverAnimationBackground";
 import { cn } from "@/utils/cn";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Roboto_Mono } from "next/font/google";
 import Head from "next/head";
 
@@ -11,7 +13,11 @@ const roboto = Roboto_Mono({
   subsets: ["cyrillic", "latin"],
 });
 
-export default function Home() {
+type Props = {};
+
+export default function Home(
+  _props: InferGetStaticPropsType<typeof getStaticProps>,
+) {
   return (
     <>
       <Head>
@@ -24,9 +30,9 @@ export default function Home() {
           <Exp />
           <div className="pb-32"></div>
 
-          {/* <div className="container mx-auto flex justify-center">
+          <div className="container mx-auto flex justify-center">
             <DownloadCV />
-          </div> */}
+          </div>
           <div className="pb-96"></div>
 
           <HoverAnimationBackground bgIdentifierAttribute="app-level-hover-bg" />
@@ -35,3 +41,11 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? "en", ["common"])),
+    },
+  };
+};

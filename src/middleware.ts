@@ -1,11 +1,23 @@
-import { NextRequest, NextResponse, userAgent } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export function middleware(request: NextRequest) {
-  const url = request.nextUrl;
-  const { device } = userAgent(request);
+const PUBLIC_FILE = /\.(.*)$/;
 
-  const viewport = device.type === "mobile" ? "mobile" : "desktop";
-  console.log(device);
-  url.searchParams.set("viewport", viewport);
-  return NextResponse.rewrite(url);
+export async function middleware(req: NextRequest) {
+  if (
+    req.nextUrl.pathname.startsWith("/_next") ||
+    PUBLIC_FILE.test(req.nextUrl.pathname)
+  ) {
+    return;
+  }
+
+  if (req.nextUrl.locale === "default") {
+    const locale = req.cookies.get("NEXT_LOCALE")?.value || "en";
+
+    return NextResponse.redirect(
+      new URL(
+        `/${locale}${req.nextUrl.pathname}${req.nextUrl.search}`,
+        req.url,
+      ),
+    );
+  }
 }
