@@ -32,6 +32,11 @@ body {
   color: var(--text);
 }
 
+::selection {
+  color: var(--white);
+  background: var(--title);
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
