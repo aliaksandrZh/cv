@@ -32,7 +32,7 @@ const useModalAnimationRx = (show: boolean) => {
           show
             ? of(show).pipe(
                 tap(() => setIsVisible(true)),
-                delay(1000),
+                delay(250),
                 tap(() =>
                   setStyles({
                     container: "scale-x-0 scale-y-[0.01] animate-unfoldIn",
@@ -110,8 +110,7 @@ export const Modal = ({
 }: {
   show: boolean;
   onCloseButtonClick: () => void;
-  //TODO: FIX
-  children: any;
+  children: string | JSX.Element | JSX.Element[];
 }) => {
   const {
     isVisible,
