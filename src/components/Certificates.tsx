@@ -2,12 +2,11 @@ import { useMediaQueryRx } from "@/hooks/useMediaQuery";
 import { Certificate, certificates } from "@/libs/certificates";
 import { fn } from "@/utils/fnPlaceholder";
 import { useTranslation } from "next-i18next";
-import Image from "next/image";
-import { Suspense, useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import { CertificatePreview } from "./CertificatePreview";
 import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
-import { Modal } from "./ui/Modal";
 import { LazyImage } from "./ui/LazyImage";
+import { Modal } from "@/components/ui/Modal";
 
 export const Certificates = () => {
   const { t } = useTranslation();
