@@ -25,7 +25,7 @@ const mediaThresholds = {
 };
 
 type MediaThresholds = keyof typeof mediaThresholds;
-export const useMediaQueryRx = (size: MediaThresholds = "sm") => {
+export const useMediaQueryRx = (size: MediaThresholds = "md") => {
   const [matched, setMatched] = useState<{ isMediaQueryMatched: boolean }>({
     isMediaQueryMatched: false,
   });

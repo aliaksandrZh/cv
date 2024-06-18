@@ -11,6 +11,10 @@ export const Projects = () => {
           <h4 className="text-title">Ernst & Young (EY) Raptor</h4>
           <h5>{t("projects.ey.position")}</h5>
           <h6 className="">2021 - 2023</h6>
+          <h6 className="font-normal">
+            <span className="font-bold">{t("projects.stack")}</span>: Angular,
+            ASP.Net Core, SSMS, SQL, Azure
+          </h6>
           <p className="mt-2 text-justify">{t("projects.ey.description")}</p>
           <h6 className="mt-2 font-bold">{t("projects.achievements")}</h6>
           <ul>
@@ -61,6 +65,10 @@ export const Projects = () => {
           <h4 className="text-title">MPRE</h4>
           <h5>{t("projects.mpre.position")}</h5>
           <h6 className="">2020 - 2021</h6>
+          <h6 className="font-normal">
+            <span className="font-bold">{t("projects.stack")}</span>: Angular,
+            React, Django, Postgress, Docker, Circle CI, Sentry
+          </h6>
           <p className="mt-2 text-justify">{t("projects.mpre.description")}</p>
           <h6 className="mt-2 font-bold">{t("projects.achievements")}</h6>
           <ul>
@@ -88,11 +96,15 @@ export const Projects = () => {
             <h4 className="text-title">Raycast</h4>
             <h5>{t("projects.raycast.position")}</h5>
             <h6 className="">2024</h6>
+            <h6 className="font-normal">
+              <span className="font-bold">{t("projects.stack")}</span>: React,
+              NodeJS, Swift, AppleScripts
+            </h6>
             <p className="mt-2 text-justify">
               {t("projects.raycast.description")}
             </p>
             <h5 className="mt-2 font-bold">
-              {t("projects.raycast.extensions")}:{" "}
+              {t("projects.raycast.extensions")}:
             </h5>
 
             <ul>
