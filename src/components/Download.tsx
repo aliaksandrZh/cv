@@ -24,13 +24,13 @@ export const DownloadCV = ({ className }: { className?: string }) => {
           download={a.download}
         >
           <button className="bg-title py-3 pl-12 pr-3 text-white transition-all hover:scale-105 active:scale-90 sm:py-5 sm:pl-20">
-            {t("download.title")}{" "}
-          </button>{" "}
+            {t("download.title")}
+          </button>
         </a>
         <select
           aria-label="Select extension"
           value={ext}
-          className="border-l-2 border-[var(--bg-2)] bg-title py-3 pl-1 pr-5 text-white transition-all hover:scale-105 active:scale-90 sm:py-5"
+          className="bg-[var(--title-light)] py-3 pl-1 pr-5 text-white transition-all hover:scale-105 active:scale-90 sm:py-5"
           onChange={(e) => setExt(e.currentTarget.value as "pdf" | "docx")}
         >
           <option value="pdf">.pdf</option>

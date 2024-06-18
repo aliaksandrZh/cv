@@ -10,13 +10,15 @@
   --bg-2: #d9dee4;
   --text: var(--black);
   --title: #2e425f;
+  --title-light: #263751;
   --bg-selection: rgba(165, 182, 191, 0.4);
-  --icon: var(--red);
+  --icon: var(--title);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --title: #6a8f7e;
+    --title-light: #587362;
     --icon: var(--title);
     --red: var(--title);
     --black: #423e37;
