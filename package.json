@@ -6,7 +6,8 @@
     "dev": "NODE_ENV=development next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -25,6 +26,7 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.19",
+    "cypress": "^13.11.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8",
