@@ -5,10 +5,10 @@ import { MailIcon } from "../assets/images/MailIcon";
 import { expertise } from "../libs/expertise";
 import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 import { TypedText } from "./ui/TypedText";
-import { useTranslation } from "../hooks/useTranslation";
+import { useTranslation } from 'react-i18next';
 
 export const Header = () => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation();
 
   return (
     <header className="container mx-auto border-b-2 border-title">

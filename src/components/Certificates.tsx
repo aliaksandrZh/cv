@@ -1,7 +1,7 @@
 import { useMediaQueryRx } from "../hooks/useMediaQuery";
 import { Certificate, certificates } from "../libs/certificates";
 import { fn } from "../utils/fnPlaceholder";
-import { useTranslation } from "../hooks/useTranslation";
+import { useTranslation } from 'react-i18next';
 import { useCallback, useState } from "react";
 import { CertificatePreview } from "./CertificatePreview";
 import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
