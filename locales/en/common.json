@@ -1,0 +1,80 @@
+{
+  "name": "Aliaksandr Zhebit",
+  "about": {
+    "title": "About Me",
+    "text": {
+      "first": "Experienced software engineer with a background in",
+      "second": "Possesses 3+ years of industry experience with expertise in frontend and full-stack development. Recently returned to the workforce after a year-long break and eager to leverage skills and knowledge to contribute to innovative projects."
+    },
+    "target": "web development"
+  },
+  "experience": {
+    "title": "Experience",
+    "position": "Software Engineer",
+    "done": {
+      "d1": "Developed and maintained web applications using technologies such as JavaScript, TypeScript, .Net, React, Angular, NodeJS, and SQL.",
+      "d2": "Collaborated with cross-functional teams to deliver high-quality software solutions.",
+      "d3": "Participated in code reviews, troubleshooting, and optimization efforts to improve application performance and reliability."
+    }
+  },
+  "expertise": {
+    "title": "Skills"
+  },
+  "certificates": {
+    "title": "Certificates"
+  },
+  "education": {
+    "title": "Education",
+    "degree": "Bachelor`s Degree",
+    "university": "Francisk Skorina Gomel State University"
+  },
+  "projects": {
+    "stack": "Stack",
+    "title": "Projects",
+    "achievements": "Key Contributions and Achievements",
+    "ey": {
+      "position": "Lead Frontend / Full-Stack Engineer",
+      "description": "Ernst & Young (EY) Raptor refers to a secure, cloud-based technology platform known as the EY Global Tax Platform (GTP). This platform integrates various data sources and provides advanced analytics, dashboards, and reporting capabilities to offer end-to-end finance and tax visibility and compliance solutions. The GTP is designed to help organizations manage their tax functions more effectively by leveraging data and technology to transform, grow, and operate efficiently.",
+      "done": {
+        "d1": "Spearheaded the frontend development efforts as Lead Engineer, overseeing the design, development, and optimization of modular and reusable components.",
+        "d2": "Designed and implemented feature modules with intricate logic and interceptors, ensuring seamless user experiences across different versions of the application.",
+        "d3": "Improved application performance and responsiveness through optimization techniques, resulting in a 20% increase in application responsiveness and a 30% reduction in development time.",
+        "d4": "Conducted extensive codebase cleanups, enhancing code quality and reducing technical debt, leading to improved maintainability and scalability.",
+        "d5": "Increased test coverage from 30% to 70%, ensuring robustness and reliability of the application.",
+        "d6": "Played a pivotal role in supporting and enhancing the Micro Frontend (MFE) system, including chunk generation, lazy loading, and resolving critical issues.",
+        "d7": "Mentored UI developers from other teams, fostering a culture of continuous learning and knowledge sharing.",
+        "d8": "Provided basic DevOps support, including managing variables, restarting pods, and optimizing Git flow with pre-push hooks",
+        "d9": "Proactively identified and resolved production issues, ensuring smooth operation of applications and minimizing downtime.",
+        "d10": "Contributed to the development of new endpoints, tables, and migrations, addressing critical business needs and supporting import/export functionalities."
+      }
+    },
+    "mpre": {
+      "position": "Frontend Engineer",
+      "description": "MPRE is a Swiss company specializing in mortgage and real estate services. The platform integrates property search, valuation, and financing solutions, utilizing advanced data analytics to offer personalized, transparent, and efficient real estate management tools, supporting users throughout the property lifecycle.",
+      "done": {
+        "d1": "Led the frontend development efforts, collaborating closely with cross-functional teams to deliver end-to-end solutions.",
+        "d2": "Enhanced user interface and scalability of the platform using Angular, Angular Material, and ChartJs, resulting in a more intuitive and efficient user experience",
+        "d3": "Integrated Google APIs, including Google Maps, Google Streetview, and Google Analytics, to provide enhanced functionality and user insights.",
+        "d4": "Refactored and redesigned the source code."
+      }
+    },
+    "raycast": {
+      "position": "Open Source",
+      "description": "Raycast is an open-source collection of powerful productivity tools integrated into an extendable launcher. It enhances workflow efficiency with a wide range of utilities, making everyday tasks quicker and more streamlined.",
+      "downloads": "downloads",
+      "extensions": "Extensions",
+      "done": {
+        "d1": "Enables users to quickly test their internet speed directly from the Raycast app.",
+        "d2": "Enhances developer workflows by providing essential console tools.",
+        "d3": "Offers a command to mute/unmute the audio input, along with a menu bar extension that shows the current status and allows toggling with a click."
+      }
+    }
+  },
+  "download": {
+    "title": "Download CV"
+  },
+  "p404": {
+    "text": "The page you are looking for might have been removed or its name changed, or it is temporarily unavailable.",
+    "back": "Go back to the homepage"
+  }
+}
