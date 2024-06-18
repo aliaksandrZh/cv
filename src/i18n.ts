@@ -21,7 +21,14 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    defaultNS: "common",
+    // defaultNS: "common",
+    backend: {
+      // Set the custom load path here
+      // for deployment
+      // loadPath: "locales/{{lng}}/{{ns}}.json",
+      // for local
+      loadPath: "cv/locales/{{lng}}/{{ns}}.json",
+    },
     fallbackLng: "en",
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default

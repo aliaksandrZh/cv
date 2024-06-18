@@ -1,9 +1,9 @@
 import { expertise } from "../libs/expertise";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 
 export const Expertise = () => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation();
   return (
     <HoverAnimationItemWrapper>
       <h3 className="text-title">{t("expertise.title")}</h3>

@@ -1,8 +1,8 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 
 export const Education = () => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation();
   return (
     <div>
       <HoverAnimationItemWrapper>

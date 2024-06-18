@@ -1,8 +1,8 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 
 export const Experience = (props: { className?: string }) => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation();
   return (
     <HoverAnimationItemWrapper className={props.className}>
       <h3 className="text-title">{t("experience.title")}</h3>
