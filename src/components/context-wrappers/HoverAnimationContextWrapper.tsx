@@ -37,7 +37,7 @@ export const HoverAnimationContextWrapper = (props: {
         handleMouseEnter,
       }}
     >
-      <div className="relative">{props.children}</div>
+      <div className="relative min-h-dvh">{props.children}</div>
     </HoverAnimationContext.Provider>
   );
 };

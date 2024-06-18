@@ -8,7 +8,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        'roboto': ['"Roboto Mono"', 'monospace'],
+        roboto: ['"Roboto Mono"', "monospace"],
       },
       colors: {
         white: {

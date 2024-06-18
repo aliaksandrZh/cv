@@ -1,13 +1,8 @@
-/* src/index.css */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
-
-/* Other Tailwind and custom styles */
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 :root {
   --white: #f2e0db;
@@ -39,7 +34,7 @@
 body {
   background: linear-gradient(to top, var(--bg-1), var(--bg-2));
   color: var(--text);
-  font-family: 'Roboto mono', monospace;
+  font-family: "Roboto mono", monospace;
 }
 
 ::selection {

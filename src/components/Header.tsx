@@ -5,13 +5,13 @@ import { MailIcon } from "../assets/images/MailIcon";
 import { expertise } from "../libs/expertise";
 import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 import { TypedText } from "./ui/TypedText";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 export const Header = () => {
   const { t } = useTranslation();
 
   return (
-    <header className="container mx-auto border-b-2 border-title">
+    <header className="container mx-auto border-b-2 border-title pt-5">
       <div className="flex flex-col p-5 sm:flex-row sm:items-center">
         <div className="flex items-center justify-center lg:w-3/12">
           <img
