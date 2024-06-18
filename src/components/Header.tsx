@@ -35,7 +35,7 @@ export const Header = () => {
           <div className="mt-5 flex flex-wrap lg:flex-nowrap">
             <HoverAnimationItemWrapper className="flex basis-1/2 justify-center sm:justify-start md:basis-auto">
               <a
-                className="cursor-pointer"
+                className="cursor-pointer text-title"
                 href="https://www.linkedin.com/in/aliaksandr-zhebit-65489b272/"
                 target="_blank"
               >
