@@ -1,6 +1,6 @@
-import { useHoverAnimation } from "@/hooks/useHoverAnimation";
-import { Certificate } from "@/libs/certificates";
-import { cn } from "@/utils/cn";
+import { useHoverAnimation } from "../hooks/useHoverAnimation";
+import { Certificate } from "../libs/certificates";
+import { cn } from "../utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import { LazyImage } from "./ui/LazyImage";
 
@@ -23,7 +23,7 @@ export const CertificatePreview = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className={cn(
-            "absolute z-10 max-h-fit w-80 cursor-pointer bg-hover p-2 shadow-2xl transition-all duration-[1s] ease-[ease-in-out]",
+            "absolute z-10 max-h-fit w-80 cursor-pointer bg-hover p-2 shadow-2xl transition-all duration-[1s] ease-[ease-in-out]"
           )}
           style={{
             top: rect.y,

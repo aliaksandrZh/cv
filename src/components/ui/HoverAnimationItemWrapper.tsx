@@ -1,4 +1,4 @@
-import { useHoverAnimation } from "@/hooks/useHoverAnimation";
+import { useHoverAnimation } from "../../hooks/useHoverAnimation";
 
 export const HoverAnimationItemWrapper = ({
   className = "",

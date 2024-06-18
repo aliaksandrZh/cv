@@ -1,6 +1,6 @@
-import { useHoverAnimation } from "@/hooks/useHoverAnimation";
-import { useWindowResize } from "@/hooks/useWindowReisze";
-import { cn } from "@/utils/cn";
+import { useHoverAnimation } from "../../hooks/useHoverAnimation";
+import { useWindowResize } from "../../hooks/useWindowReisze";
+import { cn } from "../../utils/cn";
 import { useEffect, useState } from "react";
 
 type HoverBackgroundState =
@@ -25,6 +25,7 @@ export const HoverAnimationBackground = (props: HoverBackgroundProps) => {
   const { rect } = useHoverAnimation();
 
   useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     setStyle((s) => ({ transform: "scale(0)" }));
   }, [resized]);
 

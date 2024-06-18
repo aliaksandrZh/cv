@@ -1,9 +1,8 @@
 import {
   HoverAnimationContext,
   RectState,
-} from "@/contexts/HoverAnimationContext";
-import { useMediaQueryRx } from "@/hooks/useMediaQuery";
-import { useWindowResize } from "@/hooks/useWindowReisze";
+} from "../../contexts/HoverAnimationContext";
+import { useMediaQueryRx } from "../../hooks/useMediaQuery";
 import { MouseEvent, useEffect, useState } from "react";
 
 export const HoverAnimationContextWrapper = (props: {
@@ -25,6 +24,8 @@ export const HoverAnimationContextWrapper = (props: {
       height: e.currentTarget.clientHeight,
     });
   };
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleMouseLeave = (e: MouseEvent<HTMLElement>) => {};
 
   return (

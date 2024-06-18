@@ -1,12 +1,11 @@
-import AvatarImage from "@/assets/images/2.png";
+import AvatarImage from "../assets/images/2.png";
 import { GitHubIcon } from "../assets/images/GithubIcon";
 import { LinkedInIcon } from "../assets/images/LinkedinIcon";
 import { MailIcon } from "../assets/images/MailIcon";
-import { expertise } from "@/libs/expertise";
-import { useTranslation } from "next-i18next";
-import Image from "next/image";
+import { expertise } from "../libs/expertise";
 import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 import { TypedText } from "./ui/TypedText";
+import { useTranslation } from "../hooks/useTranslation";
 
 export const Header = () => {
   const { t } = useTranslation("common");
@@ -15,7 +14,7 @@ export const Header = () => {
     <header className="container mx-auto border-b-2 border-title">
       <div className="flex flex-col p-5 sm:flex-row sm:items-center">
         <div className="flex items-center justify-center lg:w-3/12">
-          <Image
+          <img
             src={AvatarImage}
             alt="avatar"
             className="rounded-full shadow-2xl dark:bg-title"

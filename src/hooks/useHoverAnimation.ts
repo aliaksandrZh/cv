@@ -1,4 +1,4 @@
-import { HoverAnimationContext } from "@/contexts/HoverAnimationContext";
+import { HoverAnimationContext } from "../contexts/HoverAnimationContext";
 import { useContext } from "react";
 
 export const useHoverAnimation = () => {

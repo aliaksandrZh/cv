@@ -1,5 +1,5 @@
-import { expertise } from "@/libs/expertise";
-import { useTranslation } from "next-i18next";
+import { expertise } from "../libs/expertise";
+import { useTranslation } from "../hooks/useTranslation";
 import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 
 export const Expertise = () => {

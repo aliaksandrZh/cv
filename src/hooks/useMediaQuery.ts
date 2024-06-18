@@ -7,7 +7,7 @@ import {
   startWith,
   tap,
 } from "rxjs";
-import { WaitForTimeFromLastResize } from "@/libs/constants";
+import { WaitForTimeFromLastResize } from "../libs/constants";
 /**
  * sm	640px	@media (min-width: 640px) { ... }
 md	768px	@media (min-width: 768px) { ... }
@@ -41,7 +41,7 @@ export const useMediaQueryRx = (size: MediaThresholds = "md") => {
         map(() => window.matchMedia(mediaThresholds[size]).matches),
         startWith(window.matchMedia(mediaThresholds[size]).matches),
         distinctUntilChanged(),
-        tap((e) => setMatched({ isMediaQueryMatched: e })),
+        tap((e) => setMatched({ isMediaQueryMatched: e }))
       )
       .subscribe();
 

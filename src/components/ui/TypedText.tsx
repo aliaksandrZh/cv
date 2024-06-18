@@ -1,4 +1,4 @@
-import { useTypedText } from "@/hooks/useTypedText";
+import { useTypedText } from "../../hooks/useTypedText";
 
 export const TypedText = ({ words }: { words: string[] }) => {
   const { letters } = useTypedText(words);

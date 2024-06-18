@@ -1,4 +1,4 @@
-import { WaitForTimeFromLastResize } from "@/libs/constants";
+import { WaitForTimeFromLastResize } from "../libs/constants";
 import { useEffect, useState } from "react";
 import { debounceTime, fromEvent, tap } from "rxjs";
 
@@ -15,7 +15,7 @@ export const useWindowResize = () => {
     const r$ = fromEvent(window, "resize")
       .pipe(
         debounceTime(WaitForTimeFromLastResize),
-        tap(() => setResized({ isResized: true })),
+        tap(() => setResized({ isResized: true }))
       )
       .subscribe();
 

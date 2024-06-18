@@ -1,5 +1,4 @@
-import { cn } from "@/utils/cn";
-import Image from "next/image";
+import { cn } from "../../utils/cn";
 import { useEffect, useState } from "react";
 import { Skeleton } from "./Skeleton";
 
@@ -33,11 +32,11 @@ export const LazyImage = ({
         <Skeleton
           className={cn(
             "absolute left-0 top-0 h-full w-full transition-all",
-            skeletonClassName,
+            skeletonClassName
           )}
         />
       )}
-      <Image
+      <img
         src={src}
         alt={alt}
         width={width}
@@ -46,7 +45,7 @@ export const LazyImage = ({
         className={cn(
           isLoading ? "opacity-0" : "opacity-100",
           "w-full transition-all",
-          className,
+          className
         )}
       />
     </div>
