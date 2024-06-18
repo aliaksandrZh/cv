@@ -1,16 +1,16 @@
-import studySectionJsA from "@/assets/images/certificates/study-section-js-a.webp";
-import studySectionJsE from "@/assets/images/certificates/study-section-js-e.webp";
-import studySectionJsF from "@/assets/images/certificates/study-section-js-f.webp";
-import testdomJs from "@/assets/images/certificates/testdom-js.webp";
-import udemyAngular15 from "@/assets/images/certificates/udemy-angular-15.webp";
-import udemyAngularTestingMc from "@/assets/images/certificates/udemy-angular-testing-masterclass.webp";
-import udemyAngular from "@/assets/images/certificates/udemy-angular.webp";
-import udemyCssMaster from "@/assets/images/certificates/udemy-css-master.webp";
-import udemyJsAdvanced from "@/assets/images/certificates/udemy-js-advanced.webp";
-import udemyRxjs from "@/assets/images/certificates/udemy-rxjs.webp";
-import angularIntermediate from "@/assets/images/certificates/angular-intermediate-certificate.webp";
-import reactIntermediate from "@/assets/images/certificates/react-frontend-developer-certificate.webp";
-import jsIntermediate from "@/assets/images/certificates/javascript-intermediate-certificate.webp";
+import studySectionJsA from "../../public/certificates/study-section-js-a.webp";
+import studySectionJsE from "../../public/certificates/study-section-js-e.webp";
+import studySectionJsF from "../../public/certificates/study-section-js-f.webp";
+import testdomJs from "../../public/certificates/testdom-js.webp";
+import udemyAngular15 from "../../public/certificates/udemy-angular-15.webp";
+import udemyAngularTestingMc from "../../public/certificates/udemy-angular-testing-masterclass.webp";
+import udemyAngular from "../../public/certificates/udemy-angular.webp";
+import udemyCssMaster from "../../public/certificates/udemy-css-master.webp";
+import udemyJsAdvanced from "../../public/certificates/udemy-js-advanced.webp";
+import udemyRxjs from "../../public/certificates/udemy-rxjs.webp";
+import angularIntermediate from "../../public/certificates/angular-intermediate-certificate.webp";
+import reactIntermediate from "../../public/certificates/react-frontend-developer-certificate.webp";
+import jsIntermediate from "../../public/certificates/javascript-intermediate-certificate.webp";
 
 export const certificates = [
   {

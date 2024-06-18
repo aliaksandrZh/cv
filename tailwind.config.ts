@@ -103,6 +103,11 @@ const config: Config = {
             background: "var(--red)",
           },
         },
+        shine: {
+          to: {
+            "background-position-x": "-20%",
+          },
+        },
       },
       animation: {
         unfoldIn: "unfoldIn 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards",
@@ -113,6 +118,8 @@ const config: Config = {
         bgIn: "bgIn 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) forwards",
         bgOut: "bgOut 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards",
         blinkCaret: "blinkCaret 1s ease-in-out infinite",
+        "pulse-fast": "pulse 0.5s linear infinite",
+        loading: "shine 1s ease-in-out infinite",
       },
     },
   },

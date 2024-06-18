@@ -3,7 +3,7 @@ import { Certificate, certificates } from "@/libs/certificates";
 import { fn } from "@/utils/fnPlaceholder";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
-import { useCallback, useState } from "react";
+import { Suspense, useCallback, useState } from "react";
 import { CertificatePreview } from "./CertificatePreview";
 import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 import { Modal } from "./ui/Modal";
@@ -24,9 +24,9 @@ export const Certificates = () => {
       setShow({ status: true, modalData: data ?? certificate }),
     [certificate],
   );
-
+  //onMouseLeave={() => setCertificate(null)}
   return (
-    <div onMouseLeave={() => setCertificate(null)}>
+    <div>
       <h3 className="text-title">{t("certificates.title")}</h3>
       <ul className="group">
         {certificates.map((c) => (

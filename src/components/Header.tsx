@@ -1,7 +1,7 @@
 import AvatarImage from "@/assets/images/2.png";
-import { GitHubIcon } from "@/assets/images/GithubIcon";
-import { LinkedInIcon } from "@/assets/images/LinkedinIcon";
-import { MailIcon } from "@/assets/images/MailIcon";
+import { GitHubIcon } from "../assets/images/GithubIcon";
+import { LinkedInIcon } from "../assets/images/LinkedinIcon";
+import { MailIcon } from "../assets/images/MailIcon";
 import { expertise } from "@/libs/expertise";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";

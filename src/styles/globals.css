@@ -136,4 +136,17 @@ body {
     background-position-x: 95%;
     background-position-y: 45%;
   }
+
+  .skeleton {
+    background-color: var(--bg-2);
+    background: linear-gradient(
+        100deg,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, 0.5) 50%,
+        rgba(255, 255, 255, 0) 60%
+      )
+      var(--bg-2);
+    background-size: 200% 100%;
+    background-position-x: 180%;
+  }
 }
