@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import Image from "next/image";
 import { cn } from "@/utils/cn";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 import { Skeleton } from "./Skeleton";
 
 export const LazyImage = ({
@@ -9,12 +9,14 @@ export const LazyImage = ({
   width,
   height,
   className,
+  skeletonClassName,
 }: {
   src: any;
   alt: string;
   width?: number;
   height?: number;
   className?: string;
+  skeletonClassName?: string;
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -28,7 +30,12 @@ export const LazyImage = ({
   return (
     <div className="relative">
       {isLoading && (
-        <Skeleton className="absolute left-0 top-0 h-full w-full" />
+        <Skeleton
+          className={cn(
+            "absolute left-0 top-0 h-full w-full transition-all",
+            skeletonClassName,
+          )}
+        />
       )}
       <Image
         src={src}
@@ -38,7 +45,7 @@ export const LazyImage = ({
         onLoad={handleImageLoad}
         className={cn(
           isLoading ? "opacity-0" : "opacity-100",
-          "transition-all",
+          "w-full transition-all",
           className,
         )}
       />

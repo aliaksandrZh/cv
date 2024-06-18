@@ -7,6 +7,7 @@ import { Suspense, useCallback, useState } from "react";
 import { CertificatePreview } from "./CertificatePreview";
 import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 import { Modal } from "./ui/Modal";
+import { LazyImage } from "./ui/LazyImage";
 
 export const Certificates = () => {
   const { t } = useTranslation();
@@ -24,9 +25,9 @@ export const Certificates = () => {
       setShow({ status: true, modalData: data ?? certificate }),
     [certificate],
   );
-  //onMouseLeave={() => setCertificate(null)}
+
   return (
-    <div>
+    <div onMouseLeave={() => setCertificate(null)}>
       <h3 className="text-title">{t("certificates.title")}</h3>
       <ul className="group">
         {certificates.map((c) => (
@@ -50,13 +51,13 @@ export const Certificates = () => {
         show={status}
         onCloseButtonClick={() => setShow((s) => ({ ...s, status: false }))}
       >
-        <div className="max-w-screen-lg rounded-2xl bg-hover p-5 shadow-2xl">
+        <div className="max-w-screen-lg shadow-2xl">
           {modalData && (
-            <Image
+            <LazyImage
               src={modalData.img}
-              alt="certificate"
-              className="max-h-[80dvh] w-full object-contain shadow-2xl"
-            />
+              alt={modalData.title}
+              className="max-h-[1000px] object-contain"
+            ></LazyImage>
           )}
         </div>
       </Modal>
