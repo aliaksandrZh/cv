@@ -6,7 +6,7 @@
 
 :root {
   --white: #f2e0db;
-  --red: #2e425f;
+  --blue: #2e425f;
   --black: #314966;
   --bg-1: #dadfe3;
   --bg-2: #d9dee4;
@@ -22,7 +22,7 @@
     --title: #6a8f7e;
     --title-light: #587362;
     --icon: var(--title);
-    --red: var(--title);
+    --blue: var(--title);
     --black: #423e37;
     --bg-1: #2c2c2c;
     --bg-2: #1a1a1a;

@@ -33,7 +33,7 @@ const config: Config = {
             "border-color": "transparent",
           },
           "50%": {
-            "border-color": "var(--red)",
+            "border-color": "var(--blue)",
           },
           "100%": {
             "border-color": "transparent",
@@ -81,10 +81,10 @@ const config: Config = {
 
         bgIn: {
           "0%": {
-            background: "var(--red)",
+            background: "var(--blue)",
           },
           "70%": {
-            background: "var(--red)",
+            background: "var(--blue)",
           },
           "100%": {
             background: "var(--bg-selection)",
@@ -98,7 +98,7 @@ const config: Config = {
             background: "var(--bg-selection)",
           },
           "100%": {
-            background: "var(--red)",
+            background: "var(--blue)",
           },
         },
         shine: {

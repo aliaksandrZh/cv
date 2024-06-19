@@ -1,4 +1,4 @@
-import AvatarImage from "../assets/images/2.png";
+import AvatarImage from "/aliaksandr-zhebit.png";
 import { GitHubIcon } from "../assets/images/GithubIcon";
 import { LinkedInIcon } from "../assets/images/LinkedinIcon";
 import { MailIcon } from "../assets/images/MailIcon";
