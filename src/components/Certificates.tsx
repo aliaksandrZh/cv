@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useCallback, useState } from "react";
 import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 import { LazyImage } from "./ui/LazyImage";
+// TODO: Investigate: In git it's started with lowercase. It's a reason of failed vercel deployment
 import { Modal } from "../components/ui/Modal";
 import { CertificatePreview } from "./CertificatePreview";
 

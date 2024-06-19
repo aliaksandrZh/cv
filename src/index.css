@@ -74,10 +74,6 @@ body {
     @apply text-lg;
   }
 
-  ul {
-    /* @apply *:before:content-['▷'] *:before:mr-2 *:mt-2 *:text-justify; */
-  }
-
   .hover-list-item-vertical {
     @apply mt-2 text-justify before:mr-2 before:content-['▷'];
   }
@@ -88,7 +84,6 @@ body {
 
   .main-grid {
     display: grid;
-    /* gap: 1.5rem; */
     grid-template-areas:
       "about"
       "experience"
@@ -97,10 +92,6 @@ body {
       "empty"
       "education"
       "certificates";
-
-    /* padding-block: 2rem;
-    width: min(95%, 70rem);
-    margin-inline: auto; */
   }
 
   .main-grid section:nth-child(1) {

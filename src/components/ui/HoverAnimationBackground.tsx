@@ -25,8 +25,7 @@ export const HoverAnimationBackground = (props: HoverBackgroundProps) => {
   const { rect } = useHoverAnimation();
 
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    setStyle((s) => ({ transform: "scale(0)" }));
+    setStyle(() => ({ transform: "scale(0)" }));
   }, [resized]);
 
   useEffect(() => {

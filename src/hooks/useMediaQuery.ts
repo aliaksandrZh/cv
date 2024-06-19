@@ -8,12 +8,9 @@ import {
   tap,
 } from "rxjs";
 import { WaitForTimeFromLastResize } from "../libs/constants";
+
 /**
- * sm	640px	@media (min-width: 640px) { ... }
-md	768px	@media (min-width: 768px) { ... }
-lg	1024px	@media (min-width: 1024px) { ... }
-xl	1280px	@media (min-width: 1280px) { ... }
-2xl	1536px	@media (min-width: 1536px) { ... }
+  https://tailwindcss.com/docs/responsive-design
  */
 
 const mediaThresholds = {
@@ -41,7 +38,7 @@ export const useMediaQueryRx = (size: MediaThresholds = "md") => {
         map(() => window.matchMedia(mediaThresholds[size]).matches),
         startWith(window.matchMedia(mediaThresholds[size]).matches),
         distinctUntilChanged(),
-        tap((e) => setMatched({ isMediaQueryMatched: e }))
+        tap((e) => setMatched({ isMediaQueryMatched: e })),
       )
       .subscribe();
 

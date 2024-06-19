@@ -10,7 +10,7 @@ export const LazyImage = ({
   className,
   skeletonClassName,
 }: {
-  src: any;
+  src: string;
   alt: string;
   width?: number;
   height?: number;

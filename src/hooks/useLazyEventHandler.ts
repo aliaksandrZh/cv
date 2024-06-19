@@ -1,9 +1,10 @@
 import { useEffect, useRef } from "react";
 import { EMPTY, Subject, catchError, debounceTime, tap } from "rxjs";
+import { DebounceEventTime } from "../libs/constants";
 
 export const useLazyEventHandler = <T>(
   action: (arg: T) => unknown,
-  debounce: number = 250,
+  debounce: number = DebounceEventTime,
 ) => {
   const e$ = useRef(new Subject<T>());
 
