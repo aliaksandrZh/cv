@@ -1,7 +1,7 @@
 # CV
 
 
-This repository contains the source code and assets for my professional CV (Curriculum Vitae). The CV is designed to showcase my skills, experience, and qualifications in a clear and structured format suitable for job applications and professional networking.
+This repository contains the source code and assets for my professional CV.
 
 ## Features
 
@@ -11,12 +11,10 @@ This repository contains the source code and assets for my professional CV (Curr
   
 - **Education**: Lists my educational background, degrees, certifications, and relevant coursework.
   
-- **Skills**: Highlights my technical skills, soft skills, languages, and other competencies.
+- **Skills**: Highlights my technical skills and other competencies.
   
 - **Projects**: Showcases specific projects I have worked on, including descriptions, technologies used, and outcomes.
   
-- **References**: Provides references or testimonials from previous employers or colleagues.
-
 
 ## Technologies Used
 
