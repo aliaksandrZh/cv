@@ -21,6 +21,10 @@ This repository contains the source code and assets for my professional CV (Curr
 ## Technologies Used
 
 - **Frontend**: React, Tailwind, RXJS, i18n-next.
+
+## Testing
+
+-- For testing purpose  https://github.com/aliaksandrZh/screenshot-testing is used
   
 
 ## Usage
