@@ -3,7 +3,8 @@ import {
   RectState,
 } from "../../contexts/HoverAnimationContext";
 import { useMediaQueryRx } from "../../hooks/useMediaQuery";
-import { MouseEvent, useEffect, useState } from "react";
+import { MouseEvent, useCallback, useEffect, useState } from "react";
+import { useLazyEventHandler } from "../../hooks/useLazyEventHandler";
 
 export const HoverAnimationContextWrapper = (props: {
   children: JSX.Element | JSX.Element[];
@@ -11,18 +12,26 @@ export const HoverAnimationContextWrapper = (props: {
 }) => {
   const isMediaQueryMatched = useMediaQueryRx();
   const [rect, setRect] = useState<RectState>({} as RectState);
+  const { onEvent } = useLazyEventHandler<EventTarget & HTMLElement>(
+    useCallback(
+      (e) =>
+        setRect({
+          y: e.offsetTop,
+          x: e.offsetLeft,
+          width: e.clientWidth,
+          height: e.clientHeight,
+        }),
+      [],
+    ),
+    50,
+  );
 
   useEffect(() => {
     setRect({} as RectState);
   }, [isMediaQueryMatched]);
 
   const handleMouseEnter = (e: MouseEvent<HTMLElement>) => {
-    setRect({
-      y: e.currentTarget.offsetTop,
-      x: e.currentTarget.offsetLeft,
-      width: e.currentTarget.clientWidth,
-      height: e.currentTarget.clientHeight,
-    });
+    onEvent(e.currentTarget);
   };
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

@@ -29,6 +29,7 @@ const useModalAnimationRx = (show: boolean) => {
     const s$ = show$
       .pipe(
         pairwise(),
+        // TODO: test distinctUntilChanged
         filter(([prev, cur]) => prev !== cur),
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         map(([prev, cur]) => cur),
@@ -42,8 +43,8 @@ const useModalAnimationRx = (show: boolean) => {
                     container: "scale-x-0 scale-y-[0.01] animate-unfoldIn",
                     modal: "scale-0 animate-zoomIn",
                     bg: "animate-bgIn",
-                  })
-                )
+                  }),
+                ),
               )
             : of(show).pipe(
                 tap(() =>
@@ -51,13 +52,13 @@ const useModalAnimationRx = (show: boolean) => {
                     container: "scale-100 animate-unfoldOut",
                     modal: "animate-zoomOut",
                     bg: "animate-bgOut",
-                  })
+                  }),
                 ),
                 delay(DelayModalUnmounting),
                 tap(() => setIsVisible(false)),
-                tap(() => setStyles((s) => ({ ...s, container: "" })))
-              )
-        )
+                tap(() => setStyles((s) => ({ ...s, container: "" }))),
+              ),
+        ),
       )
       .subscribe();
     return () => s$.unsubscribe();
@@ -96,26 +97,26 @@ export const Modal = ({
             }}
             className={cn(
               "fixed left-0 top-0 z-20 table h-full w-full scale-0 cursor-pointer",
-              container
+              container,
             )}
           >
             <div
               className={cn(
                 "modal-background h-dvh bg-black backdrop-blur-sm",
-                bg
+                bg,
               )}
             >
               <div
                 className={cn(
                   "modal relative flex h-full w-full items-center justify-center",
-                  modal
+                  modal,
                 )}
               >
                 {children}
               </div>
             </div>
           </div>,
-          document.body
+          document.body,
         )}
     </>
   );
