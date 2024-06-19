@@ -16,7 +16,6 @@ export const useLazyEventHandler = <T>(
       .pipe(
         debounceTime(debounce),
         tap((e) => action(e)),
-        tap((e) => console.log(e)),
         catchError((error) => {
           console.error("Error in pipeline:", error);
           return EMPTY;
