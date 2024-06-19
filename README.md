@@ -24,7 +24,7 @@ This repository contains the source code and assets for my professional CV (Curr
 
 ## Testing
 
--- For testing purpose  https://github.com/aliaksandrZh/screenshot-testing is used
+For testing purpose  https://github.com/aliaksandrZh/screenshot-testing is used
   
 
 ## Usage
