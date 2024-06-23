@@ -50,7 +50,7 @@ export const Certificates = () => {
         className="mt-3 w-full py-2 pl-4 text-left transition-all hover:bg-title hover:text-white active:scale-95"
         onClick={() => setCollapsed((s) => !s)}
       >
-        {collapsed ? "Show more..." : "Show less"}
+        {collapsed ? t("certificates.more") : t("certificates.less")}
       </button>
 
       <Modal

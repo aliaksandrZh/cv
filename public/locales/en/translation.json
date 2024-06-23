@@ -20,8 +20,11 @@
   "expertise": {
     "title": "Skills"
   },
+
   "certificates": {
-    "title": "Certificates"
+    "title": "Certificates",
+    "more": "Show more...",
+    "less": "Show less"
   },
   "education": {
     "title": "Education",
