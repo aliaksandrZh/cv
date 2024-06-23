@@ -35,6 +35,7 @@ export const HoverAnimationBackground = (props: HoverBackgroundProps) => {
         height: `${rect.height}px`,
         top: `${rect.y}px`,
         left: `${rect.x}px`,
+        transform: "scale(1.02)",
       });
     }
   }, [rect]);
