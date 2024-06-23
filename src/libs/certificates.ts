@@ -11,6 +11,10 @@ import udemyRxjs from "/certificates/udemy-rxjs.webp";
 import angularIntermediate from "/certificates/angular-intermediate-certificate.webp";
 import reactIntermediate from "/certificates/react-frontend-developer-certificate.webp";
 import jsIntermediate from "/certificates/javascript-intermediate-certificate.webp";
+import tsWizardErrorSolving from "/certificates/ts-wizard-error-solving.webp";
+import tsWizardZodWorkshop from "/certificates/ts-wizard-zod-workshop.webp";
+import udemyDSABootcamp from "/certificates/udemy-bootcamp-DSA.webp";
+import udemyTailWind from "/certificates/udemy-tailwind.webp";
 
 export const certificates = [
   {
@@ -90,6 +94,30 @@ export const certificates = [
     platform: "Udemy",
     title: "RxJS in Practice",
     date: "20.04.2023",
+  },
+  {
+    img: tsWizardErrorSolving,
+    platform: "Total Typescript",
+    title: "Solving TypeScript errors",
+    date: "17.05.2024",
+  },
+  {
+    img: tsWizardZodWorkshop,
+    platform: "Total Typescript",
+    title: "Zod",
+    date: "17.05.2024",
+  },
+  {
+    img: udemyDSABootcamp,
+    platform: "Udemy",
+    title: "Algorithms + Data Structures",
+    date: "22.06.2024",
+  },
+  {
+    img: udemyTailWind,
+    platform: "Udemy",
+    title: "Tailwind CSS from scratch",
+    date: "19.06.2024",
   },
 ].sort((a, b) => {
   const dateA = new Date(a.date.split(".").reverse().join("-"));
