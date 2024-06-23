@@ -2,15 +2,16 @@ import { useMediaQueryRx } from "../hooks/useMediaQuery";
 import { Certificate, certificates } from "../libs/certificates";
 import { useTranslation } from "react-i18next";
 import { useCallback, useState } from "react";
-import { HoverAnimationItemWrapper } from "./ui/HoverAnimationItemWrapper";
 import { LazyImage } from "./ui/LazyImage";
 // TODO: Investigate: In git it's started with lowercase. It's a reason of failed vercel deployment
 import { Modal } from "../components/ui/Modal";
-import { CertificatePreview } from "./CertificatePreview";
+import { CertificateItem } from "./certificates/CertificateItem";
+import { VisibleCertificateItemsCount } from "../libs/constants";
 
 export const Certificates = () => {
   const { t } = useTranslation();
   const { isMediaQueryMatched } = useMediaQueryRx();
+  const [collapsed, setCollapsed] = useState(true);
   const [{ status, modalData }, setShow] = useState<{
     status: boolean;
     modalData?: Certificate | null;
@@ -27,24 +28,30 @@ export const Certificates = () => {
     <div>
       <h3 className="text-title">{t("certificates.title")}</h3>
       <ul className="group">
-        {certificates.map((c) => (
-          <li
-            key={c.title + c.platform}
-            className="hover-list-item-vertical flex cursor-pointer text-left"
-            onClick={() => openModal(c)}
-          >
-            <HoverAnimationItemWrapper className="w-full">
-              <div className="group/item relative">
-                <span>
-                  <span className="font-bold">{c.platform}</span>: {c.date}
-                </span>
-                <div>{c.title}</div>
-                {isMediaQueryMatched && <CertificatePreview data={c} />}
-              </div>
-            </HoverAnimationItemWrapper>
-          </li>
+        {certificates.slice(0, VisibleCertificateItemsCount).map((c) => (
+          <CertificateItem
+            certificate={c}
+            openModal={openModal}
+            isMediaQueryMatched={isMediaQueryMatched}
+          />
+        ))}
+
+        {certificates.slice(VisibleCertificateItemsCount).map((c) => (
+          <CertificateItem
+            className={collapsed ? "read-more-item" : "read-more-item-visible"}
+            certificate={c}
+            openModal={openModal}
+            isMediaQueryMatched={isMediaQueryMatched}
+          />
         ))}
       </ul>
+
+      <button
+        className="mt-3 w-full py-2 pl-4 text-left transition-all hover:bg-title hover:text-white active:scale-95"
+        onClick={() => setCollapsed((s) => !s)}
+      >
+        {collapsed ? "Show more..." : "Show less"}
+      </button>
 
       <Modal
         show={status}

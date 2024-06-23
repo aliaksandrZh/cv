@@ -6,3 +6,4 @@ export const WaitForWordDeleting = 1500;
 export const DelayModalAnimationStart = 250;
 export const DelayModalUnmounting = 1500;
 export const DebounceEventTime = 250;
+export const VisibleCertificateItemsCount = 7;

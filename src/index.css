@@ -146,4 +146,19 @@ body {
     background-size: 200% 100%;
     background-position-x: 180%;
   }
+
+  .read-more-item {
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: 0.25s ease;
+    margin-top: 0;
+  }
+
+  .read-more-item-visible {
+    opacity: 1;
+    font-size: inherit;
+    max-height: 999rem;
+    margin-top: 0.5rem;
+  }
 }
