@@ -4,10 +4,12 @@ import { Exp } from "./components/Exp";
 import { DownloadCV } from "./components/Download";
 import { HoverAnimationBackground } from "./components/ui/HoverAnimationBackground";
 import "./i18n";
+import { Info } from "./components/ui/Info";
 
 function App() {
   return (
     <>
+      <Info />
       <HoverAnimationContextWrapper itemIdentifierAttribute="data-hover-item">
         <div className="relative min-h-dvh">
           <Header />
