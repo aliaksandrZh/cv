@@ -30,7 +30,7 @@ export const DownloadCV = ({ className }: { className?: string }) => {
         <select
           aria-label="Select extension"
           value={ext}
-          className="bg-[var(--title-light)] py-3 pl-1 pr-5 text-[var(--bg-2)] transition-all hover:scale-105 active:scale-90 sm:py-5"
+          className="rounded-none bg-[var(--title-light)] py-3 pl-1 pr-5 text-[var(--bg-2)] transition-all hover:scale-105 active:scale-90 sm:py-5"
           onChange={(e) => setExt(e.currentTarget.value as "pdf" | "docx")}
         >
           <option value="pdf">.pdf</option>
