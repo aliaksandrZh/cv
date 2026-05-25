@@ -96,10 +96,17 @@ html.dark #theme-toggle .moon {
 .avatar {
   border-radius: 9999px;
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .avatar {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .contact-link {
@@ -150,6 +157,14 @@ html.dark #theme-toggle .moon {
   border-left: 2px solid var(--title);
 }
 
+@media (max-width: 639px) {
+  .sub-project {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
 .sub-project h5 {
   color: var(--title);
   margin-bottom: 0.25rem;
@@ -187,9 +202,18 @@ html.dark #theme-toggle .moon {
   border-radius: 0.25rem;
 }
 
+header p,
 main p,
 main li {
-  text-align: justify;
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+  header p,
+  main p,
+  main li {
+    text-align: justify;
+  }
 }
 
 .download-inline {

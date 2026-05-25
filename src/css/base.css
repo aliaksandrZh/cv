@@ -38,8 +38,15 @@ body {
 }
 
 .container {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .text-title {
@@ -50,6 +57,14 @@ body {
   border-right: 2px solid var(--title);
   animation: blinkCaret 1s ease-in-out infinite;
   white-space: nowrap;
+}
+
+@media (max-width: 639px) {
+  .typed-text {
+    white-space: normal;
+    border-right: none;
+    animation: none;
+  }
 }
 
 .header-line {

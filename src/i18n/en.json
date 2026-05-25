@@ -13,7 +13,7 @@
   "name": "Aliaksandr Zhebit",
   "location": "Belarus, Gomel",
   "avatar_alt": "Aliaksandr Zhebit",
-  "summary": "Software Engineer with 5+ years of experience in frontend and full-stack development. Experience building enterprise web applications, procurement dashboards, ERP/CRM workflows, and developer automation tools. Skilled in designing user-facing workflows, improving complex UI systems, and working across frontend, backend, database, and integration layers.",
+  "summary": "Software Engineer with 5+ years of experience in frontend and full-stack development. Experienced in building enterprise web applications, dashboards, ERP/CRM workflows, and developer automation tools. Skilled in designing user-facing workflows, improving complex UI systems, and working across frontend, backend, databases, and integrations.",
   "experience_heading": "Experience",
   "labels": {
     "stack": "Stack",
@@ -25,16 +25,16 @@
       "name": "CAE TECHNOLOGY",
       "dates": "2024 - Present",
       "title": "Full-Stack .NET Developer",
-      "description": "Delivered frontend-heavy features for electronic components distribution, procurement analytics, supply chain operations, and ERP/CRM workflows. Built Angular interfaces and contributed to .NET backend services, SQL Server logic, queues, workers, and integrations. Supported mentoring, onboarding, technical interviews, UI testing, and releases.",
+      "description": "Delivered frontend-focused features for electronic components distribution, supply chain analytics and operations, and ERP/CRM workflows. Built Angular interfaces and contributed to .NET backend services, SQL Server logic, queues, background workers, and integrations. Led technical interviews and supported onboarding, mentoring, UI testing, and releases.",
       "projects": {
         "sourceability": {
           "name": "Sourceability",
           "dates": "2024 - 2026",
           "stack": "Angular 17, PrimeNG, ChartJS, .NET 8, ASP.NET Core, EF Core, SQL Server, RabbitMQ, SignalR",
-          "platform": "Enterprise ERP/CRM for electronic components distribution supporting supply chain, RFQ workflows, orders, warehouse operations, inventory, and NetSuite/Elasticsearch integrations.",
+          "platform": "Engineered an ERP/CRM platform handling supply chain, RFQ workflows, and warehouse operations for electronic components distribution, featuring custom NetSuite integrations.",
           "contributions": [
-            "Led UI feature development for enterprise screens, dashboards, chart reporting, and reusable table patterns, state handling, UI library extensions, and layout customization.",
-            "Delivered backend enhancements across .NET services, SQL Server (views, stored procedures, functions), message queues and background workers.",
+            "Led UI development for internal systems, including dashboards, reporting charts, reusable table components, state management, UI library extensions, and layout customization.",
+            "Built backend functionality using .NET services, SQL Server (views, stored procedures, functions), message queues, and background workers.",
             "Resolved performance bottlenecks across Angular rendering, API delays, and database timeouts.",
             "Integrated an Angular UI testing step into Azure Pipelines.",
             "Contributed to an internal .NET-based Model Context Protocol (MCP) server for Azure DevOps integration to expose work item context to AI tools.",
@@ -44,12 +44,12 @@
           ]
         },
         "zollner": {
-          "name": "Zollner Procurement Dashboard Platform",
+          "name": "Zollner Dashboard Platform",
           "dates": "2025",
           "stack": "Angular 19, PrimeNG, ChartJS, .NET 10, ASP.NET Core, EF Core, SQL Server, RabbitMQ",
-          "platform": "Sourcing and supply chain analytics platform providing visibility into PPV, shortages, package history, KPI metrics, and exchange-rate calculations.",
+          "platform": "Sourcing and supply chain analytics platform providing visibility into PPV, shortages, package history, KPI metrics.",
           "contributions": [
-            "Led frontend development for the Zollner procurement dashboard, translating PRD requirements into Shortage and PPV workflows, audit trail support.",
+            "Led frontend development for the Zollner dashboard, translating PRD requirements into Shortage and PPV workflows with audit trail support.",
             "Delivered backend logic for KPI calculations and aggregated reporting APIs.",
             "Resolved user feedback and UAT findings to improve dashboard calculation reliability and workflow usability.",
             "Supported UAT and Production releases."
@@ -61,7 +61,7 @@
           "stack": "Anthropic Claude API, Python, Docker, Azure DevOps",
           "platform": "Internal PoC evaluating Python agents, BMAD frameworks, local LLMs, and Docker automation for an AI-assisted web application generation pipeline (early prototype stage).",
           "contributions": [
-            "Developed the initial prototype exploring requirements analysis, automated planning, and generation guidance.",
+            "Developed an initial prototype for frontend solution generation, validation, and automation of developer workflows.",
             "Investigated agentic workflow frameworks, local LLM execution, Docker-based agent runs, and CI/CD triggers."
           ]
         }
@@ -80,13 +80,13 @@
           "stack": "Angular 7-14, ASP.NET Core, SSMS, SQL, Azure",
           "platform": "EY Global Tax Platform (GTP), a secure cloud environment integrating data sources for analytics, compliance, and tax visibility.",
           "contributions": [
-            "Oversaw frontend architecture, component design, and optimization as Lead Engineer.",
-            "Implemented feature modules with intricate logic and interceptors for seamless user experiences.",
+            "Spearheaded the frontend development efforts as Lead Engineer, overseeing the design, development, and optimization of modular and reusable components.",
+            "Implemented feature modules with complex logic and interceptors for seamless user experiences.",
             "Optimized application performance, achieving a 20% increase in responsiveness and a 30% reduction in development time.",
             "Conducted codebase cleanups to reduce technical debt and improve maintainability.",
             "Increased test coverage from 30% to 70%.",
             "Played a pivotal role in supporting and enhancing the Micro Frontend (MFE) system, including chunk generation, lazy loading, and resolving critical issues.",
-            "Proactively identified and resolved production issues, ensuring smooth operation of applications and minimizing downtime.",
+            "Proactively identified and resolved production issues, ensuring smooth application operation and minimizing downtime.",
             "Built backend endpoints, database tables, migrations, and import/export functionalities.",
             "Mentored UI developers across teams and provided basic DevOps support (variable management, Git flow pre-push hooks)."
           ]
@@ -98,7 +98,7 @@
           "stack": "Angular, React, Django, Postgres, Docker, CircleCI, Sentry",
           "platform": "Swiss real estate platform integrating property search, valuation, and financing solutions.",
           "contributions": [
-            "Led frontend efforts using Angular, Angular Material, and Chart.js to scale the platform and improve UI.",
+            "Led frontend efforts using Angular, Angular Material, and Chart.js to scale the platform and improve the UI.",
             "Integrated Google APIs (Maps, Street View, Analytics) for enhanced user insights.",
             "Refactored and redesigned the frontend source code."
           ]
