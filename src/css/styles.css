@@ -1,0 +1,254 @@
+.nav-sentinel {
+  height: 1px;
+}
+
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg-2);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.top-nav.is-stuck {
+  border-bottom-color: var(--title);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.lang-switcher {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.lang-switcher a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.lang-switcher a:hover {
+  opacity: 1;
+}
+
+.lang-switcher a.lang-active {
+  opacity: 1;
+  border-bottom: 2px solid var(--title);
+}
+
+#theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: none;
+  border-radius: 9999px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#theme-toggle:hover {
+  background: var(--bg-selection);
+}
+
+#theme-toggle .sun {
+  display: none;
+}
+
+html.dark #theme-toggle .sun {
+  display: block;
+}
+
+html.dark #theme-toggle .moon {
+  display: none;
+}
+
+.cv-header {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.header-info {
+  padding-left: 0;
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .header-info {
+    padding-left: 1.25rem;
+    width: 75%;
+    margin-top: 0;
+  }
+}
+
+.avatar {
+  border-radius: 9999px;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.2s;
+}
+
+.contact-link:hover {
+  color: var(--title);
+}
+
+.experience-block {
+  margin-bottom: 1.5rem;
+}
+
+.experience-header {
+  margin-bottom: 0.5rem;
+}
+
+.title-row {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.experience-header h4 {
+  color: var(--title);
+}
+
+.experience-header h6 {
+  opacity: 0.8;
+}
+
+.experience-header h5 {
+  opacity: 0.9;
+}
+
+.sub-project {
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--title);
+}
+
+.sub-project h5 {
+  color: var(--title);
+  margin-bottom: 0.25rem;
+}
+
+.sub-project h6 {
+  margin-bottom: 0.25rem;
+}
+
+.sub-project .detail {
+  opacity: 0.9;
+}
+
+.sub-project ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.sub-project li {
+  margin-bottom: 0.25rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--title);
+  border-radius: 0.25rem;
+}
+
+main p,
+main li {
+  text-align: justify;
+}
+
+.download-inline {
+  display: flex;
+  align-items: stretch;
+}
+
+.download-inline a {
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.download-inline button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--title);
+  padding: 0.5rem 1.25rem;
+  color: var(--bg-2);
+  border: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.download-inline button:hover {
+  transform: scale(1.05);
+}
+
+.download-inline button:active {
+  transform: scale(0.9);
+}
+
+.download-inline select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: var(--title-light);
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
+  color: var(--bg-2);
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.download-inline select:hover {
+  transform: scale(1.05);
+}
+
+.download-inline select:active {
+  transform: scale(0.9);
+}

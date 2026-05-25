@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  background: linear-gradient(to top, var(--bg-1), var(--bg-2));
+  color: var(--text);
+  font-family: "Roboto Mono", monospace;
+}
+
+::selection {
+  color: var(--white);
+  background: var(--title);
+}
+
+@layer base {
+  h1 {
+    @apply text-5xl font-bold;
+  }
+  h2 {
+    @apply text-4xl font-bold;
+  }
+  h3 {
+    @apply text-3xl font-bold;
+  }
+  h4 {
+    @apply text-2xl font-bold;
+  }
+  h5 {
+    @apply text-xl font-bold;
+  }
+  h6 {
+    @apply text-lg;
+  }
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.text-title {
+  margin-bottom: 1rem;
+}
+
+.typed-text {
+  border-right: 2px solid var(--title);
+  animation: blinkCaret 1s ease-in-out infinite;
+  white-space: nowrap;
+}
+
+.header-line {
+  border-bottom: 2px solid var(--title);
+}

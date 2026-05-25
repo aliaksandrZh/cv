@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{meta.description}}" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico" />
+    {{prefetch}}
+    <title>{{meta.title}}</title>
+    <script type="module" src="../src/main.ts"></script>
+  </head>
+  <body class="min-h-screen">
+    <div class="nav-sentinel"></div>
+    <nav class="top-nav">
+      <div class="download-inline">
+        <a
+          id="download-link"
+          href="../Aliaksandr.Zhebit.pdf"
+          download="Aliaksandr.Zhebit.Web.Dev.pdf"
+          data-hover-item
+        >
+          <button id="download-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            {{download.btn}}
+          </button>
+        </a>
+        <select id="download-ext" aria-label="{{download.aria}}">
+          <option value="pdf">.pdf</option>
+          <option value="docx">.docx</option>
+        </select>
+      </div>
+
+      <button id="theme-toggle" aria-label="{{theme_aria}}">
+        <svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+
+      <div class="lang-switcher">
+        <a href="/cv/ru/">RU</a>
+        <a href="/cv/en/">EN</a>
+      </div>
+    </nav>
+
+    <header class="cv-header">
+      <div class="container mx-auto flex flex-col items-center sm:flex-row sm:items-center">
+        <img
+          src="../aliaksandr-zhebit.png"
+          alt="{{avatar_alt}}"
+          class="avatar"
+          width="200"
+          height="200"
+        />
+        <div class="header-info">
+          <h1 class="mt-5 text-center text-5xl font-bold text-title sm:text-left md:mt-0">
+            {{name}}
+          </h1>
+          <p class="mt-1 text-sm opacity-80">{{location}}</p>
+          <div class="mt-3 flex flex-wrap items-center gap-2">
+            <a
+              href="mailto:aliaksandr.zhebit@gmail.com"
+              class="contact-link"
+              data-hover-item
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <g>
+                  <path
+                    d="M4 6L10.1076 10.6123L10.1097 10.614C10.7878 11.1113 11.1271 11.3601 11.4988 11.4562C11.8272 11.5412 12.1725 11.5412 12.501 11.4562C12.8729 11.36 13.2132 11.1105 13.8926 10.6123C13.8926 10.6123 17.8101 7.60594 20 6M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8036C21 16.9215 21 17.4805 20.7822 17.9079C20.5905 18.2842 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2842 3.21799 17.9079C3 17.4801 3 16.9203 3 15.8002Z"
+                    stroke="var(--icon)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+              aliaksandr.zhebit@gmail.com
+            </a>
+            <a
+              href="https://github.com/aliaksandrzh"
+              target="_blank"
+              rel="noopener"
+              class="contact-link"
+              data-hover-item
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M13.4142 3.82843C12.6332 3.04738 11.3668 3.04738 10.5858 3.82843L9.91421 4.5L11.482 6.06774C11.6472 6.02356 11.8208 6 12 6C13.1046 6 14 6.89543 14 8C14 8.17916 13.9764 8.35282 13.9323 8.51804L15.982 10.5677C16.1472 10.5236 16.3208 10.5 16.5 10.5C17.6046 10.5 18.5 11.3954 18.5 12.5C18.5 13.6046 17.6046 14.5 16.5 14.5C15.3954 14.5 14.5 13.6046 14.5 12.5C14.5 12.3208 14.5236 12.1472 14.5677 11.982L13 10.4142V15.2676C13.5978 15.6134 14 16.2597 14 17C14 18.1046 13.1046 19 12 19C10.8954 19 10 18.1046 10 17C10 16.2597 10.4022 15.6134 11 15.2676V9.73244C10.4022 9.38663 10 8.74028 10 8C10 7.82084 10.0236 7.64718 10.0677 7.48196L8.5 5.91421L3.82843 10.5858C3.04738 11.3668 3.04738 12.6332 3.82843 13.4142L10.5858 20.1716C11.3668 20.9526 12.6332 20.9526 13.4142 20.1716L20.1716 13.4142C20.9526 12.6332 20.9526 11.3668 20.1716 10.5858L13.4142 3.82843ZM9.17157 2.41421C10.7337 0.852115 13.2663 0.852119 14.8284 2.41422L21.5858 9.17157C23.1479 10.7337 23.1479 13.2663 21.5858 14.8284L14.8284 21.5858C13.2663 23.1479 10.7337 23.1479 9.17157 21.5858L2.41421 14.8284C0.852115 13.2663 0.852119 10.7337 2.41422 9.17157L9.17157 2.41421Z"
+                  fill="var(--icon)"
+                />
+              </svg>
+              GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/aliaksandr-zhebit"
+              target="_blank"
+              rel="noopener"
+              class="contact-link"
+              data-hover-item
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z"
+                  fill="var(--icon)"
+                />
+                <path
+                  d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z"
+                  fill="var(--icon)"
+                />
+                <path
+                  d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z"
+                  fill="var(--icon)"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z"
+                  fill="var(--icon)"
+                />
+              </svg>
+              LinkedIn
+            </a>
+            <a
+              href="https://aliaksandrzh.github.io/cv/"
+              target="_blank"
+              rel="noopener"
+              class="contact-link"
+              data-hover-item
+            >
+              Web
+            </a>
+          </div>
+          <p class="mt-3 leading-relaxed">{{summary}}</p>
+          <h2 class="mt-5 h-10 text-center text-3xl sm:text-left">
+            <span id="typed-text" class="typed-text"></span>
+          </h2>
+        </div>
+      </div>
+    </header>
+
+    <div class="container mx-auto header-line"></div>
+
+    <main class="container mx-auto pt-8 pb-16">
+      <section id="experience" class="mb-8">
+        <h3 class="text-title">{{experience_heading}}</h3>
+
+        <div class="experience-block" data-hover-item>
+          <div class="experience-header">
+            <div class="title-row">
+              <h4>{{companies.cae.name}}</h4>
+              <h6>{{companies.cae.dates}}</h6>
+            </div>
+            <h5>{{companies.cae.title}}</h5>
+          </div>
+          <p class="leading-relaxed">{{companies.cae.description}}</p>
+
+          <div class="sub-project">
+            <div class="title-row">
+              <h5>{{companies.cae.projects.sourceability.name}}</h5>
+              <h6>{{companies.cae.projects.sourceability.dates}}</h6>
+            </div>
+            <p class="detail"><strong>{{labels.stack}}:</strong> {{companies.cae.projects.sourceability.stack}}</p>
+            <p class="detail"><strong>{{labels.platform}}:</strong> {{companies.cae.projects.sourceability.platform}}</p>
+            <ul>{{companies.cae.projects.sourceability.contributions}}</ul>
+          </div>
+
+          <div class="sub-project">
+            <div class="title-row">
+              <h5>{{companies.cae.projects.zollner.name}}</h5>
+              <h6>{{companies.cae.projects.zollner.dates}}</h6>
+            </div>
+            <p class="detail"><strong>{{labels.stack}}:</strong> {{companies.cae.projects.zollner.stack}}</p>
+            <p class="detail"><strong>{{labels.platform}}:</strong> {{companies.cae.projects.zollner.platform}}</p>
+            <ul>{{companies.cae.projects.zollner.contributions}}</ul>
+          </div>
+
+          <div class="sub-project">
+            <div class="title-row">
+              <h5>{{companies.cae.projects.agentic.name}}</h5>
+              <h6>{{companies.cae.projects.agentic.dates}}</h6>
+            </div>
+            <p class="detail"><strong>{{labels.stack}}:</strong> {{companies.cae.projects.agentic.stack}}</p>
+            <p class="detail"><strong>{{labels.platform}}:</strong> {{companies.cae.projects.agentic.platform}}</p>
+            <ul>{{companies.cae.projects.agentic.contributions}}</ul>
+          </div>
+        </div>
+
+        <div class="experience-block" data-hover-item>
+          <div class="experience-header">
+            <div class="title-row">
+              <h4>{{companies.itechart.name}}</h4>
+              <h6>{{companies.itechart.dates}}</h6>
+            </div>
+            <h5>{{companies.itechart.title}}</h5>
+          </div>
+          <p class="leading-relaxed">{{companies.itechart.description}}</p>
+
+          <div class="sub-project">
+            <div class="title-row">
+              <h5>{{companies.itechart.projects.ey.name}}</h5>
+              <h6>{{companies.itechart.projects.ey.dates}}</h6>
+            </div>
+            <h5><strong>{{labels.position}}:</strong> {{companies.itechart.projects.ey.position}}</h5>
+            <p class="detail"><strong>{{labels.stack}}:</strong> {{companies.itechart.projects.ey.stack}}</p>
+            <p class="detail"><strong>{{labels.platform}}:</strong> {{companies.itechart.projects.ey.platform}}</p>
+            <ul>{{companies.itechart.projects.ey.contributions}}</ul>
+          </div>
+
+          <div class="sub-project">
+            <div class="title-row">
+              <h5>{{companies.itechart.projects.mpre.name}}</h5>
+              <h6>{{companies.itechart.projects.mpre.dates}}</h6>
+            </div>
+            <h5><strong>{{labels.position}}:</strong> {{companies.itechart.projects.mpre.position}}</h5>
+            <p class="detail"><strong>{{labels.stack}}:</strong> {{companies.itechart.projects.mpre.stack}}</p>
+            <p class="detail"><strong>{{labels.platform}}:</strong> {{companies.itechart.projects.mpre.platform}}</p>
+            <ul>{{companies.itechart.projects.mpre.contributions}}</ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="open-source" class="mb-8">
+        <h3 class="text-title">{{open_source.heading}}</h3>
+        <div class="experience-block" data-hover-item>
+          <div class="experience-header">
+            <div class="title-row">
+              <h5>{{open_source.raycast.name}}</h5>
+              <h6>{{open_source.raycast.dates}}</h6>
+            </div>
+          </div>
+          <div class="sub-project">
+            <p class="detail"><strong>{{labels.stack}}:</strong> {{open_source.raycast.stack}}</p>
+            <p class="detail"><strong>{{labels.platform}}:</strong> {{open_source.raycast.platform}}</p>
+            <ul>{{open_source.raycast.contributions}}</ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="mb-8">
+        <h3 class="text-title">{{education.heading}}</h3>
+        <div class="experience-block" data-hover-item>
+          <div class="experience-header">
+            <div class="title-row">
+              <h3>{{education.university_name}}</h3>
+              <h6>{{education.university_dates}}</h6>
+            </div>
+          </div>
+          <h4 class="mt-3 text-title">{{education.degree}}</h4>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h3 class="text-title">{{skills_heading}}</h3>
+        <ul class="skills-list">
+          <li data-hover-item>JavaScript</li>
+          <li data-hover-item>TypeScript</li>
+          <li data-hover-item>C#</li>
+          <li data-hover-item>Node.js</li>
+          <li data-hover-item>Angular</li>
+          <li data-hover-item>React</li>
+          <li data-hover-item>RxJs</li>
+          <li data-hover-item>Tailwind CSS</li>
+          <li data-hover-item>ASP.NET Core</li>
+          <li data-hover-item>Docker</li>
+          <li data-hover-item>SSMS</li>
+          <li data-hover-item>SQL</li>
+          <li data-hover-item>SignalR</li>
+          <li data-hover-item>RabbitMQ</li>
+          <li data-hover-item>Azure</li>
+        </ul>
+      </section>
+    </main>
+
+  </body>
+</html>

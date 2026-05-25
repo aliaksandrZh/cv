@@ -55,6 +55,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# generated i18n HTML pages
+en/index.html
+ru/index.html
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
