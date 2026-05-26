@@ -96,17 +96,17 @@
       "contributions": [
         {
           "name": "Speedtest",
-          "downloads": "50k+ загрузок",
+          "downloads": "150k+ загрузок",
           "desc": "запуск теста скорости интернета прямо из приложения."
         },
         {
           "name": "ConsoleDev",
-          "downloads": "1.5k+ загрузок",
+          "downloads": "2.7k+ загрузок",
           "desc": "инструменты консоли разработчика."
         },
         {
           "name": "Toggle Audio Input",
-          "downloads": "1k+ загрузок",
+          "downloads": "6k+ загрузок",
           "desc": "управление микрофоном через меню и командную палитру."
         }
       ],
@@ -116,8 +116,7 @@
   "education": {
     "heading": "Образование",
     "university_name": "Гомельский государственный университет имени Франциска Скорины",
-    "university_dates": "2015 - 2019",
-    "degree": "Бакалавр"
+    "university_dates": "2015 - 2019"
   },
   "skills_heading": "Навыки"
 }

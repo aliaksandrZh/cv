@@ -53,7 +53,7 @@
 {{open_source.raycast.contributions}}
 
 ## {{education.heading}}
-{{education.university_name}} - {{education.degree}} {{education.university_dates}}
+{{education.university_name}} {{education.university_dates}}
 
 ## {{skills_heading}}
 {{skills}}

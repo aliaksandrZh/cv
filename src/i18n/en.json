@@ -96,17 +96,17 @@
       "contributions": [
         {
           "name": "Speedtest",
-          "downloads": "50k+ downloads",
+          "downloads": "150k+ downloads",
           "desc": "Runs internet speed tests directly from the app."
         },
         {
           "name": "ConsoleDev",
-          "downloads": "1.5k+ downloads",
+          "downloads": "2.7k+ downloads",
           "desc": "Integrates essential developer console tools."
         },
         {
           "name": "Toggle Audio Input",
-          "downloads": "1k+ downloads",
+          "downloads": "6k+ downloads",
           "desc": "Command and menu bar extension to mute/unmute microphones."
         }
       ],
@@ -116,8 +116,7 @@
   "education": {
     "heading": "Education",
     "university_name": "Francysk Skorina Gomel State University",
-    "university_dates": "2015 - 2019",
-    "degree": "Bachelor's Degree"
+    "university_dates": "2015 - 2019"
   },
   "skills_heading": "Skills"
 }

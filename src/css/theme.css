@@ -11,7 +11,7 @@
   --icon: var(--title);
 }
 
-.dark {
+html.dark {
   --title: #6a8f7e;
   --title-light: #587362;
   --icon: var(--title);
@@ -23,16 +23,3 @@
   --bg-selection: rgba(68, 68, 68, 0.5);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --title: #6a8f7e;
-    --title-light: #587362;
-    --icon: var(--title);
-    --blue: var(--title);
-    --black: #423e37;
-    --bg-1: #2c2c2c;
-    --bg-2: #1a1a1a;
-    --text: #cccccc;
-    --bg-selection: rgba(68, 68, 68, 0.5);
-  }
-}
