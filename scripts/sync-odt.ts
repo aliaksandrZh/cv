@@ -14,10 +14,10 @@ import {
   writeFileSync,
   rmSync,
 } from "./odt-utils.js";
+import { readLangData } from "./json-utils.js";
 
 const CONFIG = JSON.parse(readFileSync(resolve(process.cwd(), "cv-config.json"), "utf-8"));
 const ODT_TEMPLATE = resolve(process.cwd(), CONFIG.odt.sourceDir, CONFIG.odt.template);
-const I18N_DIR = resolve(process.cwd(), "src/i18n");
 
 function flattenOdt(
   obj: unknown,
@@ -135,8 +135,7 @@ function main(): void {
   const xml = readFileSync(resolve(tempDir, "content.xml"), "utf-8");
   const parsed = parseContentXml(xml);
 
-  const dataPath = resolve(I18N_DIR, `${lang}.json`);
-  const raw = JSON.parse(readFileSync(dataPath, "utf-8"));
+  const raw = readLangData(lang);
   const data = flattenOdt(raw);
 
   for (const [key, value] of Object.entries(data)) {

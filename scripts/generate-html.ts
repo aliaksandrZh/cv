@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
 import { resolve } from "path";
 import { fileURLToPath } from "url";
+import { readLangData } from "./json-utils.js";
 
 const templatePath = resolve(process.cwd(), "src/template/index.html");
 const outDir = process.cwd();
@@ -35,8 +36,7 @@ export function generateHtml(): void {
   const template = readFileSync(templatePath, "utf-8");
 
   for (const lang of langs) {
-    const dataPath = resolve(process.cwd(), `src/i18n/${lang}.json`);
-    const raw = JSON.parse(readFileSync(dataPath, "utf-8"));
+    const raw = readLangData(lang);
     const data = flatten(raw);
 
     let html = template;

@@ -10,7 +10,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "odt:prepare": "tsx scripts/prepare-odt-template.ts",
-    "odt:sync": "tsx scripts/sync-odt.ts en && tsx scripts/sync-odt.ts ru"
+    "odt:sync": "tsx scripts/sync-odt.ts en && tsx scripts/sync-odt.ts ru",
+    "md:sync": "tsx scripts/sync-md.ts en"
   },
   "dependencies": {
     "gh-pages": "^6.1.1",

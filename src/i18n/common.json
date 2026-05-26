@@ -1,0 +1,37 @@
+{
+  "contacts": {
+    "email": {
+      "label": "aliaksandr.zhebit@gmail.com",
+      "url": "mailto:aliaksandr.zhebit@gmail.com"
+    },
+    "github": {
+      "label": "GitHub",
+      "url": "https://github.com/aliaksandrzh"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/aliaksandr-zhebit"
+    },
+    "web": {
+      "label": "Web",
+      "url": "https://aliaksandrzh.github.io/cv/"
+    }
+  },
+  "skills": [
+    "JavaScript",
+    "TypeScript",
+    "C#",
+    "Node.js",
+    "Angular",
+    "React",
+    "RxJs",
+    "Tailwind CSS",
+    "ASP.NET Core",
+    "Docker",
+    "SSMS",
+    "SQL",
+    "SignalR",
+    "RabbitMQ",
+    "Azure"
+  ]
+}

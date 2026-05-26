@@ -12,5 +12,17 @@
       "en": true,
       "ru": false
     }
+  },
+  "markdown": {
+    "template": "cv_sources/cv-template.md",
+    "outputDir": "cv_sources/sync",
+    "output": {
+      "en": "Aliaksandr.Zhebit.md",
+      "ru": "cv2026-ru.md"
+    },
+    "enabled": {
+      "en": true,
+      "ru": false
+    }
   }
 }
