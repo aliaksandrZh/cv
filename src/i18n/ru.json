@@ -18,7 +18,9 @@
   "labels": {
     "stack": "Стек",
     "platform": "Платформа",
-    "position": "Позиция"
+    "position": "Позиция",
+    "key_contributions": "Ключевые достижения",
+    "contributed_extensions": "Вклад в расширения"
   },
   "companies": {
     "cae": {
@@ -114,9 +116,9 @@
       "stack": "React, Node.js, Swift, AppleScript",
       "platform": "Raycast — open-source коллекция инструментов для повышения продуктивности, встроенная в расширяемый launcher.",
       "contributions": [
-        "<strong>Speedtest</strong> <strong>(50k+ загрузок)</strong>: запуск теста скорости интернета прямо из приложения.",
-        "<strong>ConsoleDev</strong> <strong>(1.5k+ загрузок)</strong>: инструменты консоли разработчика.",
-        "<strong>Toggle Audio Input</strong> <strong>(1k+ загрузок)</strong>: управление микрофоном через меню и командную палитру."
+        { "name": "Speedtest", "downloads": "50k+ загрузок", "desc": "запуск теста скорости интернета прямо из приложения." },
+        { "name": "ConsoleDev", "downloads": "1.5k+ загрузок", "desc": "инструменты консоли разработчика." },
+        { "name": "Toggle Audio Input", "downloads": "1k+ загрузок", "desc": "управление микрофоном через меню и командную палитру." }
       ]
     }
   },

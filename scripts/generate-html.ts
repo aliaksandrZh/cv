@@ -10,7 +10,15 @@ function flatten(obj: unknown, prefix = ""): Record<string, string> {
   const result: Record<string, string> = {};
 
   if (Array.isArray(obj)) {
-    result[prefix] = obj.map((s) => `<li>${s}</li>`).join("");
+    if (obj.length > 0 && typeof obj[0] === "object" && obj[0] !== null) {
+      const items = obj.map((item) => {
+        const o = item as Record<string, string>;
+        return `<li><strong>${o.name}</strong> <strong>(${o.downloads})</strong>: ${o.desc}</li>`;
+      }).join("");
+      result[prefix] = items;
+    } else {
+      result[prefix] = obj.map((s) => `<li>${String(s)}</li>`).join("");
+    }
   } else if (obj !== null && typeof obj === "object") {
     for (const [key, value] of Object.entries(obj)) {
       const newKey = prefix ? `${prefix}.${key}` : key;

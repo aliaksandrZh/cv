@@ -59,6 +59,9 @@ yarn-error.log*
 en/index.html
 ru/index.html
 
+# odt sync temp dirs
+.tmp_odt*
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

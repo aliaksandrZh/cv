@@ -1,0 +1,16 @@
+{
+  "odt": {
+    "sourceDir": "cv_sources",
+    "source": "cv2026.odt",
+    "template": "cv2026-template.odt",
+    "outputDir": "cv_sources/sync",
+    "output": {
+      "en": "Aliaksandr.Zhebit.odt",
+      "ru": "Aliaksandr.Zhebit-ru.odt"
+    },
+    "enabled": {
+      "en": true,
+      "ru": false
+    }
+  }
+}

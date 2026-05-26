@@ -18,7 +18,9 @@
   "labels": {
     "stack": "Stack",
     "platform": "Platform",
-    "position": "Position"
+    "position": "Position",
+    "key_contributions": "Key Contributions",
+    "contributed_extensions": "Contributed extensions"
   },
   "companies": {
     "cae": {
@@ -114,9 +116,9 @@
       "stack": "React, Node.js, Swift, AppleScript",
       "platform": "Raycast is an open-source collection of powerful productivity tools integrated into an extendable launcher.",
       "contributions": [
-        "<strong>Speedtest</strong> <strong>(50k+ downloads)</strong>: Runs internet speed tests directly from the app.",
-        "<strong>ConsoleDev</strong> <strong>(1.5k+ downloads)</strong>: Integrates essential developer console tools.",
-        "<strong>Toggle Audio Input</strong> <strong>(1k+ downloads)</strong>: Command and menu bar extension to mute/unmute microphones."
+        { "name": "Speedtest", "downloads": "50k+ downloads", "desc": "Runs internet speed tests directly from the app." },
+        { "name": "ConsoleDev", "downloads": "1.5k+ downloads", "desc": "Integrates essential developer console tools." },
+        { "name": "Toggle Audio Input", "downloads": "1k+ downloads", "desc": "Command and menu bar extension to mute/unmute microphones." }
       ]
     }
   },
