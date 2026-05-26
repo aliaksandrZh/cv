@@ -235,15 +235,15 @@ main li {
   font-family: inherit;
   font-size: 0.875rem;
   font-weight: 600;
-  transition: transform 0.2s, background 0.2s;
+  transition: transform 0.15s, background 0.15s;
 }
 
 .download-inline button:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .download-inline button:active {
-  transform: scale(0.9);
+  transform: scale(0.98);
 }
 
 .download-inline select {
@@ -262,13 +262,13 @@ main li {
   font-family: inherit;
   font-size: 0.875rem;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.15s;
 }
 
 .download-inline select:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .download-inline select:active {
-  transform: scale(0.9);
+  transform: scale(0.98);
 }
