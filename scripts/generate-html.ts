@@ -57,17 +57,22 @@ function getDownloadData(): {
 
   for (const key of fileSections) {
     const section = config[key];
-    if (!section || !section.enabled?.en || !section.output?.en) continue;
+    if (!section || !section.output) continue;
 
-    const filename = section.output.en;
-    coveredFiles.add(filename);
-    const ext = filename.split(".").pop() || filename;
-    const isExisting = existingFiles.has(filename);
+    for (const lang of ["en", "ru"]) {
+      if (!section.enabled?.[lang] || !section.output[lang]) continue;
 
-    if (!isExisting) continue;
+      const filename = section.output[lang];
+      coveredFiles.add(filename);
+      const ext = filename.split(".").pop() || filename;
+      const isExisting = existingFiles.has(filename);
 
-    options.push(`<option value="${filename}">.${ext}</option>`);
-    if (!firstEnabled) firstEnabled = filename;
+      if (!isExisting) continue;
+
+      const label = `.${ext} (${lang.toUpperCase()})`;
+      options.push(`<option value="${filename}">${label}</option>`);
+      if (!firstEnabled) firstEnabled = filename;
+    }
   }
 
   for (const file of existingFiles) {
@@ -79,9 +84,7 @@ function getDownloadData(): {
 
   const optionsHtml = options.join("\n          ");
   const href = firstEnabled ? `../cv/${firstEnabled}` : "#";
-  const filename = firstEnabled
-    ? `Aliaksandr.Zhebit.${firstEnabled.split(".").pop()}`
-    : "";
+  const filename = firstEnabled || "";
 
   return { options: optionsHtml, href, filename };
 }

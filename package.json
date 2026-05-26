@@ -11,9 +11,10 @@
     "preview": "vite preview",
     "odt:prepare": "tsx scripts/prepare-odt-template.ts",
     "odt:sync": "tsx scripts/sync-odt.ts en && tsx scripts/sync-odt.ts ru",
-    "md:sync": "tsx scripts/sync-md.ts en",
+    "md:sync": "tsx scripts/sync-md.ts en && tsx scripts/sync-md.ts ru",
     "pdf:sync": "tsx scripts/sync-pdf.ts en && tsx scripts/sync-pdf.ts ru",
-    "cv:sync": "npm run odt:sync && npm run md:sync && npm run pdf:sync",
+    "cv:clean": "rm -rf cv_sources/sync/* public/cv/*",
+    "cv:sync": "npm run cv:clean && npm run odt:sync && npm run md:sync && npm run pdf:sync",
     "public:copy": "tsx scripts/copy-to-public.ts",
     "cv:build": "npm run cv:sync && npm run public:copy"
   },

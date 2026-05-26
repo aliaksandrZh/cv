@@ -14,9 +14,8 @@ export const initDownload = (): void => {
       link.removeAttribute("download");
       return;
     }
-    const ext = filename.split(".").pop() || filename;
     link.href = `../cv/${filename}`;
-    link.download = `Aliaksandr.Zhebit.${ext}`;
+    link.download = filename;
   };
 
   update();

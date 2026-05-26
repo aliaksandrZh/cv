@@ -10,7 +10,7 @@
     },
     "enabled": {
       "en": true,
-      "ru": false
+      "ru": true
     }
   },
   "pdf": {
@@ -21,7 +21,7 @@
     },
     "enabled": {
       "en": true,
-      "ru": false
+      "ru": true
     }
   },
   "public": {
@@ -32,11 +32,11 @@
     "outputDir": "cv_sources/sync",
     "output": {
       "en": "Aliaksandr.Zhebit.md",
-      "ru": "cv2026-ru.md"
+      "ru": "Aliaksandr.Zhebit-ru.md"
     },
     "enabled": {
       "en": true,
-      "ru": false
+      "ru": true
     }
   }
 }
