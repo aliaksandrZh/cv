@@ -67,12 +67,12 @@ Engineered user interface layers for a Swiss real-estate platform integrating pr
 Raycast is an open-source collection of powerful productivity tools integrated into an extendable launcher.
 
 **Contributed extensions:**
-* **Speedtest** (50k+ downloads) : Runs internet speed tests directly from the app.
-* **ConsoleDev** (1.5k+ downloads) : Integrates essential developer console tools.
-* **Toggle Audio Input** (1k+ downloads) : Command and menu bar extension to mute/unmute microphones.
+* **Speedtest** (150k+ downloads) : Runs internet speed tests directly from the app.
+* **ConsoleDev** (2.7k+ downloads) : Integrates essential developer console tools.
+* **Toggle Audio Input** (6k+ downloads) : Command and menu bar extension to mute/unmute microphones.
 
 ## Education
-Francysk Skorina Gomel State University - Bachelor's Degree 2015 - 2019
+Francysk Skorina Gomel State University 2015 - 2019
 
 ## Skills
 * JavaScript
