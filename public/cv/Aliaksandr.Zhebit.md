@@ -39,7 +39,7 @@ Key Contributions:
 * Resolved user feedback and UAT findings to improve dashboard calculation reliability and workflow usability.
 * Supported UAT and Production releases.
 
-#### Agentic Development Pipeline 2026
+#### Agentic Development 2026
 **Stack**: Anthropic Claude API, Python, Docker, Azure DevOps
 
 **Platform**: Internal PoC evaluating Python agents, BMAD frameworks, local LLMs, and Docker automation for an AI-assisted web application generation pipeline (early prototype stage).

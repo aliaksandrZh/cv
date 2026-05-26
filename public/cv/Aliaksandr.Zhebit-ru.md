@@ -39,7 +39,7 @@ Full-Stack .NET Developer
 * Внедрял изменения по результатам обратной связи пользователей и UAT, повышая точность расчётов и удобство использования.
 * Поддерживал UAT и production релизы.
 
-#### Agentic Development Pipeline 2026
+#### Agentic Development 2026
 **Стек**: Anthropic Claude API, Python, Docker, Azure DevOps
 
 **Платформа**: Внутренний PoC для исследования Python agents, BMAD frameworks, локальных LLM и Docker-автоматизации для AI-пайплайна генерации веб-приложений (ранний прототип).

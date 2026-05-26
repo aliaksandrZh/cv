@@ -58,7 +58,7 @@
           ]
         },
         "agentic": {
-          "name": "Agentic Development Pipeline",
+          "name": "Agentic Development",
           "dates": "2026",
           "stack": "Anthropic Claude API, Python, Docker, Azure DevOps",
           "platform": "Внутренний PoC для исследования Python agents, BMAD frameworks, локальных LLM и Docker-автоматизации для AI-пайплайна генерации веб-приложений (ранний прототип).",
