@@ -14,7 +14,8 @@
     "md:sync": "tsx scripts/sync-md.ts en",
     "pdf:sync": "tsx scripts/sync-pdf.ts en && tsx scripts/sync-pdf.ts ru",
     "cv:sync": "npm run odt:sync && npm run md:sync && npm run pdf:sync",
-    "public:copy": "tsx scripts/copy-to-public.ts"
+    "public:copy": "tsx scripts/copy-to-public.ts",
+    "cv:build": "npm run cv:sync && npm run public:copy"
   },
   "dependencies": {
     "gh-pages": "^6.1.1",
