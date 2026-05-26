@@ -45,6 +45,16 @@
             "Consulted and assisted team members."
           ]
         },
+        "agentic": {
+          "name": "Agentic Development",
+          "dates": "2026",
+          "stack": "Anthropic Claude API, Python, Docker, Azure DevOps",
+          "platform": "Internal PoC evaluating Python agents, BMAD frameworks, local LLMs, and Docker automation for an AI-assisted web application generation pipeline (early prototype stage).",
+          "contributions": [
+            "Developed an initial prototype for frontend solution generation, validation, and automation of developer workflows.",
+            "Investigated agentic workflow frameworks, local LLM execution, Docker-based agent runs, and CI/CD triggers."
+          ]
+        },
         "zollner": {
           "name": "Zollner Dashboard Platform",
           "dates": "2025",
@@ -55,16 +65,6 @@
             "Delivered backend logic for KPI calculations and aggregated reporting APIs.",
             "Resolved user feedback and UAT findings to improve dashboard calculation reliability and workflow usability.",
             "Supported UAT and Production releases."
-          ]
-        },
-        "agentic": {
-          "name": "Agentic Development",
-          "dates": "2026",
-          "stack": "Anthropic Claude API, Python, Docker, Azure DevOps",
-          "platform": "Internal PoC evaluating Python agents, BMAD frameworks, local LLMs, and Docker automation for an AI-assisted web application generation pipeline (early prototype stage).",
-          "contributions": [
-            "Developed an initial prototype for frontend solution generation, validation, and automation of developer workflows.",
-            "Investigated agentic workflow frameworks, local LLM execution, Docker-based agent runs, and CI/CD triggers."
           ]
         }
       }

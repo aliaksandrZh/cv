@@ -49,7 +49,7 @@ function prepareTemplate(): void {
     const tag = getTagName(node);
     const attrs = getAttrs(node);
 
-    if (tag === "table:table") {
+    if (tag === "table:table" && CONFIG.odt.headerLayout !== "flat") {
       processHeaderTable(node);
       continue;
     }
@@ -57,6 +57,11 @@ function prepareTemplate(): void {
     if (tag === "text:h") {
       const level = attrs["@_text:outline-level"];
       const text = getText(node);
+
+      if (level === "1") {
+        setText(node, "{{name}}");
+        continue;
+      }
 
       if (level === "2") {
         if (text.includes("Experience") || text.includes("Опыт работы")) {
@@ -129,6 +134,17 @@ function prepareTemplate(): void {
 
     if (tag === "text:p") {
       const text = getText(node);
+
+      if (CONFIG.odt.headerLayout === "flat" && !currentSection) {
+        if (text.includes("Belarus") || text.includes("Беларусь")) {
+          setText(node, "{{location}}");
+          continue;
+        }
+        if (text.includes("Software Engineer with 5+") || text.includes("Software Engineer с 5+")) {
+          setText(node, "{{summary}}");
+          continue;
+        }
+      }
 
       if (currentSection === "experience") {
         if (companyIndex === 0 && projectIndex === -1) {

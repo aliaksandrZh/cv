@@ -3,6 +3,7 @@
     "sourceDir": "cv_sources",
     "source": "Aliaksandr.Zhebit.odt",
     "template": "cv2026-template.odt",
+    "headerLayout": "flat",
     "outputDir": "cv_sources/sync",
     "output": {
       "en": "Aliaksandr.Zhebit.odt",
