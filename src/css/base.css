@@ -53,19 +53,6 @@ body {
   margin-bottom: 1rem;
 }
 
-.typed-text {
-  border-right: 2px solid var(--title);
-  animation: blinkCaret 1s ease-in-out infinite;
-  white-space: nowrap;
-}
-
-@media (max-width: 639px) {
-  .typed-text {
-    white-space: normal;
-    border-right: none;
-    animation: none;
-  }
-}
 
 .header-line {
   border-bottom: 2px solid var(--title);
