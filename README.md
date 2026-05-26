@@ -119,32 +119,6 @@ npm run deploy       # push dist to gh-pages branch
 
 GitHub Pages serves from `gh-pages` branch. Base path is `/cv`.
 
-## Done
-
-- MPA build with Vite (`en/`, `ru/`, root redirect)
-- Single-template i18n via Vite plugin with auto-reload on dev
-- Theme toggle (OS default, localStorage persist)
-- Language switcher in top nav
-- Typewriter animation (RxJS)
-- Hover highlight background (vanilla JS)
-- Download button in top nav with dynamic format dropdown based on `public/cv/` contents
-- Content populated from JSON (Experience, Open Source, Education, Skills)
-- Certificates section removed
-- ODT sync pipeline with template + hydration
-- Markdown sync pipeline
-- PDF sync pipeline via LibreOffice headless
-- Copy-to-public script driven by config
-- Unified `cv:sync` command
-
-## Not Done / Pending
-
-- **Animations**: Only typewriter and hover are active. No entrance animations, scroll effects, or transitions between sections.
-- **Russian translations**: Generated automatically; needs native speaker review (`src/i18n/ru.json`).
-- **Meta tags / SEO**: Basic description only; no Open Graph or structured data.
-- **Accessibility audit**: Not formally tested.
-- **Print styles**: No dedicated `@media print` CSS.
-- **404 page**: No custom 404 for GitHub Pages.
-
 ## Notes
 
 - Typed text is inside an `<h2>` with fixed `h-10` height to prevent layout shift.
