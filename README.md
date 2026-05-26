@@ -9,7 +9,7 @@ Static multi-page personal CV for Aliaksandr Zhebit, built with **vanilla TypeSc
 - **Build tool**: Vite (MPA mode)
 - **Styling**: Tailwind CSS v3 + custom CSS modules
 - **No framework**: Vanilla TypeScript, no React, no router
-- **i18n**: Single template + pre-build generation. `src/template/index.html` with `{{dot.notation}}` placeholders is hydrated by `scripts/generate-html.ts` before Vite build, producing `en/index.html` and `ru/index.html`.
+- **i18n**: Single template + pre-build generation. `src/template/index.html` with `{{dot.notation}}` placeholders is hydrated by `scripts/generate-html.ts` before Vite build, producing `en/index.html` and `ru/index.html`. Download options are generated dynamically at build time based on files present in `public/cv/`.
 - **Deploy**: `gh-pages` branch via `npm run deploy`
 
 ## File Structure
@@ -28,6 +28,10 @@ cv/
 │       ├── Aliaksandr.Zhebit.odt
 │       ├── Aliaksandr.Zhebit.pdf
 │       └── Aliaksandr.Zhebit.md
+├── public/
+│   ├── cv/                 # Generated CV files copied for web download
+│   │   ├── Aliaksandr.Zhebit.pdf
+│   │   └── Aliaksandr.Zhebit.md
 ├── scripts/
 │   ├── generate-html.ts    # HTML i18n generator
 │   ├── json-utils.ts       # Shared JSON merge / lang data loader
@@ -94,7 +98,7 @@ All pipelines share the same source of truth: `src/i18n/{en,ru}.json` + `src/i18
 
 ### Copy to Public
 
-- **`scripts/copy-to-public.ts`**: Copies synced files from `cv_sources/sync/` to `public/` based on `public.copy` list in `cv-config.json`.
+- **`scripts/copy-to-public.ts`**: Copies synced files from `cv_sources/sync/` to `public/cv/` based on `public.copy` list in `cv-config.json`.
 - Respects `enabled` flags per language.
 - **Command**:
   - `npm run public:copy` — copy configured formats to `public/`
@@ -123,7 +127,7 @@ GitHub Pages serves from `gh-pages` branch. Base path is `/cv`.
 - Language switcher in top nav
 - Typewriter animation (RxJS)
 - Hover highlight background (vanilla JS)
-- Download button in top nav (PDF/ODT selector)
+- Download button in top nav with dynamic format dropdown based on `public/cv/` contents
 - Content populated from JSON (Experience, Open Source, Education, Skills)
 - Certificates section removed
 - ODT sync pipeline with template + hydration
@@ -146,4 +150,5 @@ GitHub Pages serves from `gh-pages` branch. Base path is `/cv`.
 - Typed text is inside an `<h2>` with fixed `h-10` height to prevent layout shift.
 - Theme uses `.dark` class on `<html>` + CSS custom properties.
 - `lang.ts` marks active language by matching `/cv/{lang}/` in `href`.
+- Download dropdown options are generated at build time by scanning `public/cv/`. Only existing files appear; missing configured formats are omitted.
 - LibreOffice on macOS is typically at `/Applications/LibreOffice.app/Contents/MacOS/soffice` (not in PATH).

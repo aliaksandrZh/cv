@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from "fs";
 import { resolve } from "path";
 import { fileURLToPath } from "url";
 import { readLangData } from "./json-utils.js";
@@ -32,12 +32,71 @@ function flatten(obj: unknown, prefix = ""): Record<string, string> {
   return result;
 }
 
+function getDownloadData(): {
+  options: string;
+  href: string;
+  filename: string;
+} {
+  const configPath = resolve(process.cwd(), "cv-config.json");
+  const config = JSON.parse(readFileSync(configPath, "utf-8"));
+  const publicCvDir = resolve(process.cwd(), "public", "cv");
+
+  const existingFiles = new Set<string>();
+  try {
+    for (const file of readdirSync(publicCvDir)) {
+      existingFiles.add(file);
+    }
+  } catch {
+    // Directory does not exist yet
+  }
+
+  const fileSections = ["pdf", "odt", "markdown"];
+  const options: string[] = [];
+  const coveredFiles = new Set<string>();
+  let firstEnabled: string | null = null;
+
+  for (const key of fileSections) {
+    const section = config[key];
+    if (!section || !section.enabled?.en || !section.output?.en) continue;
+
+    const filename = section.output.en;
+    coveredFiles.add(filename);
+    const ext = filename.split(".").pop() || filename;
+    const isExisting = existingFiles.has(filename);
+
+    if (!isExisting) continue;
+
+    options.push(`<option value="${filename}">.${ext}</option>`);
+    if (!firstEnabled) firstEnabled = filename;
+  }
+
+  for (const file of existingFiles) {
+    if (coveredFiles.has(file)) continue;
+    const ext = file.split(".").pop() || file;
+    options.push(`<option value="${file}">.${ext}</option>`);
+    if (!firstEnabled) firstEnabled = file;
+  }
+
+  const optionsHtml = options.join("\n          ");
+  const href = firstEnabled ? `../cv/${firstEnabled}` : "#";
+  const filename = firstEnabled
+    ? `Aliaksandr.Zhebit.${firstEnabled.split(".").pop()}`
+    : "";
+
+  return { options: optionsHtml, href, filename };
+}
+
 export function generateHtml(): void {
   const template = readFileSync(templatePath, "utf-8");
 
   for (const lang of langs) {
     const raw = readLangData(lang);
     const data = flatten(raw);
+
+    const downloadData = getDownloadData();
+    data["download.options"] = downloadData.options;
+    data["download.href"] = downloadData.href;
+    data["download.filename"] = downloadData.filename;
 
     let html = template;
 

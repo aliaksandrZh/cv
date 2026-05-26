@@ -8,9 +8,15 @@ export const initDownload = (): void => {
   if (!link || !select) return;
 
   const update = () => {
-    const ext = select.value as "pdf" | "docx";
-    link.href = `../Aliaksandr.Zhebit.${ext}`;
-    link.download = `Aliaksandr.Zhebit.Web.Dev.${ext}`;
+    const filename = select.value;
+    if (!filename) {
+      link.href = "#";
+      link.removeAttribute("download");
+      return;
+    }
+    const ext = filename.split(".").pop() || filename;
+    link.href = `../cv/${filename}`;
+    link.download = `Aliaksandr.Zhebit.${ext}`;
   };
 
   update();

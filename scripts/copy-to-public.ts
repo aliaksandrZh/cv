@@ -9,6 +9,11 @@ function main(): void {
     mkdirSync(publicDir, { recursive: true });
   }
 
+  const cvDir = resolve(publicDir, "cv");
+  if (!existsSync(cvDir)) {
+    mkdirSync(cvDir, { recursive: true });
+  }
+
   const copyList: string[] = CONFIG.public?.copy ?? [];
   if (copyList.length === 0) {
     console.log("Nothing configured to copy.");
@@ -30,7 +35,7 @@ function main(): void {
 
       const fileName = section.output[lang];
       const src = resolve(process.cwd(), section.outputDir, fileName);
-      const dst = resolve(publicDir, fileName);
+      const dst = resolve(cvDir, fileName);
 
       if (!existsSync(src)) {
         console.log(`Skipped ${key} ${lang} (not found: ${src})`);
@@ -38,7 +43,7 @@ function main(): void {
       }
 
       copyFileSync(src, dst);
-      console.log(`Copied ${key} ${lang} → public/${fileName}`);
+      console.log(`Copied ${key} ${lang} → public/cv/${fileName}`);
     }
   }
 }

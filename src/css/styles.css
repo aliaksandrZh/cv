@@ -174,10 +174,6 @@ html.dark #theme-toggle .moon {
   margin-bottom: 0.25rem;
 }
 
-.sub-project .detail {
-  opacity: 0.9;
-}
-
 .sub-project ul {
   list-style: disc;
   padding-left: 1.25rem;
