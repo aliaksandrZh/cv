@@ -13,6 +13,20 @@
       "ru": false
     }
   },
+  "pdf": {
+    "outputDir": "cv_sources/sync",
+    "output": {
+      "en": "Aliaksandr.Zhebit.pdf",
+      "ru": "Aliaksandr.Zhebit-ru.pdf"
+    },
+    "enabled": {
+      "en": true,
+      "ru": false
+    }
+  },
+  "public": {
+    "copy": ["pdf", "markdown"]
+  },
   "markdown": {
     "template": "cv_sources/cv-template.md",
     "outputDir": "cv_sources/sync",

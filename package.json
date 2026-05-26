@@ -11,7 +11,10 @@
     "preview": "vite preview",
     "odt:prepare": "tsx scripts/prepare-odt-template.ts",
     "odt:sync": "tsx scripts/sync-odt.ts en && tsx scripts/sync-odt.ts ru",
-    "md:sync": "tsx scripts/sync-md.ts en"
+    "md:sync": "tsx scripts/sync-md.ts en",
+    "pdf:sync": "tsx scripts/sync-pdf.ts en && tsx scripts/sync-pdf.ts ru",
+    "cv:sync": "npm run odt:sync && npm run md:sync && npm run pdf:sync",
+    "public:copy": "tsx scripts/copy-to-public.ts"
   },
   "dependencies": {
     "gh-pages": "^6.1.1",
