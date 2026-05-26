@@ -111,7 +111,7 @@ All pipelines share the same source of truth: `src/i18n/{en,ru}.json` + `src/i18
 ## Deployment
 
 ```bash
-npm run cv:sync      # regenerate all synced artifacts
+npm run cv:build      # regenerate all synced artifacts
 npm run public:copy  # copy configured files to public/
 npm run build        # build Vite site
 npm run deploy       # push dist to gh-pages branch
