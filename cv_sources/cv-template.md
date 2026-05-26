@@ -2,7 +2,7 @@
 
 {{location}}
 
-[{{contacts.email.label}}]({{contacts.email.url}}) | [{{contacts.github.label}}]({{contacts.github.url}}) | [{{contacts.linkedin.label}}]({{contacts.linkedin.url}}) | [{{contacts.web.label}}]({{contacts.web.url}})
+[{{contacts.email.label}}]({{contacts.email.url}}) | [{{contacts.github.label}}]({{contacts.github.url}}) | [{{contacts.linkedin.label}}]({{contacts.linkedin.url}})
 
 {{summary}}
 

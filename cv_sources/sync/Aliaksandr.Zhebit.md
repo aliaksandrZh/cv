@@ -2,7 +2,7 @@
 
 Belarus, Gomel
 
-[aliaksandr.zhebit@gmail.com](mailto:aliaksandr.zhebit@gmail.com) | [GitHub](https://github.com/aliaksandrzh) | [LinkedIn](https://linkedin.com/in/aliaksandr-zhebit) | [Web](https://aliaksandrzh.github.io/cv/)
+[aliaksandr.zhebit@gmail.com](mailto:aliaksandr.zhebit@gmail.com) | [GitHub](https://github.com/aliaksandrzh) | [LinkedIn](https://linkedin.com/in/aliaksandr-zhebit)
 
 Software Engineer with 5+ years of experience in frontend and full-stack development. Experienced in building enterprise web applications, dashboards, ERP/CRM workflows, and developer automation tools. Skilled in designing user-facing workflows, improving complex UI systems, and working across frontend, backend, databases, and integrations.
 

@@ -2,7 +2,7 @@
 
 Беларусь, Гомель
 
-[aliaksandr.zhebit@gmail.com](mailto:aliaksandr.zhebit@gmail.com) | [GitHub](https://github.com/aliaksandrzh) | [LinkedIn](https://linkedin.com/in/aliaksandr-zhebit) | [Web](https://aliaksandrzh.github.io/cv/)
+[aliaksandr.zhebit@gmail.com](mailto:aliaksandr.zhebit@gmail.com) | [GitHub](https://github.com/aliaksandrzh) | [LinkedIn](https://linkedin.com/in/aliaksandr-zhebit)
 
 Software Engineer с 5+ годами опыта во frontend и full-stack разработке. Опыт разработки enterprise web-приложений, дашбордов для цепочек поставок, ERP/CRM workflows и инструментов автоматизации для разработчиков. Специализируюсь на проектировании пользовательских рабочих процессов, улучшении сложных UI-систем и работе с frontend, backend, базами данных и интеграциями.
 
