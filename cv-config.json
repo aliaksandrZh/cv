@@ -1,7 +1,7 @@
 {
   "odt": {
     "sourceDir": "cv_sources",
-    "source": "Aliaksandr.Zhebit.odt",
+    "source": "Aliaksandr.Zhebit copy.odt",
     "template": "cv2026-template.odt",
     "headerLayout": "flat",
     "outputDir": "cv_sources/sync",

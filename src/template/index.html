@@ -55,7 +55,7 @@
           <p class="mt-1 text-center text-sm opacity-80 sm:text-left">{{location}}</p>
           <div class="mt-3 flex flex-wrap items-center justify-center gap-2 sm:justify-start">
             <a
-              href="mailto:aliaksandr.zhebit@gmail.com"
+              href="{{contacts.email.url}}"
               class="contact-link"
               data-hover-item
             >
@@ -70,10 +70,10 @@
                   />
                 </g>
               </svg>
-              aliaksandr.zhebit@gmail.com
+              {{contacts.email.label}}
             </a>
             <a
-              href="https://github.com/aliaksandrzh"
+              href="{{contacts.github.url}}"
               target="_blank"
               rel="noopener"
               class="contact-link"
@@ -87,10 +87,10 @@
                   fill="var(--icon)"
                 />
               </svg>
-              GitHub
+              {{contacts.github.label}}
             </a>
             <a
-              href="https://linkedin.com/in/aliaksandr-zhebit"
+              href="{{contacts.linkedin.url}}"
               target="_blank"
               rel="noopener"
               class="contact-link"
@@ -116,7 +116,7 @@
                   fill="var(--icon)"
                 />
               </svg>
-              LinkedIn
+              {{contacts.linkedin.label}}
             </a>
           </div>
           <p class="mt-3 leading-relaxed">{{summary}}</p>
@@ -136,38 +136,18 @@
               <h4>{{companies.cae.name}}</h4>
               <h6>{{companies.cae.dates}}</h6>
             </div>
-            <h5>{{companies.cae.title}}</h5>
           </div>
-          <p class="leading-relaxed">{{companies.cae.description}}</p>
 
           <div class="sub-project">
             <div class="title-row">
               <h5>{{companies.cae.projects.sourceability.name}}</h5>
               <h6>{{companies.cae.projects.sourceability.dates}}</h6>
             </div>
+            <p class="detail"><strong>{{labels.position}}:</strong> {{companies.cae.projects.sourceability.position}}</p>
             <p class="detail"><strong>{{labels.stack}}:</strong> {{companies.cae.projects.sourceability.stack}}</p>
-            <p class="detail"><strong>{{labels.platform}}:</strong> {{companies.cae.projects.sourceability.platform}}</p>
+            <p class="detail my-2">{{companies.cae.projects.sourceability.description}}</p>
+            <p class="detail"><strong>{{labels.key_contributions}}:</strong></p>
             <ul>{{companies.cae.projects.sourceability.contributions}}</ul>
-          </div>
-
-          <div class="sub-project">
-            <div class="title-row">
-              <h5>{{companies.cae.projects.agentic.name}}</h5>
-              <h6>{{companies.cae.projects.agentic.dates}}</h6>
-            </div>
-            <p class="detail"><strong>{{labels.stack}}:</strong> {{companies.cae.projects.agentic.stack}}</p>
-            <p class="detail"><strong>{{labels.platform}}:</strong> {{companies.cae.projects.agentic.platform}}</p>
-            <ul>{{companies.cae.projects.agentic.contributions}}</ul>
-          </div>
-
-          <div class="sub-project">
-            <div class="title-row">
-              <h5>{{companies.cae.projects.zollner.name}}</h5>
-              <h6>{{companies.cae.projects.zollner.dates}}</h6>
-            </div>
-            <p class="detail"><strong>{{labels.stack}}:</strong> {{companies.cae.projects.zollner.stack}}</p>
-            <p class="detail"><strong>{{labels.platform}}:</strong> {{companies.cae.projects.zollner.platform}}</p>
-            <ul>{{companies.cae.projects.zollner.contributions}}</ul>
           </div>
         </div>
 
@@ -177,18 +157,17 @@
               <h4>{{companies.itechart.name}}</h4>
               <h6>{{companies.itechart.dates}}</h6>
             </div>
-            <h5>{{companies.itechart.title}}</h5>
           </div>
-          <p class="leading-relaxed">{{companies.itechart.description}}</p>
 
           <div class="sub-project">
             <div class="title-row">
               <h5>{{companies.itechart.projects.ey.name}}</h5>
               <h6>{{companies.itechart.projects.ey.dates}}</h6>
             </div>
-            <h5><strong>{{labels.position}}:</strong> {{companies.itechart.projects.ey.position}}</h5>
+            <p class="detail"><strong>{{labels.position}}:</strong> {{companies.itechart.projects.ey.position}}</p>
             <p class="detail"><strong>{{labels.stack}}:</strong> {{companies.itechart.projects.ey.stack}}</p>
-            <p class="detail"><strong>{{labels.platform}}:</strong> {{companies.itechart.projects.ey.platform}}</p>
+            <p class="detail my-2">{{companies.itechart.projects.ey.description}}</p>
+            <p class="detail"><strong>{{labels.key_contributions}}:</strong></p>
             <ul>{{companies.itechart.projects.ey.contributions}}</ul>
           </div>
 
@@ -197,9 +176,10 @@
               <h5>{{companies.itechart.projects.mpre.name}}</h5>
               <h6>{{companies.itechart.projects.mpre.dates}}</h6>
             </div>
-            <h5><strong>{{labels.position}}:</strong> {{companies.itechart.projects.mpre.position}}</h5>
+            <p class="detail"><strong>{{labels.position}}:</strong> {{companies.itechart.projects.mpre.position}}</p>
             <p class="detail"><strong>{{labels.stack}}:</strong> {{companies.itechart.projects.mpre.stack}}</p>
-            <p class="detail"><strong>{{labels.platform}}:</strong> {{companies.itechart.projects.mpre.platform}}</p>
+            <p class="detail my-2">{{companies.itechart.projects.mpre.description}}</p>
+            <p class="detail"><strong>{{labels.key_contributions}}:</strong></p>
             <ul>{{companies.itechart.projects.mpre.contributions}}</ul>
           </div>
         </div>
@@ -216,7 +196,8 @@
           </div>
           <div class="sub-project">
             <p class="detail"><strong>{{labels.stack}}:</strong> {{open_source.raycast.stack}}</p>
-            <p class="detail"><strong>{{labels.platform}}:</strong> {{open_source.raycast.platform}}</p>
+            <p class="detail my-2">{{open_source.raycast.platform}}</p>
+            <p class="detail"><strong>{{labels.contributed_extensions}}:</strong></p>
             <ul>{{open_source.raycast.contributions}}</ul>
           </div>
         </div>

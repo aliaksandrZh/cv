@@ -104,16 +104,6 @@ function prepareTemplate(): void {
           replaceProjectHeading(node, "companies.cae.projects.sourceability");
           continue;
         }
-        if (text.includes("Zollner")) {
-          projectIndex = 1;
-          replaceProjectHeading(node, "companies.cae.projects.zollner");
-          continue;
-        }
-        if (text.includes("Agentic")) {
-          projectIndex = 2;
-          replaceProjectHeading(node, "companies.cae.projects.agentic");
-          continue;
-        }
         if (text.includes("Ernst")) {
           projectIndex = 0;
           replaceProjectHeading(node, "companies.itechart.projects.ey");
@@ -147,29 +137,6 @@ function prepareTemplate(): void {
       }
 
       if (currentSection === "experience") {
-        if (companyIndex === 0 && projectIndex === -1) {
-          // CAE company-level paragraphs
-          if (text.includes("Full-Stack .NET Developer") || text.includes("Full-Stack")) {
-            setText(node, "{{companies.cae.title}}");
-            continue;
-          }
-          if (text.includes("Delivered frontend")) {
-            setText(node, "{{companies.cae.description}}");
-            continue;
-          }
-        }
-        if (companyIndex === 1 && projectIndex === -1) {
-          // ITECHART company-level paragraphs
-          if (text.includes("Software Engineer") && !text.includes("University")) {
-            setText(node, "{{companies.itechart.title}}");
-            continue;
-          }
-          if (text.includes("Developed and maintained")) {
-            setText(node, "{{companies.itechart.description}}");
-            continue;
-          }
-        }
-
         // Project-level paragraphs
         const projectKey = getProjectKey(companyIndex, projectIndex);
         if (projectKey) {
@@ -189,6 +156,18 @@ function prepareTemplate(): void {
             replaceKeyContributionsParagraph(node);
             continue;
           }
+          if (text.includes("Drove feature development")) {
+            setText(node, "{{companies.cae.projects.sourceability.description}}");
+            continue;
+          }
+          if (text.includes("Coordinated frontend")) {
+            setText(node, "{{companies.itechart.projects.ey.description}}");
+            continue;
+          }
+          if (text.includes("Engineered user interface")) {
+            setText(node, "{{companies.itechart.projects.mpre.description}}");
+            continue;
+          }
         }
       }
 
@@ -197,8 +176,8 @@ function prepareTemplate(): void {
           replaceLabelValueParagraph(node, "labels.stack", "open_source.raycast.stack", "Stack:");
           continue;
         }
-        if (text.startsWith("Platform:") || text.startsWith("Платформа:")) {
-          replaceLabelValueParagraph(node, "labels.platform", "open_source.raycast.platform", "Platform:");
+        if (text.includes("Raycast is an open-source") || text.includes("Raycast — open-source")) {
+          setText(node, "{{open_source.raycast.platform}}");
           continue;
         }
         if (text.includes("Contributed extensions") || text.includes("Вклад в расширения")) {
@@ -260,7 +239,7 @@ function processHeaderTable(tableNode: unknown): void {
 function getProjectKey(companyIndex: number, projectIndex: number): string | null {
   const companies = ["cae", "itechart"];
   const projects: Record<string, string[]> = {
-    cae: ["sourceability", "zollner", "agentic"],
+    cae: ["sourceability"],
     itechart: ["ey", "mpre"],
   };
   const company = companies[companyIndex];
@@ -328,40 +307,20 @@ function replaceLabelValueParagraph(
   node: unknown,
   labelKey: string,
   valueKey: string,
-  labelPrefix: string
+  _labelPrefix: string
 ): void {
-  const children = getChildren(node);
-  const newChildren: unknown[] = [];
-  let labelAdded = false;
-
-  for (const child of children) {
-    if (isTextNode(child)) {
-      const text = String(child["#text"] ?? "");
-      if (text.trim().startsWith(labelPrefix) && !labelAdded) {
-        newChildren.push({ "#text": `{{${labelKey}}}: ` });
-        labelAdded = true;
-      }
-      // value text nodes are skipped - consolidated below
-    } else if (getTagName(child) === "text:span") {
-      const attrs = getAttrs(child);
-      const text = getText(child);
-      if (text.trim().startsWith(labelPrefix) && !labelAdded) {
-        newChildren.push({
-          "text:span": [{ "#text": `{{${labelKey}}}: ` }],
-          ":@": { "@_text:style-name": attrs["@_text:style-name"] },
-        });
-        labelAdded = true;
-      }
-      // value spans are skipped - consolidated below
-    } else {
-      newChildren.push(cloneNode(child));
-    }
-  }
-
-  // Consolidate all value fragments into a single text node
-  if (labelAdded) {
-    newChildren.push({ "#text": `{{${valueKey}}}` });
-  }
+  // Standardize to bold label (T5) + normal value (T8) regardless of original formatting.
+  // T5 = fo:font-weight="bold", T8 = fo:font-weight="normal" from auto-styles.
+  const newChildren: unknown[] = [
+    {
+      "text:span": [{ "#text": `{{${labelKey}}}: ` }],
+      ":@": { "@_text:style-name": "T5" },
+    },
+    {
+      "text:span": [{ "#text": `{{${valueKey}}}` }],
+      ":@": { "@_text:style-name": "T8" },
+    },
+  ];
 
   const tag = getTagName(node);
   if (tag) (node as Record<string, unknown>)[tag] = newChildren;
@@ -431,11 +390,11 @@ function replaceContributionsList(listNode: unknown, key: string): void {
       (firstP as Record<string, unknown>)[pTag] = [
         {
           "text:span": [{ "#text": `{{${key}.name}}` }],
-          ":@": { "@_text:style-name": "T4" },
+          ":@": { "@_text:style-name": "T6" },
         },
         {
           "text:span": [{ "#text": ` ({{${key}.downloads}})` }],
-          ":@": { "@_text:style-name": "T4" },
+          ":@": { "@_text:style-name": "T6" },
         },
         { "#text": `: {{${key}.desc}}` },
       ];

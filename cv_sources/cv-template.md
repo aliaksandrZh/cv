@@ -9,45 +9,25 @@
 ## {{experience_heading}}
 
 ### {{companies.cae.name}} {{companies.cae.dates}}
-{{companies.cae.title}}
-
-{{companies.cae.description}}
 
 #### {{companies.cae.projects.sourceability.name}} {{companies.cae.projects.sourceability.dates}}
+**{{labels.position}}**: {{companies.cae.projects.sourceability.position}}
+
 **{{labels.stack}}**: {{companies.cae.projects.sourceability.stack}}
 
-**{{labels.platform}}**: {{companies.cae.projects.sourceability.platform}}
+{{companies.cae.projects.sourceability.description}}
 
 {{labels.key_contributions}}:
 {{companies.cae.projects.sourceability.contributions}}
 
-#### {{companies.cae.projects.zollner.name}} {{companies.cae.projects.zollner.dates}}
-**{{labels.stack}}**: {{companies.cae.projects.zollner.stack}}
-
-**{{labels.platform}}**: {{companies.cae.projects.zollner.platform}}
-
-**{{labels.key_contributions}}:**
-{{companies.cae.projects.zollner.contributions}}
-
-#### {{companies.cae.projects.agentic.name}} {{companies.cae.projects.agentic.dates}}
-**{{labels.stack}}**: {{companies.cae.projects.agentic.stack}}
-
-**{{labels.platform}}**: {{companies.cae.projects.agentic.platform}}
-
-**{{labels.key_contributions}}:**
-{{companies.cae.projects.agentic.contributions}}
-
 ### {{companies.itechart.name}} {{companies.itechart.dates}}
-{{companies.itechart.title}}
-
-{{companies.itechart.description}}
 
 #### {{companies.itechart.projects.ey.name}} {{companies.itechart.projects.ey.dates}}
 **{{labels.position}}**: {{companies.itechart.projects.ey.position}}
 
 **{{labels.stack}}**: {{companies.itechart.projects.ey.stack}}
 
-**{{labels.platform}}**: {{companies.itechart.projects.ey.platform}}
+{{companies.itechart.projects.ey.description}}
 
 **{{labels.key_contributions}}:**
 {{companies.itechart.projects.ey.contributions}}
@@ -57,7 +37,7 @@
 
 **{{labels.stack}}**: {{companies.itechart.projects.mpre.stack}}
 
-**{{labels.platform}}**: {{companies.itechart.projects.mpre.platform}}
+{{companies.itechart.projects.mpre.description}}
 
 **{{labels.key_contributions}}:**
 {{companies.itechart.projects.mpre.contributions}}
@@ -67,7 +47,7 @@
 #### {{open_source.raycast.name}} {{open_source.raycast.dates}}
 **{{labels.stack}}**: {{open_source.raycast.stack}}
 
-**{{labels.platform}}**: {{open_source.raycast.platform}}
+{{open_source.raycast.platform}}
 
 **{{labels.contributed_extensions}}:**
 {{open_source.raycast.contributions}}

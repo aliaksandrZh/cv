@@ -135,6 +135,10 @@ html.dark #theme-toggle .moon {
   color: var(--title);
 }
 
+.contact-link:first-child {
+  padding-left: 0;
+}
+
 .experience-block {
   margin-bottom: 1.5rem;
 }
@@ -183,6 +187,9 @@ html.dark #theme-toggle .moon {
 }
 
 .sub-project h6 {
+  color: var(--title);
+  opacity: 0.8;
+  font-size: 1rem;
   margin-bottom: 0.25rem;
 }
 

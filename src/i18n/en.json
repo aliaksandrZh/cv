@@ -13,12 +13,12 @@
   "name": "Aliaksandr Zhebit",
   "location": "Belarus, Gomel",
   "avatar_alt": "Aliaksandr Zhebit",
-  "summary": "Software Engineer with 5+ years of experience in frontend and full-stack development. Experienced in building enterprise web applications, dashboards, ERP/CRM workflows, and developer automation tools. Skilled in designing user-facing workflows, improving complex UI systems, and working across frontend, backend, databases, and integrations.",
+  "summary": "Software Engineer with 5+ years of experience in frontend and full-stack development. Experienced in building enterprise web applications, dashboards, ERP/CRM workflows, and internal automation tools. Skilled in designing user-facing workflows, improving complex UI systems, and working across frontend, backend, databases, and integrations.",
   "experience_heading": "Experience",
   "labels": {
     "stack": "Stack",
     "platform": "Platform",
-    "position": "Position",
+    "position": "Role",
     "key_contributions": "Key Contributions",
     "contributed_extensions": "Contributed extensions"
   },
@@ -26,46 +26,26 @@
     "cae": {
       "name": "CAE TECHNOLOGY",
       "dates": "2024 - Present",
-      "title": "Full-Stack .NET Developer",
-      "description": "Delivered frontend-focused features for electronic components distribution, supply chain analytics and operations, and ERP/CRM workflows. Built Angular interfaces and contributed to .NET backend services, SQL Server logic, queues, background workers, and integrations. Led technical interviews and supported onboarding, mentoring, UI testing, and releases.",
+      "title": "Full-stack Developer",
+      "description": "",
       "projects": {
         "sourceability": {
           "name": "Sourceability",
           "dates": "2024 - 2026",
-          "stack": "Angular 17, PrimeNG, ChartJS, .NET 8, ASP.NET Core, EF Core, SQL Server, RabbitMQ, SignalR",
-          "platform": "Engineered an ERP/CRM platform handling supply chain, RFQ workflows, and warehouse operations for electronic components distribution, featuring custom NetSuite integrations.",
+          "position": "Full-stack Developer",
+          "stack": "Angular 17-19, PrimeNG, ChartJS, .NET 8-10, ASP.NET Core, EF Core, SQL Server, RabbitMQ, SignalR, Python, Docker",
           "contributions": [
-            "Led UI development for internal systems, including dashboards, reporting charts, reusable table components, state management, UI library extensions, and layout customization.",
-            "Built backend functionality using .NET services, SQL Server (views, stored procedures, functions), message queues, and background workers.",
-            "Resolved performance bottlenecks across Angular rendering, API delays, and database timeouts.",
-            "Integrated an Angular UI testing step into Azure Pipelines.",
-            "Contributed to an internal .NET-based Model Context Protocol (MCP) server for Azure DevOps integration to expose work item context to AI tools.",
-            "Audited production issues and implemented fixes across affected frontend and backend flows.",
-            "Supported UAT and Production releases.",
-            "Consulted and assisted team members."
-          ]
-        },
-        "agentic": {
-          "name": "Agentic Development",
-          "dates": "2026",
-          "stack": "Anthropic Claude API, Python, Docker, Azure DevOps",
-          "platform": "Internal PoC evaluating Python agents, BMAD frameworks, local LLMs, and Docker automation for an AI-assisted web application generation pipeline (early prototype stage).",
-          "contributions": [
-            "Developed an initial prototype for frontend solution generation, validation, and automation of developer workflows.",
-            "Investigated agentic workflow frameworks, local LLM execution, Docker-based agent runs, and CI/CD triggers."
-          ]
-        },
-        "zollner": {
-          "name": "Zollner Dashboard Platform",
-          "dates": "2025",
-          "stack": "Angular 19, PrimeNG, ChartJS, .NET 10, ASP.NET Core, EF Core, SQL Server, RabbitMQ",
-          "platform": "Sourcing and supply chain analytics platform providing visibility into PPV, shortages, package history, KPI metrics.",
-          "contributions": [
-            "Led frontend development for the Zollner dashboard, translating PRD requirements into Shortage and PPV workflows with audit trail support.",
-            "Delivered backend logic for KPI calculations and aggregated reporting APIs.",
-            "Resolved user feedback and UAT findings to improve dashboard calculation reliability and workflow usability.",
-            "Supported UAT and Production releases."
-          ]
+            "Implemented the majority of global UI features, interactive dashboards, reporting charts, reusable components, and state management systems.",
+            "Led frontend development for the Zollner analytics sub-project from PRD to production, delivering dedicated Shortage and PPV workflows with full audit trail support.",
+            "Developed robust backend logic, delivering complex KPI calculations, reporting APIs, and automated background services integrated with multiple external systems for cross-platform data synchronization.",
+            "Resolved performance bottlenecks across Angular rendering layers, API response times, and database queries.",
+            "Enhanced Azure CI/CD pipelines with automated Angular UI testing steps to streamline the validation process.",
+            "Resolved complex production issues end-to-end across the entire application stack to maintain system stability and performance.",
+            "Expanded internal AI-assisted ecosystem tools by adding specialized workflow capabilities to a Model Context Protocol (MCP) server for Azure DevOps.",
+            "Investigated agentic workflow frameworks, local LLM execution, and Docker-based automation pipelines for an internal web application generation prototype.",
+            "Conducted UI technical interviews, facilitated onboarding processes, and provided technical assistance to development and QA teammates."
+          ],
+          "description": "Developed features and supported production releases across both frontend and backend layers for a global enterprise supply chain and ERP/CRM ecosystem handling electronic components distribution, RFQ workflows, and warehouse operations, alongside its analytics sub-project, Zollner."
         }
       }
     },
@@ -73,14 +53,13 @@
       "name": "ITECHART GROUP",
       "dates": "2020 - 2023",
       "title": "Software Engineer",
-      "description": "Developed and maintained web applications using JavaScript, TypeScript, .NET, React, Angular, Node.js, and SQL. Collaborated with cross-functional teams, conducted code reviews, and optimized application performance.",
+      "description": "",
       "projects": {
         "ey": {
           "name": "Ernst & Young (EY) Raptor",
           "dates": "2021 - 2023",
           "position": "Lead Frontend / Full-Stack Engineer",
           "stack": "Angular 7-14, ASP.NET Core, SSMS, SQL, Azure",
-          "platform": "EY Global Tax Platform (GTP), a secure cloud environment integrating data sources for analytics, compliance, and tax visibility.",
           "contributions": [
             "Spearheaded the frontend development efforts as Lead Engineer, overseeing the design, development, and optimization of modular and reusable components.",
             "Implemented feature modules with complex logic and interceptors for seamless user experiences.",
@@ -88,22 +67,22 @@
             "Conducted codebase cleanups to reduce technical debt and improve maintainability.",
             "Increased test coverage from 30% to 70%.",
             "Played a pivotal role in supporting and enhancing the Micro Frontend (MFE) system, including chunk generation, lazy loading, and resolving critical issues.",
-            "Proactively identified and resolved production issues, ensuring smooth application operation and minimizing downtime.",
             "Built backend endpoints, database tables, migrations, and import/export functionalities.",
             "Mentored UI developers across teams and provided basic DevOps support (variable management, Git flow pre-push hooks)."
-          ]
+          ],
+          "description": "Coordinated frontend development and full-stack feature delivery for the EY Global Tax Platform (GTP), a secure cloud environment integrating disparate data sources for global analytics, compliance, and tax visibility."
         },
         "mpre": {
           "name": "MPRE",
           "dates": "2020 - 2021",
           "position": "Frontend Engineer",
           "stack": "Angular, React, Django, Postgres, Docker, CircleCI, Sentry",
-          "platform": "Swiss real estate platform integrating property search, valuation, and financing solutions.",
           "contributions": [
-            "Led frontend efforts using Angular, Angular Material, and Chart.js to scale the platform and improve the UI.",
+            "Developed frontend features using Angular, Angular Material, and Chart.js to scale the platform and improve the UI.",
             "Integrated Google APIs (Maps, Street View, Analytics) for enhanced user insights.",
             "Refactored and redesigned the frontend source code."
-          ]
+          ],
+          "description": "Engineered user interface layers for a Swiss real-estate platform integrating property search, automated valuation engines, and financing solutions."
         }
       }
     }
@@ -114,12 +93,24 @@
       "name": "Raycast",
       "dates": "2024",
       "stack": "React, Node.js, Swift, AppleScript",
-      "platform": "Raycast is an open-source collection of powerful productivity tools integrated into an extendable launcher.",
       "contributions": [
-        { "name": "Speedtest", "downloads": "50k+ downloads", "desc": "Runs internet speed tests directly from the app." },
-        { "name": "ConsoleDev", "downloads": "1.5k+ downloads", "desc": "Integrates essential developer console tools." },
-        { "name": "Toggle Audio Input", "downloads": "1k+ downloads", "desc": "Command and menu bar extension to mute/unmute microphones." }
-      ]
+        {
+          "name": "Speedtest",
+          "downloads": "50k+ downloads",
+          "desc": "Runs internet speed tests directly from the app."
+        },
+        {
+          "name": "ConsoleDev",
+          "downloads": "1.5k+ downloads",
+          "desc": "Integrates essential developer console tools."
+        },
+        {
+          "name": "Toggle Audio Input",
+          "downloads": "1k+ downloads",
+          "desc": "Command and menu bar extension to mute/unmute microphones."
+        }
+      ],
+      "platform": "Raycast is an open-source collection of powerful productivity tools integrated into an extendable launcher."
     }
   },
   "education": {
