@@ -350,12 +350,13 @@ function replaceKeyContributionsParagraph(
 function replaceEducationParagraph(node: unknown): void {
   const children = getChildren(node);
   const newChildren: unknown[] = [];
+
   for (const child of children) {
     if (isTextNode(child)) {
       const text = child["#text"];
-      if (text.includes("-") && text.includes("Bachelor") || text.includes("Бакалавр")) {
+      if (text.trim()) {
         newChildren.push({
-          "#text": "{{education.university_name}} - {{education.degree}} ",
+          "#text": "{{education.university_name}} ",
         });
       }
     } else if (getTagName(child) === "text:span") {
