@@ -8,7 +8,7 @@ Software Engineer с 5+ годами опыта во frontend и full-stack ра
 
 ## Опыт работы
 
-### CAE TECHNOLOGY 2024 - настоящее время
+### CAE TECHNOLOGY 2024 - 2026
 
 #### Sourceability 2024 - 2026
 **Роль**: Full-stack Developer
