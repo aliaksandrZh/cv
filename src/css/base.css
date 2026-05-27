@@ -9,6 +9,8 @@ body {
   background: linear-gradient(to top, var(--bg-1), var(--bg-2));
   color: var(--text);
   font-family: "Roboto Mono", monospace;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 ::selection {
@@ -37,17 +39,6 @@ body {
   }
 }
 
-.container {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-@media (min-width: 640px) {
-  .container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
 
 .text-title {
   margin-bottom: 1rem;
