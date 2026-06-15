@@ -118,5 +118,8 @@
     "university_name": "Гомельский государственный университет имени Франциска Скорины",
     "university_dates": "2015 - 2019"
   },
-  "skills_heading": "Навыки"
+  "skills_heading": "Навыки",
+  "recommendation": {
+    "label": "Рекомендательное письмо (PDF)"
+  }
 }

@@ -118,5 +118,8 @@
     "university_name": "Francysk Skorina Gomel State University",
     "university_dates": "2015 - 2019"
   },
-  "skills_heading": "Skills"
+  "skills_heading": "Skills",
+  "recommendation": {
+    "label": "Recommendation Letter (PDF)"
+  }
 }

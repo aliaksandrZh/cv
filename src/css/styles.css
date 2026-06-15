@@ -307,3 +307,35 @@ main li {
 .download-inline select:focus {
   background: var(--title);
 }
+
+.recommendation-link {
+  margin-top: 0.25rem;
+  margin-left: 0.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--title);
+}
+
+.recommendation-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--text);
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.recommendation-link a:hover {
+  color: var(--title);
+}
+
+.recommendation-link svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 639px) {
+  .recommendation-link {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+  }
+}
